@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background: white !important;
+@import '@fontsource/red-hat-display/400.css';
+@import '@fontsource/red-hat-display/500.css';
+@import '@fontsource/red-hat-display/700.css';
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans;
+    font-family: 'Red Hat Display', sans-serif;
+    letter-spacing: 0.5px;
+  }
 }
