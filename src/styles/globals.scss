@@ -14,11 +14,24 @@
   }
 }
 
-.nav-link {
-  @apply text-white text-lg relative tracking-[1px] cursor-pointer;
-}
+@layer components {
+  .social-icon-wrapper {
+    @apply w-[50px] h-[50px] relative block;
+  }
 
+  .social-icon-svg {
+    @apply absolute inset-0 w-full h-full pointer-events-none;
+  }
 
-.social-icon {
-  @apply w-[50px] h-[50px] flex items-center justify-center rounded border border-white/25;
+  .social-icon-content {
+    @apply absolute inset-0 flex items-center justify-center text-white text-[18px];
+  }
+
+  .social-icon-wrapper:hover .social-icon-content {
+    @apply text-primary;
+  }
+
+   .nav-link {
+    @apply text-white text-base font-medium tracking-[1px] cursor-pointer;
+  }
 }

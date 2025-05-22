@@ -6,19 +6,23 @@ import clsx from 'clsx'
 import { useState } from 'react'
 import { FaFacebookF, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
 import { navItems } from '@/constants/navItems'
+import SocialIcon from '@/components/SocialIcon'
 
 export default function Header() {
   const pathname = usePathname()
   const [openMenu, setOpenMenu] = useState<string | null>(null)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur">
-      <div className="max-w-7xl mx-auto flex justify-between items-center h-[110px] px-6">
-        <Link href="/" className="text-3xl font-bold text-primary text-[36px] tracking-wide">
+    <header className="fixed left-0 right-0 top-0 z-50 bg-black/40 backdrop-blur">
+      <div className="mx-auto flex h-[110px] max-w-7xl items-center justify-between px-6">
+        <Link
+          href="/"
+          className="text-3xl text-[36px] font-bold tracking-wide text-primary"
+        >
           gm
         </Link>
 
-        <nav className="flex gap-14 relative">
+        <nav className="relative flex gap-14">
           {navItems.map(({ label, href, children }) =>
             children ? (
               <div
@@ -27,14 +31,29 @@ export default function Header() {
                 onMouseEnter={() => setOpenMenu(label)}
                 onMouseLeave={() => setOpenMenu(null)}
               >
-                <button className="nav-link">{label}</button>
+                <button className="nav-link flex items-center gap-2">
+                  {label}
+                  <svg
+                    className="h-2 w-2 fill-current text-white"
+                    viewBox="0 0 10 6"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L5 5L9 1"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </button>
                 {openMenu === label && (
-                  <div className="absolute top-full left-0 w-64 bg-[#1f1f1f] rounded-lg border border-white/10 shadow-lg z-50">
+                  <div className="absolute left-0 top-full z-50 w-64 rounded-lg border border-white/10 bg-[#1f1f1f] shadow-lg">
                     {children.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-4 py-3 hover:bg-teal-700/30 transition-colors text-white text-sm"
+                        className="block px-4 py-3 text-sm text-white transition-colors hover:bg-teal-700/30"
                       >
                         {item.label}
                       </Link>
@@ -46,24 +65,21 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                className={clsx('nav-link', pathname === href && 'text-primary')}
+                className={clsx(
+                  'nav-link',
+                  pathname === href && 'text-primary',
+                )}
               >
                 {label}
               </Link>
-            )
+            ),
           )}
         </nav>
 
         <div className="flex items-center gap-2 text-white">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <FaFacebookF />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <FaLinkedinIn />
-          </a>
-          <a href="#" className="social-icon">
-            <FaXTwitter />
-          </a>
+          <SocialIcon href="https://facebook.com" icon={<FaFacebookF />} />
+          <SocialIcon href="https://linkedin.com" icon={<FaLinkedinIn />} />
+          <SocialIcon href="#" icon={<FaXTwitter />} />
         </div>
       </div>
     </header>
