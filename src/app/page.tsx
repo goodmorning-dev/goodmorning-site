@@ -1,7 +1,3 @@
 export default function HomePage() {
-  return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold">Welcome to GoodMorning</h1>
-    </main>
-  );
+  return <div className="text-center py-12">Home Page</div>;
 }
