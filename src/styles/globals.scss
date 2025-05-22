@@ -13,3 +13,12 @@
     letter-spacing: 0.5px;
   }
 }
+
+.nav-link {
+  @apply text-white text-lg relative tracking-[1px] cursor-pointer;
+}
+
+
+.social-icon {
+  @apply w-[50px] h-[50px] flex items-center justify-center rounded border border-white/25;
+}
