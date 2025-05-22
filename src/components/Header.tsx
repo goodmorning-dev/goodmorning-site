@@ -5,40 +5,11 @@ import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { useState } from 'react'
 import { FaFacebookF, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
+import { navItems } from '@/constants/navItems'
 
 export default function Header() {
   const pathname = usePathname()
   const [openMenu, setOpenMenu] = useState<string | null>(null)
-
-  const navItems = [
-    {
-      label: 'Services',
-      children: [
-        { label: 'Technical co-founder', href: '/services/co-founder' },
-        { label: 'Consulting', href: '/services/consulting' },
-        { label: 'Staff Augmentation', href: '/services/augmentation' },
-        { label: 'MVP Development', href: '/services/mvp-development' },
-        { label: 'Auditing', href: '/services/auditing' }
-      ]
-    },
-    {
-      label: 'Success Stories',
-      href: '/success'
-    },
-    {
-      label: 'About',
-      children: [
-        { label: 'About Us', href: '/about-us' },
-        { label: 'Careers', href: '/careers' },
-        { label: 'Contact Us', href: '/contact' },
-        { label: 'Blog', href: '/blog' }
-      ]
-    },
-    {
-      label: 'Team',
-      href: '/team'
-    }
-  ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur">
