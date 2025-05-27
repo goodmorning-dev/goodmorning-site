@@ -7,6 +7,7 @@ module.exports = {
         secondary: '#5959ff',
         black: '#000000',
         white: '#ffffff',
+        gray: '#131313',
       },
       fontFamily: {
         sans: ['RedHatDisplay', 'sans-serif'],
