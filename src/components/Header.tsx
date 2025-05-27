@@ -1,12 +1,14 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { useState } from 'react'
 import { FaFacebookF, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
 import { navItems } from '@/constants/navItems'
 import SocialIcon from '@/components/SocialIcon'
+import logo from '@/../public/logo.png'
 
 export default function Header() {
   const pathname = usePathname()
@@ -19,7 +21,13 @@ export default function Header() {
           href="/"
           className="text-3xl text-[36px] font-bold tracking-wide text-primary"
         >
-          gm
+          <Image
+            src={logo}
+            alt="GoodMorning Logo"
+            width={80}
+            height={50}
+            priority
+          />
         </Link>
 
         <nav className="relative flex gap-14">
