@@ -45,4 +45,9 @@
   .nav-link {
     @apply cursor-pointer text-base font-medium tracking-[1px] text-white;
   }
+
+  .icon-bg {
+    @apply flex aspect-square h-24 items-center justify-center rounded-xl shadow-[0_17px_20px_rgba(0,0,0,0.02)];
+    background-image: linear-gradient(226deg, #100f0f 10%, #222325);
+  }
 }
