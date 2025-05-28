@@ -29,7 +29,7 @@ export default function Footer() {
             <p className="mb-7">hello@goodmorning.dev</p>
 
             <div className="flex gap-3">
-              <button className="flex h-10 w-10 items-center justify-center rounded border border-white/30 hover:border-primary">
+              <button className="social-border">
                 <FaFacebookF size={14} />
               </button>
               <button className="flex h-10 w-10 items-center justify-center rounded border border-white/30 hover:border-primary">
