@@ -1,6 +1,7 @@
 import FeatureCard from '@/components/FeatureCard'
 import features from '@/constants/features'
 import Button from '@/components/Button'
+import LogoScroller from '@/components/LogoScroller'
 
 export default function HomePage() {
   return (
@@ -14,19 +15,34 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Trusted companies section */}
+      <section className="relative overflow-hidden bg-black py-20">
+        <div
+          className="pointer-events-none absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/galaxy-bg.png')" }}
+        />
+        <div className="mx-auto flex max-w-7xl items-center gap-20">
+          <div className="z-10 max-w-sm">
+            <h3 className="text-[28px] leading-10 tracking-[0.5px]">
+              <span className="font-bold text-white">Trusted by</span>{' '}
+              industry-leading companies worldwide
+            </h3>
+          </div>
+          <LogoScroller />
+        </div>
+      </section>
+
       {/* Call to action section */}
       <section className="relative overflow-hidden bg-black py-64">
         <div
           className="pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
           style={{ backgroundImage: "url('/images/astronaut.png')" }}
         />
-
         <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-between md:flex-row">
           <div className="text-5xl font-bold leading-tight tracking-[1.2px]">
             Ready to transform <br />
             your vision?
           </div>
-
           <div className="max-w-lg space-y-6">
             <p className="text-2xl tracking-[0.7px]">
               Connect with us today to explore how we can elevate your Web3
