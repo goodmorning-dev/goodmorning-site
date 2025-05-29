@@ -12,6 +12,9 @@ module.exports = {
       fontFamily: {
         sans: ['RedHatDisplay', 'sans-serif'],
       },
+      maxWidth: {
+        '8xl': '86rem',
+      },
     },
   },
   plugins: [],
