@@ -9,7 +9,7 @@ export default function HomePage() {
     <div>
       {/* Feature section */}
       <section className="bg-gray py-20">
-        <div className="mx-auto grid max-w-7xl gap-20 px-4 md:grid-cols-2">
+        <div className="max-w-8xl mx-auto grid gap-20 px-4 md:grid-cols-2">
           {features.map((f, idx) => (
             <FeatureCard key={idx} {...f} />
           ))}
@@ -81,7 +81,7 @@ export default function HomePage() {
           className="pointer-events-none absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/galaxy-bg.png')" }}
         />
-        <div className="mx-auto flex max-w-7xl items-center gap-20">
+        <div className="max-w-8xl mx-auto flex items-center gap-20">
           <div className="z-10 max-w-sm">
             <h3 className="text-[28px] leading-10 tracking-[0.5px]">
               <span className="font-bold text-white">Trusted by</span>{' '}
@@ -98,7 +98,7 @@ export default function HomePage() {
           className="pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
           style={{ backgroundImage: "url('/images/astronaut.png')" }}
         />
-        <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-between md:flex-row">
+        <div className="max-w-8xl relative z-10 mx-auto flex flex-col justify-between md:flex-row">
           <div className="text-5xl font-bold leading-tight tracking-[1.2px]">
             Ready to transform <br />
             your vision?
