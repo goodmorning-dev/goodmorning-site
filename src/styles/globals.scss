@@ -63,4 +63,23 @@
     );
     border-image-slice: 1;
   }
+
+  .gradient-underline {
+    position: relative;
+    z-index: 2;
+  }
+  .gradient-underline::before {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    bottom: 4px;
+    z-index: -1;
+    height: 22px;
+    background-image: linear-gradient(
+      to left,
+      transparent,
+      var(--tw-gradient-to)
+    );
+    --tw-gradient-to: theme('colors.secondary');
+  }
 }

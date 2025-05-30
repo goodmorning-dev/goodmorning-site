@@ -6,6 +6,7 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary'
   outlined?: boolean
   className?: string
+  background?: string
   onClick?: () => void
 }
 
@@ -14,12 +15,12 @@ export default function Button({
   variant = 'primary',
   outlined = false,
   className,
+  background = 'bg-black',
   onClick,
 }: ButtonProps) {
   const isSecondary = variant === 'secondary'
   const borderColor = isSecondary ? 'border-secondary' : 'border-primary'
   const bgColor = isSecondary ? 'bg-secondary' : 'bg-primary'
-  const textColor = isSecondary ? 'text-secondary' : 'text-primary'
 
   const hoverBgColor = isSecondary
     ? 'group-hover:bg-secondary'
@@ -63,7 +64,7 @@ export default function Button({
           'relative z-10 inline-flex w-full items-center justify-center px-4 py-3',
           'rounded-md text-base font-bold uppercase tracking-[2.3px] transition-all duration-300',
           outlined
-            ? clsx('bg-black', hoverBgColor, 'group-hover:text-black')
+            ? clsx(background, hoverBgColor, 'group-hover:text-black')
             : `${bgColor} border border-solid text-black ${borderColor}`,
         )}
         style={{

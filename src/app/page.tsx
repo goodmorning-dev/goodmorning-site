@@ -3,13 +3,14 @@ import features from '@/constants/features'
 import Button from '@/components/Button'
 import LogoScroller from '@/components/LogoScroller'
 import services from '@/constants/services'
+import TeamSection from '@/components/Team'
 
 export default function HomePage() {
   return (
     <div>
       {/* Feature section */}
       <section className="bg-gray py-20">
-        <div className="max-w-8xl mx-auto grid gap-20 px-4 md:grid-cols-2">
+        <div className="mx-auto grid max-w-8xl gap-20 px-4 md:grid-cols-2">
           {features.map((f, idx) => (
             <FeatureCard key={idx} {...f} />
           ))}
@@ -18,11 +19,11 @@ export default function HomePage() {
 
       {/* Services section */}
       <section className="bg-black py-36 text-white">
-        <div className="max-w-8xl mx-auto flex flex-col items-center justify-between gap-24 px-4 md:flex-row">
+        <div className="mx-auto flex max-w-8xl flex-col items-center justify-between gap-24 px-4 md:flex-row">
           <div className="min-w-[34.5rem] space-y-7">
             <h1 className="relative text-[3.125rem] font-black leading-[1.2] tracking-[1.2px]">
               <span className="relative z-10 inline-block">
-                <span className="before:absolute before:inset-x-0 before:bottom-[-12px] before:z-[-1] before:h-[22px] before:bg-gradient-to-l before:from-transparent before:to-secondary">
+                <span className="gradient-underline">
                   Unlock your potential
                 </span>
               </span>{' '}
@@ -81,7 +82,7 @@ export default function HomePage() {
           className="pointer-events-none absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/galaxy-bg.png')" }}
         />
-        <div className="max-w-8xl mx-auto flex items-center gap-20">
+        <div className="mx-auto flex max-w-8xl items-center gap-20">
           <div className="z-10 max-w-sm">
             <h3 className="text-[28px] leading-10 tracking-[0.5px]">
               <span className="font-bold text-white">Trusted by</span>{' '}
@@ -92,13 +93,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Team section */}
+      <section className="bg-gray py-36">
+        <div className="mx-auto max-w-8xl">
+          <div className="text-center">
+            <h2 className="mb-8 text-5xl font-black tracking-[1.2px]">
+              The <span className="text-primary">goodmorning</span>{' '}
+              <span className="gradient-underline">team</span>
+            </h2>
+            <p className="mb-20 text-[22px] tracking-[0.6px]">
+              of makers, thinkers and explorers
+            </p>
+          </div>
+
+          <TeamSection short />
+        </div>
+      </section>
+
       {/* Call to action section */}
       <section className="relative overflow-hidden bg-black py-64">
         <div
           className="pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
           style={{ backgroundImage: "url('/images/astronaut.png')" }}
         />
-        <div className="max-w-8xl relative z-10 mx-auto flex flex-col justify-between md:flex-row">
+        <div className="relative z-10 mx-auto flex max-w-8xl flex-col justify-between md:flex-row">
           <div className="text-5xl font-bold leading-tight tracking-[1.2px]">
             Ready to transform <br />
             your vision?
