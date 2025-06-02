@@ -4,6 +4,7 @@ import Button from '@/components/Button'
 import LogoScroller from '@/components/LogoScroller'
 import services from '@/constants/services'
 import TeamSection from '@/components/Team'
+import Blog from '@/components/Blog'
 
 export default function HomePage() {
   return (
@@ -128,6 +129,23 @@ export default function HomePage() {
             </p>
             <Button>Contact us</Button>
           </div>
+        </div>
+      </section>
+
+      {/* Insights section */}
+      <section className="bg-gray py-36">
+        <div className="mx-auto max-w-8xl">
+          <div className="text-center">
+            <h2 className="mb-8 text-5xl font-black tracking-[1.2px]">
+              <span className="text-primary">Insights</span> from our{' '}
+              <span className="gradient-underline">experts</span>
+            </h2>
+            <p className="mb-20 text-[22px] tracking-[0.6px]">
+              Dive into our treasure chest of Web3 solutions <br /> and explore
+              what’s next
+            </p>
+          </div>
+          <Blog />
         </div>
       </section>
     </div>
