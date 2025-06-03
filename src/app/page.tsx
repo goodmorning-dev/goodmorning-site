@@ -5,10 +5,88 @@ import LogoScroller from '@/components/LogoScroller'
 import services from '@/constants/services'
 import TeamSection from '@/components/Team'
 import Blog from '@/components/Blog'
+import Image from 'next/image'
 
 export default function HomePage() {
   return (
     <div>
+      {/* Hero section */}
+      <section className="relative">
+        <div className="pointer-events-none absolute inset-0 z-0">
+          <Image
+            src="/images/stars.png"
+            alt="Stars background"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+          />
+        </div>
+        <div className="pointer-events-none absolute inset-0 z-10 mt-60 flex items-center">
+          <Image
+            src="/images/sun.png"
+            alt="Sunrise over Earth"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+          />
+        </div>
+
+        <div className="relative z-20">
+          <div className="flex flex-col items-center pt-[150px] text-center">
+            <h1 className="text-7xl font-black leading-tight tracking-wide">
+              <span className="text-primary">Web3 development</span> studio
+              <br />
+              operating <span className="gradient-underline">globally</span>
+            </h1>
+            <p className="font-regular mt-12 max-w-4xl text-2xl tracking-wide">
+              As a Web3 development studio, at goodmorning we craft tailored
+              blockchain services to help startups and industry leaders navigate
+              the ever-evolving Web3 space. Whether you're launching something
+              new or scaling an existing project, we bring the expertise to make
+              it happen.
+            </p>
+            <Button className="mt-8" variant="primary">
+              Contact Us
+            </Button>
+          </div>
+
+          <div className="mx-auto mt-[480px] flex max-w-8xl pb-[150px]">
+            <div className="max-w-xl space-y-7">
+              <h2 className="text-5xl font-black leading-snug">
+                A <span className="text-primary">Web3 development</span> company
+                built on real{' '}
+              </h2>
+              <span className="gradient-underline text-5xl font-black leading-snug">
+                synergy
+              </span>
+              <p className="text-xl leading-8 tracking-[0.6px]">
+                With over a decade of experience in blockchain technology,
+                goodmorning is dedicated to empowering innovative companies. Our
+                strong team, with more than 80% tenure, is committed to
+                delivering exceptional Web3 solutions tailored to your needs.
+              </p>
+              <Button className="mt-2" outlined variant="secondary">
+                About Us
+              </Button>
+            </div>
+            <div className="ml-10 flex flex-1 justify-center">
+              <div className="max-w-[620px]">
+                <Image
+                  src="/images/hero.png"
+                  alt="Hero image"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Feature section */}
       <section className="bg-gray py-20">
         <div className="mx-auto grid max-w-8xl gap-20 px-4 md:grid-cols-2">
@@ -33,7 +111,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-2xl">
-              Web3 is full of opportunities – let’s make sure you seize them
+              Web3 is full of opportunities – let's make sure you seize them
               with services tailored to your vision.
             </p>
             <Button variant="secondary" outlined>
@@ -142,7 +220,7 @@ export default function HomePage() {
             </h2>
             <p className="mb-20 text-[22px] tracking-[0.6px]">
               Dive into our treasure chest of Web3 solutions <br /> and explore
-              what’s next
+              what's next
             </p>
           </div>
           <Blog />
