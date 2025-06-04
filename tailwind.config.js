@@ -9,6 +9,7 @@ module.exports = {
         white: '#ffffff',
         gray: '#131313',
         lightGray: '#1e1e1e',
+        textGray: '#919191',
       },
       fontFamily: {
         sans: ['RedHatDisplay', 'sans-serif'],

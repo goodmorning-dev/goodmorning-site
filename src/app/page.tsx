@@ -4,6 +4,7 @@ import Button from '@/components/Button'
 import LogoScroller from '@/components/LogoScroller'
 import TeamSection from '@/components/Team'
 import Blog from '@/components/Blog'
+import TestimonialsSlider from '@/components/TestimonialsSlider'
 import features from '@/constants/features'
 import services from '@/constants/services'
 import techKnowledge from '@/constants/techKnowledge'
@@ -173,6 +174,23 @@ export default function HomePage() {
           <LogoScroller />
         </div>
       </section>
+
+      {/* Testimonials section */}
+      <section className="relative z-10 mx-auto max-w-8xl bg-black py-32">
+        <div className="">
+          <h2 className="mb-7 text-center text-[3.125rem] font-black leading-[1.2] tracking-[1.2px]">
+            Our Web3 <span className="gradient-underline">client's</span>
+            <br />
+            <span className="text-primary">success stories</span>
+          </h2>
+          <p className="text-center text-2xl">
+            We bring real results to help you make a real impact
+          </p>
+        </div>
+        <TestimonialsSlider />
+      </section>
+
+      {/* Blue sunset image between sections */}
 
       {/* Tech knowledge section */}
       <section className="relative z-10 bg-black py-32">
