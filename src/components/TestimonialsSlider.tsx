@@ -18,7 +18,7 @@ export default function TestimonialsSlider() {
   const handleNext = () => slider.current?.next()
 
   return (
-    <div className="relative mt-16 w-full px-4">
+    <div className="relative z-30 mt-16 w-full px-4">
       <div ref={sliderRef} className="keen-slider">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="keen-slider__slide flex justify-center">

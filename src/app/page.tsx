@@ -176,8 +176,8 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials section */}
-      <section className="relative z-10 mx-auto max-w-8xl bg-black py-32">
-        <div className="">
+      <section className="relative mx-auto max-w-8xl bg-black pt-32">
+        <div>
           <h2 className="mb-7 text-center text-[3.125rem] font-black leading-[1.2] tracking-[1.2px]">
             Our Web3 <span className="gradient-underline">client's</span>
             <br />
@@ -190,11 +190,28 @@ export default function HomePage() {
         <TestimonialsSlider />
       </section>
 
-      {/* Blue sunset image between sections */}
+      {/* Blue sunset background between sections */}
+      <div className="relative z-20 h-[360px]">
+        <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2">
+          <Image
+            src="/images/blue-sunset.png"
+            alt="Blue sunset glow"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'cover',
+              pointerEvents: 'none',
+            }}
+          />
+        </div>
+      </div>
 
       {/* Tech knowledge section */}
-      <section className="relative z-10 bg-black py-32">
-        <div className="mx-auto max-w-8xl">
+      <section className="bg-black pb-32">
+        <div className="relative z-20 mx-auto max-w-8xl">
           <h2 className="mb-7 text-center text-[3.125rem] font-black leading-[1.2] tracking-[1.2px]">
             <span className="gradient-underline">Empowering</span> your Web3
             journey <br />
