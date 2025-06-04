@@ -1,11 +1,13 @@
+import Image from 'next/image'
 import FeatureCard from '@/components/FeatureCard'
-import features from '@/constants/features'
 import Button from '@/components/Button'
 import LogoScroller from '@/components/LogoScroller'
-import services from '@/constants/services'
 import TeamSection from '@/components/Team'
 import Blog from '@/components/Blog'
-import Image from 'next/image'
+import features from '@/constants/features'
+import services from '@/constants/services'
+import techKnowledge from '@/constants/techKnowledge'
+import knowledgeBg from '@/../public/images/knowledge-bg.png'
 
 export default function HomePage() {
   return (
@@ -169,6 +171,54 @@ export default function HomePage() {
             </h3>
           </div>
           <LogoScroller />
+        </div>
+      </section>
+
+      {/* Tech knowledge section */}
+      <section className="relative z-10 bg-black py-32">
+        <div className="mx-auto max-w-8xl">
+          <h2 className="mb-7 text-center text-[3.125rem] font-black leading-[1.2] tracking-[1.2px]">
+            <span className="gradient-underline">Empowering</span> your Web3
+            journey <br />
+            with our <span className="text-primary">tech knowledge</span>
+          </h2>
+          <p className="mx-auto max-w-[51rem] text-center text-2xl">
+            Well-established, cutting-edge or experimental technology, we have
+            our hands on it. Building on top of Ethereum and all major EVM
+            chains, we handle a rich set of tools and magic to bring your
+            project to life.
+          </p>
+          <div className="mt-20 grid grid-cols-3 gap-10">
+            {techKnowledge.map(({ icon, title, description }, index) => (
+              <div
+                key={index}
+                className="items-center rounded-2xl px-7 py-10 text-center"
+                style={{
+                  backgroundImage: `url(${knowledgeBg.src})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                <div className="mb-10 flex items-center justify-center">
+                  <Image
+                    src={icon}
+                    alt="Knowledge Icon"
+                    width={60}
+                    height={60}
+                  />
+                </div>
+                <h3 className="mx-auto mb-4 max-w-xs text-3xl font-bold">
+                  {title}
+                </h3>
+                <p className="text-xl leading-[1.5] tracking-[0.6px]">
+                  {description}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 flex justify-center">
+            <Button variant="primary">Get in touch</Button>
+          </div>
         </div>
       </section>
 
