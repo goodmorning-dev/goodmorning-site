@@ -4,19 +4,37 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
-import { useState } from 'react'
+import { useState, ReactNode } from 'react'
 import { FaFacebookF, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
 import { navItems } from '@/constants/navItems'
-import SocialIcon from '@/components/SocialIcon'
 import logo from '@/../public/logo.png'
 
 export default function Header() {
   const pathname = usePathname()
   const [openMenu, setOpenMenu] = useState<string | null>(null)
 
+  const SocialIcon = ({ icon, href }: { icon: ReactNode; href: string }) => (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="social-icon-wrapper"
+    >
+      <Image
+        src="/masks/bg.svg"
+        alt=""
+        width={50}
+        height={50}
+        className="social-icon-svg"
+        draggable={false}
+      />
+      <div className="social-icon-content">{icon}</div>
+    </a>
+  )
+
   return (
     <header className="fixed left-0 right-0 top-0 z-50 bg-black/40 backdrop-blur">
-      <div className="max-w-8xl mx-auto flex h-[110px] items-center justify-between px-6">
+      <div className="mx-auto flex h-[110px] max-w-8xl items-center justify-between px-6">
         <Link
           href="/"
           className="text-3xl text-[36px] font-bold tracking-wide text-primary"
