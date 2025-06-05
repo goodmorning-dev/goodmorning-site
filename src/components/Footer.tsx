@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="text-sm">
       <div className="bg-[url('/images/footer-bg.png')] bg-cover bg-center pt-16">
-        <div className="max-w-8xl mx-auto flex flex-col justify-between gap-8 pb-10 md:flex-row">
+        <div className="mx-auto flex max-w-8xl flex-col justify-between gap-8 px-5 pb-10 md:flex-row lg:px-0">
           <div className="max-w-xl">
             <div className="mb-6">
               <Image
@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="text-s max-w-8xl mx-auto flex flex-col justify-between py-7 text-center opacity-60 md:flex-row md:text-left">
+      <div className="mx-auto flex max-w-8xl flex-col items-center justify-between py-7 opacity-60 md:flex-row">
         <span>
           © {new Date().getFullYear()} goodmorning. All rights reserved.
         </span>
