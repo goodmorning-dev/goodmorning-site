@@ -11,8 +11,9 @@
 @layer base {
   html,
   body {
-    @apply bg-black font-sans leading-8 tracking-tight text-white;
+    @apply bg-black font-sans leading-8 text-white;
     font-family: 'Red Hat Display', sans-serif;
+    letter-spacing: 0.5px;
   }
 
   * {
