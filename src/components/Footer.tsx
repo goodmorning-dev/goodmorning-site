@@ -29,6 +29,7 @@ export default function Footer() {
 
             <p className="mb-7">hello@goodmorning.dev</p>
 
+            {/* TODO: Fix social media icons (border)*/}
             <div className="flex gap-3">
               <button className="social-border">
                 <FaFacebookF size={14} />

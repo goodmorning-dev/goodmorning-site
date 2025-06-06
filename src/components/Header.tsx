@@ -102,9 +102,10 @@ export default function Header() {
           )}
         </nav>
 
+        {/* TODO: Fix social media icons (border)*/}
         <div className="flex items-center gap-2 text-white">
-          <SocialIcon href="https://facebook.com" icon={<FaFacebookF />} />
-          <SocialIcon href="https://linkedin.com" icon={<FaLinkedinIn />} />
+          <SocialIcon href="#" icon={<FaFacebookF />} />
+          <SocialIcon href="#" icon={<FaLinkedinIn />} />
           <SocialIcon href="#" icon={<FaXTwitter />} />
         </div>
       </div>
