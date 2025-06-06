@@ -64,8 +64,8 @@ export default function Button({
           'relative z-10 inline-flex w-full items-center justify-center px-4 py-3',
           'rounded-md text-base font-bold uppercase tracking-[2.3px] transition-all duration-300',
           outlined
-            ? clsx(background, hoverBgColor, 'group-hover:text-white')
-            : `${bgColor} border border-solid text-black ${borderColor}`,
+            ? clsx(background, hoverBgColor)
+            : `${bgColor} border border-solid text-black ${borderColor} group-hover:scale-105`,
         )}
         style={{
           clipPath,
