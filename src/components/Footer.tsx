@@ -86,14 +86,29 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-8xl flex-col items-center justify-between py-7 opacity-60 md:flex-row">
-        <span>
+      <div className="mx-auto flex max-w-8xl flex-col items-center justify-between py-7 md:flex-row">
+        <span className="text-white/60">
           © {new Date().getFullYear()} goodmorning. All rights reserved.
         </span>
         <div className="mt-2 flex gap-6 md:mt-0">
-          <Link href="#">Privacy Policy</Link>
-          <Link href="#">Terms of Services</Link>
-          <Link href="#">Sitemap</Link>
+          <Link
+            href="#"
+            className="text-white/60 transition-colors duration-200 hover:text-white"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            href="#"
+            className="text-white/60 transition-colors duration-200 hover:text-white"
+          >
+            Terms of Services
+          </Link>
+          <Link
+            href="#"
+            className="text-white/60 transition-colors duration-200 hover:text-white"
+          >
+            Sitemap
+          </Link>
         </div>
       </div>
     </footer>
