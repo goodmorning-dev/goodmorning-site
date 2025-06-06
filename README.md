@@ -2,20 +2,21 @@
 
 Website for goodmorning, built with Next.js.
 
-> 🚧 **Work in Progress** 
+> 🚧 **Work in Progress**
 
 ---
 
 ## 🛠 Setup Instructions
 
 1. **Clone the repo**
+
    ```
    git clone https://github.com/goodmorning-dev/goodmorning-site.git
-   cd goodmorning-web
+   cd goodmorning-site
    ```
 
-
 2. **Install dependencies**
+
    ```
    npm install
    ```
@@ -28,9 +29,10 @@ Website for goodmorning, built with Next.js.
 ---
 
 ### 📦 Available Scripts
-   ```
-   npm run dev – Start the dev server
-   npm run build – Build for production
-   npm run start – Start the production server
-   npm run lint – Run ESLint
-   ```
+
+```
+npm run dev – Start the dev server
+npm run build – Build for production
+npm run start – Start the production server
+npm run lint – Run ESLint
+```
