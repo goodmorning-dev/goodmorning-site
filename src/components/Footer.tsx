@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { FaFacebookF, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
+import footerItems from '@/constants/footerItems'
 import logo from '@/../public/logo.png'
 
 export default function Footer() {
@@ -42,46 +43,20 @@ export default function Footer() {
           </div>
 
           <div className="grid grid-cols-2 gap-28 text-base">
-            <ul className="space-y-4">
-              <li>
-                <Link href="#">Tech co-founder</Link>
-              </li>
-              <li>
-                <Link href="#">Web3 consulting</Link>
-              </li>
-              <li>
-                <Link href="#">MVP development</Link>
-              </li>
-              <li>
-                <Link href="#">Staff augmentation</Link>
-              </li>
-              <li>
-                <Link href="#">Web3 technical auditing</Link>
-              </li>
-              <li>
-                <Link href="#">All services</Link>
-              </li>
-            </ul>
-            <ul className="space-y-4">
-              <li>
-                <Link href="#">About us</Link>
-              </li>
-              <li>
-                <Link href="#">Team</Link>
-              </li>
-              <li>
-                <Link href="#">Case Studies</Link>
-              </li>
-              <li>
-                <Link href="#">Blog</Link>
-              </li>
-              <li>
-                <Link href="#">Careers</Link>
-              </li>
-              <li>
-                <Link href="#">Get in touch</Link>
-              </li>
-            </ul>
+            {footerItems.map((category) => (
+              <ul key={category.title} className="space-y-4">
+                {category.items.map(({ label, href }) => (
+                  <li key={label}>
+                    <Link
+                      href={href}
+                      className="transition-colors duration-200 hover:text-white/60"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ))}
           </div>
         </div>
       </div>
