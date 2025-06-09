@@ -51,13 +51,12 @@ export default function Header() {
         <nav className="relative flex gap-14">
           {navItems.map(({ label, href, children }) =>
             children ? (
-              <div
-                key={label}
-                className="relative"
-                onMouseEnter={() => setOpenMenu(label)}
-                onMouseLeave={() => setOpenMenu(null)}
-              >
-                <button className="nav-link flex items-center gap-2">
+              <div key={label} className="group relative">
+                <button
+                  onMouseEnter={() => setOpenMenu(label)}
+                  onMouseLeave={() => setOpenMenu(null)}
+                  className="nav-link flex items-center gap-2"
+                >
                   {label}
                   <svg
                     className="h-2 w-2 fill-current text-white"
@@ -73,19 +72,39 @@ export default function Header() {
                     />
                   </svg>
                 </button>
-                {openMenu === label && (
-                  <div className="absolute left-0 top-full z-50 w-64 rounded-lg border border-white/10 bg-[#1f1f1f] shadow-lg">
-                    {children.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="block px-4 py-3 text-sm text-white transition-colors hover:bg-teal-700/30"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
+
+                <div
+                  className="absolute left-0 top-full z-50 pt-[42.5px]"
+                  onMouseEnter={() => setOpenMenu(label)}
+                  onMouseLeave={() => setOpenMenu(null)}
+                >
+                  {openMenu === label && (
+                    <div
+                      className="w-64 overflow-hidden bg-[url('/images/gradient-bg.png')] shadow-xl backdrop-blur-md"
+                      style={{
+                        clipPath:
+                          'polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%)',
+                        WebkitClipPath:
+                          'polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%)',
+                      }}
+                    >
+                      {children.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={clsx(
+                            'block px-5 py-3 text-sm text-white transition-colors duration-200',
+                            pathname === item.href
+                              ? 'bg-primary text-black'
+                              : 'hover:bg-white/10',
+                          )}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             ) : (
               <Link
