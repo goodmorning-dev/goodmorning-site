@@ -33,7 +33,7 @@ export default function Header() {
   )
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 bg-black/40 backdrop-blur">
+    <header className="fixed left-0 right-0 top-0 z-50 bg-[url('/images/gradient-bg.png')] bg-cover bg-center backdrop-blur">
       <div className="mx-auto flex h-[110px] max-w-8xl items-center justify-between px-6">
         <Link
           href="/"
