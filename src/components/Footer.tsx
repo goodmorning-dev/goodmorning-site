@@ -7,7 +7,7 @@ import logo from '@/../public/logo.png'
 export default function Footer() {
   return (
     <footer className="text-sm">
-      <div className="bg-[url('/images/footer-bg.png')] bg-cover bg-center pt-16">
+      <div className="bg-[url('/images/gradient-bg.png')] bg-cover bg-center pt-16">
         <div className="mx-auto flex max-w-8xl flex-col justify-between gap-8 px-5 pb-10 md:flex-row lg:px-0">
           <div className="max-w-2xl">
             <div className="mb-6">
