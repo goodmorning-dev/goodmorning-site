@@ -96,7 +96,7 @@ export default function Header() {
                             'block px-7 py-4 text-sm text-white transition-colors duration-200',
                             pathname === item.href
                               ? 'bg-primary text-black'
-                              : 'hover:bg-primary/80 hover:text-black',
+                              : 'hover:bg-primary hover:text-black',
                           )}
                         >
                           {item.label}
