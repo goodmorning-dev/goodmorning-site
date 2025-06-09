@@ -2,11 +2,11 @@ export const navItems = [
   {
     label: 'Services',
     children: [
-      { label: 'Technical co-founder', href: '/services/co-founder' },
-      { label: 'Consulting', href: '/services/consulting' },
-      { label: 'Staff Augmentation', href: '/services/augmentation' },
-      { label: 'MVP Development', href: '/services/mvp-development' },
-      { label: 'Auditing', href: '/services/auditing' }
+      { label: 'Web3 technical co-founder', href: '/services/co-founder' },
+      { label: 'Web3 consulting services', href: '/services/consulting' },
+      { label: 'Staff augmentation services', href: '/services/augmentation' },
+      { label: 'Web3 MVP development services', href: '/services/mvp-development' },
+      { label: 'Web3 technical auditing', href: '/services/auditing' }
     ]
   },
   {

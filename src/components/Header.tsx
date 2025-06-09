@@ -80,12 +80,12 @@ export default function Header() {
                 >
                   {openMenu === label && (
                     <div
-                      className="w-64 overflow-hidden bg-[url('/images/gradient-bg.png')] shadow-xl backdrop-blur-md"
+                      className="w-[300px] overflow-hidden bg-gray shadow-xl backdrop-blur-md"
                       style={{
                         clipPath:
-                          'polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%)',
+                          'polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%)',
                         WebkitClipPath:
-                          'polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%)',
+                          'polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%)',
                       }}
                     >
                       {children.map((item) => (
@@ -93,10 +93,10 @@ export default function Header() {
                           key={item.href}
                           href={item.href}
                           className={clsx(
-                            'block px-5 py-3 text-sm text-white transition-colors duration-200',
+                            'block px-7 py-4 text-sm text-white transition-colors duration-200',
                             pathname === item.href
                               ? 'bg-primary text-black'
-                              : 'hover:bg-white/10',
+                              : 'hover:bg-primary/80 hover:text-black',
                           )}
                         >
                           {item.label}
