@@ -28,7 +28,7 @@ export default function Button({
 
   const glowColor = isSecondary
     ? 'drop-shadow-[0_0_25px_rgba(89,89,255,0.4)]'
-    : 'drop-shadow-[0_0_25px_rgba(18,213,202,0.4)]'
+    : 'drop-shadow-[0_0_25px_rgba(18,213,202,0.4)] hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.4)]'
 
   const clipPath =
     'polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%)'
@@ -38,7 +38,7 @@ export default function Button({
       onClick={onClick}
       className={clsx(
         'group relative inline-block min-w-[214px] overflow-visible',
-        `filter ${glowColor}`,
+        `filter transition-all transition-300 ${glowColor}`,
         className,
       )}
       style={{ background: 'transparent' }}
@@ -65,7 +65,7 @@ export default function Button({
           'rounded-md text-base font-bold uppercase tracking-[2.3px] transition-all duration-300',
           outlined
             ? clsx(background, hoverBgColor)
-            : `${bgColor} border border-solid text-black ${borderColor} group-hover:scale-105`,
+            : `${bgColor} text-black ${borderColor} group-hover:bg-white`,
         )}
         style={{
           clipPath,
