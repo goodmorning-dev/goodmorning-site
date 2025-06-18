@@ -62,9 +62,9 @@ export default function BlogCards() {
 
               <Link
                 href={post.link}
-                className="mt-5 font-bold text-primary hover:underline"
+                className="mt-5 font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
               >
-                READ MORE <span className="ml-4 text-2xl">→</span>
+                READ MORE <span className="ml-3 text-xl">→</span>
               </Link>
             </div>
           </div>
