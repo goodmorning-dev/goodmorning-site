@@ -38,7 +38,7 @@ export default function Button({
       onClick={onClick}
       className={clsx(
         'group relative inline-block min-w-[214px] overflow-visible',
-        `filter transition-all transition-300 ${glowColor}`,
+        `transition-300 filter transition-all ${glowColor}`,
         className,
       )}
       style={{ background: 'transparent' }}
@@ -49,7 +49,6 @@ export default function Button({
           className={clsx(
             'absolute inset-0 z-0 rounded-md transition-all duration-300',
             bgColor,
-            'group-hover:opacity-0',
           )}
           style={{
             clipPath,
