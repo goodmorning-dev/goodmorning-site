@@ -7,6 +7,7 @@ import clsx from 'clsx'
 import { useEffect, useRef, useState, ReactNode } from 'react'
 import { FaFacebookF, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
 import { navItems } from '@/constants/navItems'
+import SocialIcon from '@/components/SocialIcon'
 import logo from '@/../public/logo.png'
 
 export default function Header() {
@@ -31,25 +32,6 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  const SocialIcon = ({ icon, href }: { icon: ReactNode; href: string }) => (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="social-icon-wrapper"
-    >
-      <Image
-        src="/masks/bg.svg"
-        alt=""
-        width={50}
-        height={50}
-        className="social-icon-svg"
-        draggable={false}
-      />
-      <div className="social-icon-content">{icon}</div>
-    </a>
-  )
 
   return (
     <header
@@ -145,11 +127,10 @@ export default function Header() {
           )}
         </nav>
 
-        {/* TODO: Fix social media icons (border)*/}
         <div className="flex items-center gap-2 text-white">
-          <SocialIcon href="#" icon={<FaFacebookF />} />
-          <SocialIcon href="#" icon={<FaLinkedinIn />} />
-          <SocialIcon href="#" icon={<FaXTwitter />} />
+          <SocialIcon href="#" icon={<FaFacebookF size={20} />} />
+          <SocialIcon href="#" icon={<FaLinkedinIn size={20} />} />
+          <SocialIcon href="#" icon={<FaXTwitter size={20} />} />
         </div>
       </div>
     </header>

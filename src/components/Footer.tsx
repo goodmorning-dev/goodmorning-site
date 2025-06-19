@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FaFacebookF, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
 import footerItems from '@/constants/footerItems'
+import SocialIcon from '@/components/SocialIcon'
 import logo from '@/../public/logo.png'
 
 export default function Footer() {
@@ -29,17 +30,14 @@ export default function Footer() {
 
             <p className="mb-7">hello@goodmorning.dev</p>
 
-            {/* TODO: Fix social media icons (border)*/}
             <div className="flex gap-3">
-              <button className="social-border">
-                <FaFacebookF size={14} />
-              </button>
-              <button className="flex h-10 w-10 items-center justify-center rounded border border-white/30 hover:border-primary">
-                <FaLinkedinIn size={14} />
-              </button>
-              <button className="flex h-10 w-10 items-center justify-center rounded border border-white/30 hover:border-primary">
-                <FaXTwitter size={14} />
-              </button>
+              <SocialIcon href="#" size={40} icon={<FaFacebookF size={14} />} />
+              <SocialIcon href="#" size={40} icon={<FaXTwitter size={14} />} />
+              <SocialIcon
+                href="#"
+                size={40}
+                icon={<FaLinkedinIn size={14} />}
+              />
             </div>
           </div>
 
