@@ -35,7 +35,7 @@ export default function TestimonialsSlider() {
                   <h4 className="text-[25px] font-semibold leading-10 tracking-wide">
                     {testimonial.name}
                   </h4>
-                  <p className="text-textGray text-2xl">
+                  <p className="text-2xl text-textGray">
                     {testimonial.title}, {testimonial.company}
                   </p>
                 </div>
@@ -66,7 +66,10 @@ export default function TestimonialsSlider() {
       </div>
 
       <div className="mt-16 flex justify-end gap-4">
-        <button onClick={handlePrev}>
+        <button
+          onClick={handlePrev}
+          className="transition-transform duration-300 hover:scale-110"
+        >
           <Image
             src="/icons/arrow-left.png"
             alt="Previous"
@@ -75,7 +78,10 @@ export default function TestimonialsSlider() {
             draggable={false}
           />
         </button>
-        <button onClick={handleNext}>
+        <button
+          onClick={handleNext}
+          className="transition-transform duration-300 hover:scale-110"
+        >
           <Image
             src="/icons/arrow-right.png"
             alt="Next"
