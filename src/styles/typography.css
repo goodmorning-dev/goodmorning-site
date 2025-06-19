@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header-1 {
+  @apply text-[70px] font-black leading-[80px];
+}
+
+.header-2 {
+  @apply text-[50px] font-black leading-[60px];
+}
+
+.header-3 {
+  @apply text-[36px] font-bold leading-[46px];
+}
+
+.header-4 {
+  @apply text-[30px] font-extrabold leading-[38px];
+}
+
+.paragraph {
+  @apply text-[22px] font-medium leading-[32px];
+}
