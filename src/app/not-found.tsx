@@ -1,18 +1,30 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { notFoundVariants } from '@/constants/notFoundQuotes'
 import Button from '@/components/Button'
 import { useRouter } from 'next/navigation'
 
 export default function NotFound() {
   const router = useRouter()
-  const [variant, setVariant] = useState(notFoundVariants[0])
+  const [variant, setVariant] = useState<(typeof notFoundVariants)[0] | null>(
+    null,
+  )
 
   useEffect(() => {
     const random = Math.floor(Math.random() * notFoundVariants.length)
     setVariant(notFoundVariants[random])
   }, [])
+
+  if (!variant) return null
+
+  const renderWithBreaks = (text: string) =>
+    text.split('<br />').map((part, i) => (
+      <Fragment key={i}>
+        {part}
+        {i < text.split('<br />').length - 1 && <br />}
+      </Fragment>
+    ))
 
   return (
     <section
@@ -23,10 +35,10 @@ export default function NotFound() {
         backgroundBlendMode: 'darken',
       }}
     >
-      {/* Outlined 404 background */}
       <span
         className="pointer-events-none absolute inset-0 z-0 flex select-none items-center justify-center"
         aria-hidden="true"
+        style={{ top: '-20vh' }}
       >
         <span
           className="text-[18vw] font-black drop-shadow-lg"
@@ -38,17 +50,15 @@ export default function NotFound() {
           404
         </span>
       </span>
-      {/* Foreground content */}
+
       <div className="relative z-10 flex flex-col items-center justify-center">
-        <p className="mb-2 max-w-xl text-center text-4xl font-bold">
-          {variant.headline}
+        <p className="mb-10 text-center text-7xl font-bold">
+          {renderWithBreaks(variant.headline)}
         </p>
-        <p className="mb-8 max-w-xl text-center text-lg">{variant.subtext}</p>
-        <Button
-          variant="primary"
-          className="mt-2"
-          onClick={() => router.push('/')}
-        >
+        <p className="mb-8 max-w-xl text-center text-lg">
+          {renderWithBreaks(variant.subtext)}
+        </p>
+        <Button variant="primary" onClick={() => router.push('/')}>
           {variant.button}
         </Button>
       </div>
