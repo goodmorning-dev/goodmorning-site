@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
-import { useState, ReactNode } from 'react'
+import { useEffect, useRef, useState, ReactNode } from 'react'
 import { FaFacebookF, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
 import { navItems } from '@/constants/navItems'
 import logo from '@/../public/logo.png'
@@ -12,6 +12,25 @@ import logo from '@/../public/logo.png'
 export default function Header() {
   const pathname = usePathname()
   const [openMenu, setOpenMenu] = useState<string | null>(null)
+  const [showHeader, setShowHeader] = useState(true)
+  const lastScrollY = useRef(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY
+
+      if (currentY > lastScrollY.current && currentY > 100) {
+        setShowHeader(false)
+      } else {
+        setShowHeader(true)
+      }
+
+      lastScrollY.current = currentY
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const SocialIcon = ({ icon, href }: { icon: ReactNode; href: string }) => (
     <a
@@ -33,7 +52,12 @@ export default function Header() {
   )
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 bg-[url('/images/gradient-bg.png')] bg-cover bg-center backdrop-blur">
+    <header
+      className={clsx(
+        'fixed left-0 right-0 top-0 z-50 transform bg-[url("/images/gradient-bg.png")] bg-cover bg-center backdrop-blur transition-transform duration-500 ease-in-out',
+        showHeader ? 'translate-y-0' : '-translate-y-full',
+      )}
+    >
       <div className="mx-auto flex h-[110px] max-w-8xl items-center justify-between px-6">
         <Link
           href="/"
