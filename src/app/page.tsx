@@ -61,9 +61,7 @@ export default function HomePage() {
                 A <span className="text-primary">Web3 development</span> company
                 built on real{' '}
               </h2>
-              <span className="gradient-underline header-2">
-                synergy
-              </span>
+              <span className="gradient-underline header-2">synergy</span>
               <p className="text-xl leading-8 tracking-[0.6px]">
                 With over a decade of experience in blockchain technology,
                 goodmorning is dedicated to empowering innovative companies. Our
@@ -100,10 +98,10 @@ export default function HomePage() {
       </section>
 
       {/* Services section */}
-      <section className="bg-black py-36 text-white">
+      <section className="py-36">
         <div className="mx-auto flex max-w-8xl flex-col items-center justify-between gap-24 px-4 md:flex-row">
           <div className="min-w-[34.5rem] space-y-7">
-            <h1 className="relative header-2 leading-[1.2]">
+            <h1 className="header-2 relative leading-[1.2]">
               <span className="relative z-10 inline-block">
                 <span className="gradient-underline">
                   Unlock your potential
@@ -142,15 +140,11 @@ export default function HomePage() {
                   className="h-[240px] rounded-md object-cover"
                 />
                 <div className="flex flex-col justify-center space-y-3 px-[25px] py-[30px]">
-                  <h4
-                    className={`header-4 text-primary`}
-                  >
+                  <h4 className={`header-4 text-primary`}>
                     {card.title}{' '}
                     <span className="text-white">{card.subtitle}</span>
                   </h4>
-                  <p className="text-xl leading-[30px]">
-                    {card.desc}
-                  </p>
+                  <p className="text-xl leading-[30px]">{card.desc}</p>
                 </div>
               </div>
             ))}
@@ -159,7 +153,7 @@ export default function HomePage() {
       </section>
 
       {/* Trusted companies section */}
-      <section className="relative overflow-hidden bg-black py-20">
+      <section className="relative overflow-hidden py-20">
         <div
           className="pointer-events-none absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/galaxy-bg.png')" }}
@@ -167,7 +161,7 @@ export default function HomePage() {
         <div className="mx-auto flex max-w-8xl items-center gap-20">
           <div className="z-10 max-w-sm">
             <h3 className="text-[28px] leading-10 tracking-[0.5px]">
-              <span className="font-bold text-white">Trusted by</span>{' '}
+              <span className="font-bold">Trusted by</span>{' '}
               industry-leading companies worldwide
             </h3>
           </div>
@@ -176,14 +170,14 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials section */}
-      <section className="relative mx-auto max-w-8xl bg-black pt-32">
+      <section className="relative mx-auto max-w-8xl pt-32">
         <div>
-          <h2 className="mb-7 text-center header-2 leading-[1.2]">
+          <h2 className="header-2 mb-7 text-center leading-[1.2]">
             Our Web3 <span className="gradient-underline">client's</span>
             <br />
             <span className="text-primary">success stories</span>
           </h2>
-          <p className="text-center paragraph">
+          <p className="paragraph text-center">
             We bring real results to help you make a real impact
           </p>
         </div>
@@ -210,14 +204,14 @@ export default function HomePage() {
       </div>
 
       {/* Tech knowledge section */}
-      <section className="bg-black pb-32">
+      <section className="pb-32">
         <div className="relative z-20 mx-auto max-w-8xl">
-          <h2 className="mb-7 text-center header-2 tracking-[1.2px]">
+          <h2 className="header-2 mb-7 text-center tracking-[1.2px]">
             <span className="gradient-underline">Empowering</span> your Web3
             journey <br />
             with our <span className="text-primary">tech knowledge</span>
           </h2>
-          <p className="mx-auto max-w-[52rem] text-center paragraph">
+          <p className="paragraph mx-auto max-w-[52rem] text-center">
             Well-established, cutting-edge or experimental technology, we have
             our hands on it. Building on top of Ethereum and all major EVM
             chains, we handle a rich set of tools and magic to bring your
@@ -242,9 +236,7 @@ export default function HomePage() {
                     height={60}
                   />
                 </div>
-                <h3 className="mx-auto mb-4 max-w-xs header-4">
-                  {title}
-                </h3>
+                <h3 className="header-4 mx-auto mb-4 max-w-xs">{title}</h3>
                 <p className="text-xl leading-[1.5] tracking-[0.6px]">
                   {description}
                 </p>
@@ -261,13 +253,11 @@ export default function HomePage() {
       <section className="bg-gray py-36">
         <div className="mx-auto max-w-8xl">
           <div className="text-center">
-            <h2 className="mb-8 header-2 tracking-[1.2px]">
+            <h2 className="header-2 mb-8 tracking-[1.2px]">
               The <span className="text-primary">goodmorning</span>{' '}
               <span className="gradient-underline">team</span>
             </h2>
-            <p className="mb-20 paragraph">
-              of makers, thinkers and explorers
-            </p>
+            <p className="paragraph mb-20">of makers, thinkers and explorers</p>
           </div>
 
           <TeamSection short />
@@ -275,7 +265,7 @@ export default function HomePage() {
       </section>
 
       {/* Call to action section */}
-      <section className="relative overflow-hidden bg-black py-64">
+      <section className="relative overflow-hidden py-64">
         <div
           className="pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
           style={{ backgroundImage: "url('/images/astronaut.png')" }}
@@ -299,11 +289,11 @@ export default function HomePage() {
       <section className="bg-gray py-36">
         <div className="mx-auto max-w-8xl">
           <div className="text-center">
-            <h2 className="mb-8 header-2 tracking-[1.2px]">
+            <h2 className="header-2 mb-8 tracking-[1.2px]">
               <span className="text-primary">Insights</span> from our{' '}
               <span className="gradient-underline">experts</span>
             </h2>
-            <p className="mb-20 paragraph">
+            <p className="paragraph mb-20">
               Dive into our treasure chest of Web3 solutions <br /> and explore
               what's next
             </p>
