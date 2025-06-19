@@ -28,7 +28,7 @@ export default function NotFound() {
 
   return (
     <section
-      className="relative flex min-h-[90vh] flex-col items-center justify-center bg-black bg-cover bg-center text-white"
+      className="relative flex min-h-[90vh] flex-col items-center justify-center bg-black bg-cover bg-center"
       style={{
         backgroundImage: `url(${variant.image})`,
         backgroundColor: 'transparent',
@@ -41,7 +41,7 @@ export default function NotFound() {
         style={{ top: '-20vh' }}
       >
         <span
-          className="text-[18vw] font-black drop-shadow-lg"
+          className="text-[300px] font-black drop-shadow-lg tracking-[33px]"
           style={{
             WebkitTextStroke: '8px rgba(255,255,255,0.3)',
             color: 'transparent',
@@ -52,10 +52,10 @@ export default function NotFound() {
       </span>
 
       <div className="relative z-10 flex flex-col items-center justify-center">
-        <p className="mb-10 text-center text-7xl font-bold">
+        <p className="mb-10 text-center header-1">
           {renderWithBreaks(variant.headline)}
         </p>
-        <p className="mb-8 max-w-xl text-center text-lg">
+        <p className="mb-8 text-center text-2xl">
           {renderWithBreaks(variant.subtext)}
         </p>
         <Button variant="primary" onClick={() => router.push('/')}>
