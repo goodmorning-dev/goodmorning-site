@@ -38,7 +38,7 @@ export default function HomePage() {
 
         <div className="relative z-20">
           <div className="flex flex-col items-center pt-[150px] text-center">
-            <h1 className="text-7xl font-black leading-tight tracking-wide">
+            <h1 className="header-1">
               <span className="text-primary">Web3 development</span> studio
               <br />
               operating <span className="gradient-underline">globally</span>
@@ -57,11 +57,11 @@ export default function HomePage() {
 
           <div className="mx-auto mt-[480px] flex max-w-8xl pb-[150px]">
             <div className="max-w-xl space-y-7">
-              <h2 className="text-5xl font-black leading-snug">
+              <h2 className="header-2">
                 A <span className="text-primary">Web3 development</span> company
                 built on real{' '}
               </h2>
-              <span className="gradient-underline text-5xl font-black leading-snug">
+              <span className="gradient-underline header-2">
                 synergy
               </span>
               <p className="text-xl leading-8 tracking-[0.6px]">
@@ -103,7 +103,7 @@ export default function HomePage() {
       <section className="bg-black py-36 text-white">
         <div className="mx-auto flex max-w-8xl flex-col items-center justify-between gap-24 px-4 md:flex-row">
           <div className="min-w-[34.5rem] space-y-7">
-            <h1 className="relative text-[3.125rem] font-black leading-[1.2] tracking-[1.2px]">
+            <h1 className="relative header-2 leading-[1.2]">
               <span className="relative z-10 inline-block">
                 <span className="gradient-underline">
                   Unlock your potential
@@ -113,7 +113,7 @@ export default function HomePage() {
               <br />a Web3 development firm
             </h1>
 
-            <p className="text-2xl">
+            <p className="paragraph">
               Web3 is full of opportunities – let's make sure you seize them
               with services tailored to your vision.
             </p>
@@ -143,12 +143,12 @@ export default function HomePage() {
                 />
                 <div className="flex flex-col justify-center space-y-3 px-[25px] py-[30px]">
                   <h4
-                    className={`text-3xl font-normal font-semibold text-primary`}
+                    className={`header-4 text-primary`}
                   >
                     {card.title}{' '}
                     <span className="text-white">{card.subtitle}</span>
                   </h4>
-                  <p className="text-xl leading-[30px] tracking-[0.5px]">
+                  <p className="text-xl leading-[30px]">
                     {card.desc}
                   </p>
                 </div>
@@ -178,12 +178,12 @@ export default function HomePage() {
       {/* Testimonials section */}
       <section className="relative mx-auto max-w-8xl bg-black pt-32">
         <div>
-          <h2 className="mb-7 text-center text-[3.125rem] font-black leading-[1.2] tracking-[1.2px]">
+          <h2 className="mb-7 text-center header-2 leading-[1.2]">
             Our Web3 <span className="gradient-underline">client's</span>
             <br />
             <span className="text-primary">success stories</span>
           </h2>
-          <p className="text-center text-2xl">
+          <p className="text-center paragraph">
             We bring real results to help you make a real impact
           </p>
         </div>
@@ -212,12 +212,12 @@ export default function HomePage() {
       {/* Tech knowledge section */}
       <section className="bg-black pb-32">
         <div className="relative z-20 mx-auto max-w-8xl">
-          <h2 className="mb-7 text-center text-[3.125rem] font-black leading-[1.2] tracking-[1.2px]">
+          <h2 className="mb-7 text-center header-2 tracking-[1.2px]">
             <span className="gradient-underline">Empowering</span> your Web3
             journey <br />
             with our <span className="text-primary">tech knowledge</span>
           </h2>
-          <p className="mx-auto max-w-[51rem] text-center text-2xl">
+          <p className="mx-auto max-w-[52rem] text-center paragraph">
             Well-established, cutting-edge or experimental technology, we have
             our hands on it. Building on top of Ethereum and all major EVM
             chains, we handle a rich set of tools and magic to bring your
@@ -242,7 +242,7 @@ export default function HomePage() {
                     height={60}
                   />
                 </div>
-                <h3 className="mx-auto mb-4 max-w-xs text-3xl font-bold">
+                <h3 className="mx-auto mb-4 max-w-xs header-4">
                   {title}
                 </h3>
                 <p className="text-xl leading-[1.5] tracking-[0.6px]">
@@ -261,11 +261,11 @@ export default function HomePage() {
       <section className="bg-gray py-36">
         <div className="mx-auto max-w-8xl">
           <div className="text-center">
-            <h2 className="mb-8 text-5xl font-black tracking-[1.2px]">
+            <h2 className="mb-8 header-2 tracking-[1.2px]">
               The <span className="text-primary">goodmorning</span>{' '}
               <span className="gradient-underline">team</span>
             </h2>
-            <p className="mb-20 text-[22px] tracking-[0.6px]">
+            <p className="mb-20 paragraph">
               of makers, thinkers and explorers
             </p>
           </div>
@@ -281,7 +281,7 @@ export default function HomePage() {
           style={{ backgroundImage: "url('/images/astronaut.png')" }}
         />
         <div className="relative z-10 mx-auto flex max-w-8xl flex-col justify-between md:flex-row">
-          <div className="text-5xl font-bold leading-tight tracking-[1.2px]">
+          <div className="header-2 tracking-[1.2px]">
             Ready to transform <br />
             your vision?
           </div>
@@ -299,11 +299,11 @@ export default function HomePage() {
       <section className="bg-gray py-36">
         <div className="mx-auto max-w-8xl">
           <div className="text-center">
-            <h2 className="mb-8 text-5xl font-black tracking-[1.2px]">
+            <h2 className="mb-8 header-2 tracking-[1.2px]">
               <span className="text-primary">Insights</span> from our{' '}
               <span className="gradient-underline">experts</span>
             </h2>
-            <p className="mb-20 text-[22px] tracking-[0.6px]">
+            <p className="mb-20 paragraph">
               Dive into our treasure chest of Web3 solutions <br /> and explore
               what's next
             </p>

@@ -15,7 +15,7 @@
 }
 
 .header-4 {
-  @apply text-[30px] font-extrabold leading-[38px];
+  @apply text-[30px] font-bold leading-[38px];
 }
 
 .paragraph {
