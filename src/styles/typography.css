@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .header-1 {
-  @apply text-[70px] font-black leading-[80px];
+  @apply text-[70px] font-black leading-[80px] tracking-[1.5px];
 }
 
 .header-2 {
