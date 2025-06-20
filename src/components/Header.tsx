@@ -127,7 +127,7 @@ export default function Header() {
           )}
         </nav>
 
-        <div className="flex items-center gap-2 text-white">
+        <div className="flex items-center gap-2">
           <SocialIcon href="#" icon={<FaFacebookF size={20} />} />
           <SocialIcon href="#" icon={<FaLinkedinIn size={20} />} />
           <SocialIcon href="#" icon={<FaXTwitter size={20} />} />

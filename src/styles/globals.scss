@@ -45,7 +45,7 @@
   }
 
   .nav-link {
-    @apply cursor-pointer text-base font-medium tracking-[1px] text-white;
+    @apply transition cursor-pointer text-base font-medium tracking-[1px] text-white duration-300 hover:text-primary;
   }
 
   .icon-bg {
