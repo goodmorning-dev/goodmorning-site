@@ -161,8 +161,8 @@ export default function HomePage() {
         <div className="mx-auto flex max-w-8xl items-center gap-20">
           <div className="z-10 max-w-sm">
             <h3 className="text-[28px] leading-10 tracking-[0.5px]">
-              <span className="font-bold">Trusted by</span>{' '}
-              industry-leading companies worldwide
+              <span className="font-bold">Trusted by</span> industry-leading
+              companies worldwide
             </h3>
           </div>
           <LogoScroller />
