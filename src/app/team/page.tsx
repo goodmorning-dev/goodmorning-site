@@ -137,10 +137,10 @@ export default function TeamPage() {
 
       {/* TODO: should be bg gray */}
       {/* CTA section */}
-      <section className="relative py-64">
+      <section className="relative py-64 bg-gray">
         <div
           className="pointer-events-none absolute inset-0 bg-contain bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/cta-future-bg.png')" }}
+          style={{ backgroundImage: "url('/images/cta-future-bg-gray.png')" }}
         />
 
         <div className="relative z-10 mx-auto flex max-w-8xl items-center justify-between">
