@@ -1,8 +1,16 @@
 'use client'
 
+import { useState } from 'react'
 import Button from '@/components/Button'
+import steps from '@/constants/successAcordion'
+import { FaPlus, FaMinus } from 'react-icons/fa'
 
 export default function ServicesPage() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
+
+  const toggle = (index: number) => {
+    setOpenIndex((prev) => (prev === index ? null : index))
+  }
   return (
     <main>
       {/* Hero Section */}
@@ -29,6 +37,64 @@ export default function ServicesPage() {
             <Button className="mt-8" variant="primary">
               Get in Touch
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Section */}
+      <section className="bg-gray py-40">
+        <div className="mx-auto grid max-w-8xl grid-cols-1 items-center gap-14 md:grid-cols-2">
+          <div>
+            <img
+              src="/images/accordion-image.png"
+              alt="Our recipe for success"
+              className="w-full rounded-3xl object-cover"
+            />
+          </div>
+
+          <div>
+            <h2 className="header-2 mb-5 !text-[56px]">
+              Our recipe for success
+            </h2>
+            <p className="paragraph mb-8 leading-relaxed">
+              There’s no room for guesswork in the Web3 world. Here’s our
+              battle-tested process that will take your idea from concept to
+              launch:
+            </p>
+
+            <div className="space-y-6">
+              {steps.map((step, index) => (
+                <div key={index}>
+                  <button
+                    onClick={() => toggle(index)}
+                    className="header-3 flex w-full items-center justify-between text-left tracking-[0.86px] focus:outline-none"
+                  >
+                    {step.title}
+                    {openIndex === index ? (
+                      <FaMinus className="text-primary" size={20} />
+                    ) : (
+                      <FaPlus className="text-primary" size={20} />
+                    )}
+                  </button>
+
+                  <div
+                    className={`mt-2 overflow-hidden transition-all duration-300 ease-in-out ${
+                      openIndex === index
+                        ? 'max-h-96 opacity-100'
+                        : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <p className="max-w-[590px] pt-4 text-[19px] italic leading-[26px] text-white/80">
+                      {step.content}
+                    </p>
+                  </div>
+                  <div
+                    className="my-8 w-full border-t"
+                    style={{ borderColor: '#d8d8d8', opacity: 0.3 }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
