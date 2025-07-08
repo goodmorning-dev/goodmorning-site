@@ -1,7 +1,17 @@
+'use client'
+
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Button from '@/components/Button'
+import Input from '@/components/Input'
 
 export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSubmit = () => {
+    setIsSubmitting(true)
+  }
+
   return (
     <>
       {/* Contact Hero */}
@@ -85,7 +95,84 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form TODO*/}
+      {/* Contact Form */}
+      <section className="bg-gray py-40">
+        <div className="mx-auto mb-20 max-w-4xl text-center">
+          <h2 className="header-2 mx-auto max-w-md text-[56px]">
+            <span className="gradient-underline">Looking</span> for your next{' '}
+            <span className="text-primary">big move?</span>
+          </h2>
+          <p className="mt-8 text-xl font-semibold">
+            It&apos;s only a few clicks away.
+          </p>
+          <p className="mx-auto mt-8 max-w-[730px] text-xl">
+            Whether you&apos;re in need of a technical co-founder, an entire
+            team to join forces with, or someone with the know-how to build an
+            MVP from scratch, we&apos;re all ears. Drop us a message and
+            let&apos;s build together. We promise we read
+          </p>
+        </div>
+
+        <form
+          action="https://formsend.xyz/submit-form/gm@goodmorning.dev"
+          method="post"
+          onSubmit={handleSubmit}
+          className="mx-auto max-w-4xl space-y-12"
+        >
+          <div className="grid gap-8 md:grid-cols-2">
+            <Input name="name" label="Your name" required />
+            <Input name="company" label="Company Name / Website URL" />
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            <Input name="email" label="Email" type="email" required />
+            <Input name="phone" label="Phone number" type="tel" required />
+          </div>
+
+          <Input
+            name="iam"
+            label="I am..."
+            type="select"
+            required
+            options={[
+              { label: 'A founder', value: 'founder' },
+              { label: 'An investor', value: 'investor' },
+              { label: 'Looking for a team', value: 'team' },
+            ]}
+          />
+
+          <Input
+            name="message"
+            label="Tell us briefly about your enquiry"
+            type="textarea"
+            required
+          />
+
+          <div className="flex justify-between">
+            <div className="flex items-center gap-6 text-xl">
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                required
+                className="h-[35px] w-[35px] appearance-none rounded-md border border-white/40 transition duration-150 checked:border-primary checked:bg-primary focus:outline-none"
+              />
+              <label htmlFor="terms">
+                I Accept the{' '}
+                <a href="/terms" className="text-primary hover:underline">
+                  Terms
+                </a>
+              </label>
+            </div>
+
+            <div className="text-right">
+              <Button>
+                {isSubmitting ? 'Submitting...' : 'Submit'}
+              </Button>
+            </div>
+          </div>
+        </form>
+      </section>
     </>
   )
 }

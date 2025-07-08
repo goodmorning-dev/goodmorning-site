@@ -25,6 +25,14 @@
   *::after {
     @apply box-border;
   }
+
+  // Hide autofill background color (not sure if this is the best solution)
+  input:-webkit-autofill {
+    transition:
+      background-color 9999s ease-out,
+      color 9999s ease-out;
+    transition-delay: 9999s;
+  }
 }
 
 @layer components {
@@ -45,7 +53,7 @@
   }
 
   .nav-link {
-    @apply transition cursor-pointer text-base font-medium tracking-[1px] text-white duration-300 hover:text-primary;
+    @apply cursor-pointer text-base font-medium tracking-[1px] text-white transition duration-300 hover:text-primary;
   }
 
   .icon-bg {
@@ -82,5 +90,12 @@
       var(--tw-gradient-to)
     );
     --tw-gradient-to: theme('colors.secondary');
+  }
+
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg fill='white' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+    background-size: 1rem;
   }
 }
