@@ -58,7 +58,7 @@ export default function TestimonialsSlider() {
               {testimonial.link && (
                 <Link
                   href={testimonial.link}
-                  className="text-14px mt-10 inline-flex font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white lg:text-[16px]"
+                  className="text-[14px] mt-10 inline-flex font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white lg:text-[16px]"
                 >
                   READ CASE STUDY <span className="ml-3 text-xl">→</span>
                 </Link>
