@@ -17,8 +17,8 @@ export default function FeatureCard({
         <Image src={icon} alt={title} width={52} height={52} />
       </div>
       <div className="text-center lg:text-left">
-        <h3 className="text-3xl font-bold">{title}</h3>
-        <p className="mt-3 text-[1.25rem]">{description}</p>
+        <h3 className="header-4">{title}</h3>
+        <p className="paragraph mt-3 !font-normal lg:text-[20px]">{description}</p>
       </div>
     </div>
   )
