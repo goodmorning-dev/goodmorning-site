@@ -19,6 +19,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
+      if (isMobileOpen) return
       const currentY = window.scrollY
       if (currentY > lastScrollY.current && currentY > 100) {
         setShowHeader(false)
@@ -30,7 +31,7 @@ export default function Header() {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [isMobileOpen])
 
   useEffect(() => {
     if (isMobileOpen) {
@@ -160,7 +161,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMobileOpen && (
-        <div className="absolute left-0 right-0 top-[110px] z-40 flex flex-col gap-4 bg-gray/90 px-6 py-8 shadow-xl backdrop-blur-md transition-all duration-300 lg:hidden">
+        <div className="absolute left-0 right-0 top-[110px] z-40 flex max-h-[calc(100vh-110px)] flex-col gap-4 overflow-y-auto bg-gray px-6 py-8 shadow-xl backdrop-blur-md transition-all duration-300 lg:hidden">
           {navItems.map(({ label, href, children }) =>
             children ? (
               <div key={label} className="mb-4">
@@ -202,7 +203,7 @@ export default function Header() {
             ),
           )}
 
-          <div className="mt-6 flex gap-4 border-t border-white/10 pt-6">
+          <div className="mt-6 flex gap-4 border-t border-white/10 pt-6 pb-10">
             <SocialIcon href="#" icon={<FaFacebookF size={20} />} />
             <SocialIcon href="#" icon={<FaLinkedinIn size={20} />} />
             <SocialIcon href="#" icon={<FaXTwitter size={20} />} />
