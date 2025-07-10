@@ -25,7 +25,7 @@ export default function HomePage() {
             style={{ width: '100%', height: 'auto' }}
           />
         </div>
-        <div className="pointer-events-none absolute inset-0 z-10 mt-60 flex items-center">
+        <div className="pointer-events-none absolute inset-0 z-10 mt-[-200px] flex items-center lg:mt-60">
           <Image
             src="/images/sun.png"
             alt="Sunrise over Earth"
@@ -36,14 +36,14 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="relative z-20">
-          <div className="flex flex-col items-center pt-[150px] text-center">
+        <div className="relative z-20 px-5 lg:px-0">
+          <div className="flex flex-col items-center pt-[50px] text-center lg:pt-[150px]">
             <h1 className="header-1">
               <span className="text-primary">Web3 development</span> studio
               <br />
               operating <span className="gradient-underline">globally</span>
             </h1>
-            <p className="font-regular mt-12 max-w-4xl text-2xl tracking-wide">
+            <p className="paragraph font-regular mt-12 max-w-4xl lg:!text-[24px]">
               As a Web3 development studio, at goodmorning we craft tailored
               blockchain services to help startups and industry leaders navigate
               the ever-evolving Web3 space. Whether you're launching something
@@ -55,24 +55,28 @@ export default function HomePage() {
             </Button>
           </div>
 
-          <div className="mx-auto mt-[480px] flex max-w-8xl pb-[150px]">
-            <div className="max-w-xl space-y-7">
-              <h2 className="header-2">
+          <div className="mx-auto mt-[250px] flex max-w-8xl flex-col items-center gap-12 pb-[150px] lg:mt-[480px] lg:flex-row lg:items-start lg:gap-0">
+            <div className="flex max-w-xl flex-col items-center justify-center space-y-7 lg:items-start lg:justify-start">
+              <h2 className="header-2 text-center lg:text-left">
                 A <span className="text-primary">Web3 development</span> company
                 built on real{' '}
               </h2>
-              <span className="gradient-underline header-2">synergy</span>
-              <p className="text-xl leading-8 tracking-[0.6px]">
+              <span className="gradient-underline header-2 !mt-0">synergy</span>
+              <p className="paragraph font-regular text-center lg:text-left lg:!text-[20px]">
                 With over a decade of experience in blockchain technology,
                 goodmorning is dedicated to empowering innovative companies. Our
                 strong team, with more than 80% tenure, is committed to
                 delivering exceptional Web3 solutions tailored to your needs.
               </p>
-              <Button className="mt-2" outlined variant="secondary">
+              <Button
+                className="m-auto mt-2 lg:m-0"
+                outlined
+                variant="secondary"
+              >
                 About Us
               </Button>
             </div>
-            <div className="ml-10 flex flex-1 justify-center">
+            <div className="ml-0 flex flex-1 justify-center lg:ml-10">
               <div className="max-w-[620px]">
                 <Image
                   src="/images/hero.png"
@@ -100,7 +104,7 @@ export default function HomePage() {
       {/* Services section */}
       <section className="py-36">
         <div className="mx-auto flex max-w-8xl flex-col items-center justify-between gap-24 px-4 md:flex-row">
-          <div className="min-w-[34.5rem] space-y-7">
+          <div className="space-y-7 lg:min-w-[34.5rem]">
             <h1 className="header-2 relative leading-[1.2]">
               <span className="relative z-10 inline-block">
                 <span className="gradient-underline">
@@ -124,7 +128,7 @@ export default function HomePage() {
             {services.map((card, idx) => (
               <div
                 key={idx}
-                className="flex bg-gray"
+                className="flex flex-col bg-gray lg:flex-row"
                 style={{
                   clipPath:
                     'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
@@ -134,17 +138,19 @@ export default function HomePage() {
                   overflow: 'hidden',
                 }}
               >
-                <img
+                <Image
+                  width={240}
+                  height={230}
                   src={card.image}
                   alt="Service"
-                  className="h-[240px] rounded-md object-cover"
+                  className="w-full rounded-md object-cover lg:w-[240px]"
                 />
                 <div className="flex flex-col justify-center space-y-3 px-[25px] py-[30px]">
                   <h4 className={`header-4 text-primary`}>
                     {card.title}{' '}
                     <span className="text-white">{card.subtitle}</span>
                   </h4>
-                  <p className="text-xl leading-[30px]">{card.desc}</p>
+                  <p className="paragraph text-white lg:text-[20px]">{card.desc}</p>
                 </div>
               </div>
             ))}
@@ -158,7 +164,7 @@ export default function HomePage() {
           className="pointer-events-none absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/galaxy-bg.png')" }}
         />
-        <div className="mx-auto flex max-w-8xl items-center gap-20">
+        <div className="mx-auto flex max-w-8xl flex-col items-center gap-20 px-5 text-center lg:flex-row lg:px-0 lg:text-left">
           <div className="z-10 max-w-sm">
             <h3 className="text-[28px] leading-10 tracking-[0.5px]">
               <span className="font-bold">Trusted by</span> industry-leading
@@ -170,7 +176,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials section */}
-      <section className="relative mx-auto max-w-8xl pt-32">
+      <section className="relative mx-auto max-w-8xl px-5 pt-32 lg:px-0">
         <div>
           <h2 className="header-2 mb-7 text-center leading-[1.2]">
             Our Web3 <span className="gradient-underline">client's</span>
@@ -205,7 +211,7 @@ export default function HomePage() {
 
       {/* Tech knowledge section */}
       <section className="pb-32">
-        <div className="relative z-20 mx-auto max-w-8xl">
+        <div className="relative z-20 mx-auto max-w-8xl px-5 lg:px-0">
           <h2 className="header-2 mb-7 text-center tracking-[1.2px]">
             <span className="gradient-underline">Empowering</span> your Web3
             journey <br />
@@ -217,7 +223,7 @@ export default function HomePage() {
             chains, we handle a rich set of tools and magic to bring your
             project to life.
           </p>
-          <div className="mt-20 grid grid-cols-3 gap-10">
+          <div className="mt-20 grid grid-cols-1 gap-10 lg:grid-cols-3">
             {techKnowledge.map(({ icon, title, description }, index) => (
               <div
                 key={index}
@@ -251,7 +257,7 @@ export default function HomePage() {
 
       {/* Team section */}
       <section className="bg-gray py-36">
-        <div className="mx-auto max-w-8xl">
+        <div className="mx-auto max-w-8xl px-5 lg:px-0">
           <div className="text-center">
             <h2 className="header-2 mb-8 tracking-[1.2px]">
               The <span className="text-primary">goodmorning</span>{' '}
@@ -267,16 +273,16 @@ export default function HomePage() {
       {/* Call to action section */}
       <section className="relative overflow-hidden py-64">
         <div
-          className="pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
+          className="pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 lg:opacity-90"
           style={{ backgroundImage: "url('/images/astronaut.png')" }}
         />
-        <div className="relative z-10 mx-auto flex max-w-8xl flex-col justify-between md:flex-row">
+        <div className="lg:items-left relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-5 px-5 text-center md:flex-row lg:gap-0 lg:px-0 lg:text-left">
           <div className="header-2 tracking-[1.2px]">
             Ready to transform <br />
             your vision?
           </div>
           <div className="max-w-lg space-y-6">
-            <p className="text-2xl tracking-[0.7px]">
+            <p className="paragraph lg:!text-[24px]">
               Connect with us today to explore how we can elevate your Web3
               project on new heights.
             </p>
@@ -287,7 +293,7 @@ export default function HomePage() {
 
       {/* Insights section */}
       <section className="bg-gray py-36">
-        <div className="mx-auto max-w-8xl">
+        <div className="mx-auto max-w-8xl px-5 lg:px-0">
           <div className="text-center">
             <h2 className="header-2 mb-8 tracking-[1.2px]">
               <span className="text-primary">Insights</span> from our{' '}

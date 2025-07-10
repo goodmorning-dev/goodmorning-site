@@ -56,8 +56,8 @@ export default function BlogCards() {
               </div>
 
               <div>
-                <h3 className="mb-3 text-3xl font-bold">{post.title}</h3>
-                <p className="text-xl tracking-wide">{post.excerpt}</p>
+                <h3 className="header-4 mb-3">{post.title}</h3>
+                <p className="paragraph lg:text-[20px] lg:tracking-[0.6px]">{post.excerpt}</p>
               </div>
 
               <Link

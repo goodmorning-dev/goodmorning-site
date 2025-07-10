@@ -20,7 +20,7 @@ export default function LogoScroller() {
     drag: true,
     mode: 'free',
     slides: {
-      perView: '4.1',
+      perView: '2',
       spacing: 86,
     },
   })

@@ -7,10 +7,12 @@ import Link from 'next/link'
 import { testimonials } from '@/constants/testimonials'
 
 export default function TestimonialsSlider() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     loop: true,
     slides: {
-      perView: 2,
+      perView: isMobile ? 1 : 2,
       spacing: 70,
     },
   })

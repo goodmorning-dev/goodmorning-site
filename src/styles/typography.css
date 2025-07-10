@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 .header-1 {
-  @apply text-[70px] font-black leading-[80px] tracking-[1.5px];
+  @apply text-[34px] font-black leading-[42px] tracking-[0.5px] sm:text-[70px] sm:leading-[80px] sm:tracking-[1.5px];
 }
 
 .header-2 {
-  @apply text-[50px] font-black leading-[60px] tracking-[1.2px];
+  @apply text-[28px] font-black leading-[36px] tracking-[0.4px] sm:text-[50px] sm:leading-[60px] sm:tracking-[1.2px];
 }
 
 .header-3 {
-  @apply text-[36px] font-bold leading-[46px];
+  @apply text-[24px] font-bold leading-[32px] sm:text-[36px] sm:leading-[46px];
 }
 
 .header-4 {
-  @apply text-[30px] font-bold leading-[38px];
+  @apply text-[20px] font-bold leading-[28px] sm:text-[30px] sm:leading-[38px];
 }
 
 .paragraph {
-  @apply text-[22px] font-medium leading-[32px];
+  @apply text-[16px] font-medium leading-[26px] sm:text-[22px] sm:leading-[32px];
 }
