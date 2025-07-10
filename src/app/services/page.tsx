@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import Button from '@/components/Button'
+import Image from 'next/image'
+import Link from 'next/link'
 import steps from '@/constants/successAcordion'
 import { FaPlus, FaMinus } from 'react-icons/fa'
 
@@ -11,6 +13,7 @@ export default function ServicesPage() {
   const toggle = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index))
   }
+
   return (
     <main>
       {/* Hero Section */}
@@ -41,9 +44,188 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="py-40">
+        <h1 className="header-2 m-auto mb-8 max-w-5xl text-center !text-[56px]">
+          <span className="gradient-underline">Unlock new levels</span> with our
+          blockchain development <span className="text-primary">services</span>
+        </h1>
+        <p className="paragraph m-auto mb-20 max-w-[870px] text-center !font-normal">
+          There's more than one way to get things done. So pick your fighter
+          from our menu and let's bring your ideas to life. Here's a quick look
+          at our service areas.
+        </p>
+        <div className="mx-auto flex max-w-8xl gap-12">
+          <div className="flex w-1/2 flex-col gap-12">
+            <div
+              className="rounded-3xl bg-gray"
+              style={{
+                clipPath:
+                  'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
+                WebkitClipPath:
+                  'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
+                borderRadius: '20px',
+                overflow: 'hidden',
+              }}
+            >
+              <div className="p-8">
+                <h2 className="header-3 mb-5">
+                  Web3 technical cofounder as a service
+                </h2>
+                <p className="paragraph mb-6 !font-normal">
+                  Got the vision but need the technical brainpower? We step in
+                  as your technical co-founder helping you shape your product
+                  strategy, build scalable architecture, and lead your dev team
+                  from day one.
+                </p>
+                <Link
+                  href="#"
+                  className="mt-5 font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
+                >
+                  VIEW MORE <span className="ml-3 text-xl">→</span>
+                </Link>
+              </div>
+              <Image
+                src="/images/service-cofounder.png"
+                width={700}
+                height={400}
+                alt="Web3 technical cofounder as a service"
+                className="w-full object-cover"
+              />
+            </div>
+            <div className="flex items-center gap-12">
+              <div
+                className="w-1/2 rounded-3xl bg-gray p-[30px]"
+                style={{
+                  clipPath:
+                    'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
+                  WebkitClipPath:
+                    'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
+                  borderRadius: '20px',
+                  overflow: 'hidden',
+                }}
+              >
+                <h2 className="header-3 mb-5 !text-[28px]">MVP development</h2>
+                <p className="paragraph mb-6 !text-[19px] !font-normal">
+                  Ideas are cool, but working products are cooler. We build
+                  rock-solid MVPs that get you to market quickly - without
+                  cutting corners.
+                </p>
+                <Link
+                  href="#"
+                  className="mt-5 font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
+                >
+                  VIEW MORE <span className="ml-3 text-xl">→</span>
+                </Link>
+              </div>
+              <div
+                className="w-1/2 rounded-3xl bg-gray p-[30px]"
+                style={{
+                  clipPath:
+                    'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
+                  WebkitClipPath:
+                    'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
+                  borderRadius: '20px',
+                  overflow: 'hidden',
+                }}
+              >
+                <h2 className="header-3 mb-5 !text-[28px]">
+                  Web3 technical auditing
+                </h2>
+                <p className="paragraph mb-6 !text-[19px] !font-normal">
+                  Security is our forte, so you can count on us to deep dive
+                  into your infrastructure and tell you exactly what's solid and
+                  what needs fixing.
+                </p>
+                <Link
+                  href="#"
+                  className="mt-5 font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
+                >
+                  VIEW MORE <span className="ml-3 text-xl">→</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="flex w-1/2 flex-col gap-12">
+            <div
+              className="rounded-3xl bg-gray"
+              style={{
+                clipPath:
+                  'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
+                WebkitClipPath:
+                  'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
+                borderRadius: '20px',
+                overflow: 'hidden',
+              }}
+            >
+              <div className="flex">
+                <Image
+                  src="/images/service-consultancy.png"
+                  width={340}
+                  height={340}
+                  alt="Web3 technical cofounder as a service"
+                  className="w-1/2 w-full object-cover"
+                />
+                <div className="p-8">
+                  <h2 className="header-3 mb-5 !text-[28px]">
+                    Web3 consultancy
+                  </h2>
+                  <p className="paragraph mb-6 !text-[19px] !font-normal">
+                    Finding the Web3 maze a bit overwhelming? Whatever your
+                    struggle, we break it down by offering expert guidance,
+                    adding confidence, and taking away the headaches.
+                  </p>
+                  <Link
+                    href="#"
+                    className="mt-5 font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
+                  >
+                    VIEW MORE <span className="ml-3 text-xl">→</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div
+              className="rounded-3xl bg-gray"
+              style={{
+                clipPath:
+                  'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
+                WebkitClipPath:
+                  'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
+                borderRadius: '20px',
+                overflow: 'hidden',
+              }}
+            >
+              <div className="p-8 pb-14">
+                <h2 className="header-3 mb-5">Staff (team) augmentation</h2>
+                <p className="paragraph mb-6 !font-normal">
+                  If you're in need of an extra pair of hands (or maybe ten),
+                  let us plug in our Web3 devs, engineers and blockchain wizards
+                  right into your team.
+                  <br /> Scaling up feels even better without the long hiring
+                  process.
+                </p>
+                <Link
+                  href="#"
+                  className="mt-5 font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
+                >
+                  VIEW MORE <span className="ml-3 text-xl">→</span>
+                </Link>
+              </div>
+              <Image
+                src="/images/service-augmentation.png"
+                width={700}
+                height={400}
+                alt="Staff (team) augmentation"
+                className="w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Success Section */}
       <section className="bg-gray py-40">
-        <div className="mx-auto grid max-w-8xl grid-cols-1 items-center gap-14 md:grid-cols-2">
+        <div className="mx-auto grid max-w-8xl grid-cols-1 items-center gap-12 md:grid-cols-2">
           <div>
             <img
               src="/images/accordion-image.png"
