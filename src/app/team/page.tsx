@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Button from '@/components/Button'
-import TeamSection from '@/components/home/Team'
+import TeamSection from '@/components/Team'
 import { teamValues } from '@/constants/values'
 
 export default function TeamPage() {
