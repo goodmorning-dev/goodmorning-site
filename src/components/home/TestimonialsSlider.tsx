@@ -4,10 +4,11 @@ import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useIsMobile } from '@/hooks/useIsMobile'
 import { testimonials } from '@/constants/testimonials'
 
 export default function TestimonialsSlider() {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+  const isMobile = useIsMobile()
 
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     loop: true,
@@ -32,12 +33,12 @@ export default function TestimonialsSlider() {
                   'polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%)',
               }}
             >
-              <div className="flex justify-between">
+              <div className="flex flex-col-reverse justify-between lg:flex-row">
                 <div>
-                  <h4 className="text-[25px] font-semibold leading-10 tracking-wide">
+                  <h4 className="text-[20px] font-semibold leading-10 tracking-wide lg:text-[25px]">
                     {testimonial.name}
                   </h4>
-                  <p className="text-2xl text-textGray">
+                  <p className="text-[20px] text-textGray lg:text-[25px]">
                     {testimonial.title}, {testimonial.company}
                   </p>
                 </div>
@@ -50,14 +51,14 @@ export default function TestimonialsSlider() {
                 />
               </div>
 
-              <p className="mt-9 text-[26px] italic leading-[1.43] tracking-[0.75px]">
+              <p className="paragraph mt-9 italic lg:text-[26px] lg:leading-[1.43] lg:tracking-[0.75px]">
                 “{testimonial.text}”
               </p>
 
               {testimonial.link && (
                 <Link
                   href={testimonial.link}
-                  className="mt-10 inline-flex font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
+                  className="text-14px mt-10 inline-flex font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white lg:text-[16px]"
                 >
                   READ CASE STUDY <span className="ml-3 text-xl">→</span>
                 </Link>

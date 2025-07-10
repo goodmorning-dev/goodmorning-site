@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
+import { useIsMobile } from '@/hooks/useIsMobile'
 
 const logos = [
   '/logos/limechain.png',
@@ -14,7 +15,7 @@ const logos = [
 ]
 
 export default function LogoScroller() {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+  const isMobile = useIsMobile()
 
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     loop: true,
