@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
-import { useEffect, useRef, useState, ReactNode } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { FaFacebookF, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
 import { navItems } from '@/constants/navItems'
 import SocialIcon from '@/components/SocialIcon'
@@ -13,25 +13,36 @@ import logo from '@/../public/logo.png'
 export default function Header() {
   const pathname = usePathname()
   const [openMenu, setOpenMenu] = useState<string | null>(null)
+  const [isMobileOpen, setIsMobileOpen] = useState(false)
   const [showHeader, setShowHeader] = useState(true)
   const lastScrollY = useRef(0)
 
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY
-
       if (currentY > lastScrollY.current && currentY > 100) {
         setShowHeader(false)
       } else {
         setShowHeader(true)
       }
-
       lastScrollY.current = currentY
     }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  useEffect(() => {
+    if (isMobileOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMobileOpen])
 
   return (
     <header
@@ -54,7 +65,8 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="relative flex gap-14">
+        {/* Desktop Navigation */}
+        <nav className="relative hidden gap-14 lg:flex">
           {navItems.map(({ label, href, children }) =>
             children ? (
               <div key={label} className="group relative">
@@ -67,7 +79,6 @@ export default function Header() {
                   <svg
                     className="h-2 w-2 fill-current text-white"
                     viewBox="0 0 10 6"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M1 1L5 5L9 1"
@@ -127,12 +138,77 @@ export default function Header() {
           )}
         </nav>
 
-        <div className="flex items-center gap-2">
+        {/* Social Icons */}
+        <div className="hidden items-center gap-2 lg:flex">
           <SocialIcon href="#" icon={<FaFacebookF size={20} />} />
           <SocialIcon href="#" icon={<FaLinkedinIn size={20} />} />
           <SocialIcon href="#" icon={<FaXTwitter size={20} />} />
         </div>
+
+        {/* Mobile Hamburger */}
+        <button
+          className="z-50 lg:hidden"
+          onClick={() => setIsMobileOpen((prev) => !prev)}
+        >
+          <div className="space-y-1">
+            <div className="h-0.5 w-6 bg-white" />
+            <div className="h-0.5 w-6 bg-white" />
+            <div className="h-0.5 w-6 bg-white" />
+          </div>
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileOpen && (
+        <div className="absolute left-0 right-0 top-[110px] z-40 flex flex-col gap-4 bg-gray/90 px-6 py-8 shadow-xl backdrop-blur-md transition-all duration-300 lg:hidden">
+          {navItems.map(({ label, href, children }) =>
+            children ? (
+              <div key={label} className="mb-4">
+                <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-white/70">
+                  {label}
+                </p>
+                <div className="ml-2 flex flex-col gap-2 border-l border-white/10 pl-4">
+                  {children.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setIsMobileOpen(false)}
+                      className={clsx(
+                        'rounded-lg px-3 py-2 text-white transition-all duration-200',
+                        pathname === item.href
+                          ? 'bg-primary font-medium text-black'
+                          : 'hover:bg-white/10',
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setIsMobileOpen(false)}
+                className={clsx(
+                  'rounded-lg px-3 py-3 text-white transition-all duration-200',
+                  pathname === href
+                    ? 'bg-primary font-medium text-black'
+                    : 'hover:bg-white/10',
+                )}
+              >
+                {label}
+              </Link>
+            ),
+          )}
+
+          <div className="mt-6 flex gap-4 border-t border-white/10 pt-6">
+            <SocialIcon href="#" icon={<FaFacebookF size={20} />} />
+            <SocialIcon href="#" icon={<FaLinkedinIn size={20} />} />
+            <SocialIcon href="#" icon={<FaXTwitter size={20} />} />
+          </div>
+        </div>
+      )}
     </header>
   )
 }
