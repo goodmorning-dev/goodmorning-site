@@ -9,9 +9,25 @@ import { FaPlus, FaMinus } from 'react-icons/fa'
 
 export default function ServicesPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const [closingIndex, setClosingIndex] = useState<number | null>(null)
 
   const toggle = (index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index))
+    if (openIndex === index) {
+      setOpenIndex(null)
+      return
+    }
+
+    if (openIndex !== null) {
+      setClosingIndex(openIndex)
+      setOpenIndex(null)
+
+      setTimeout(() => {
+        setClosingIndex(null)
+        setOpenIndex(index)
+      }, 300)
+    } else {
+      setOpenIndex(index)
+    }
   }
 
   return (
@@ -263,7 +279,9 @@ export default function ServicesPage() {
                     className={`mt-2 overflow-hidden transition-all duration-300 ease-in-out ${
                       openIndex === index
                         ? 'max-h-96 opacity-100'
-                        : 'max-h-0 opacity-0'
+                        : closingIndex === index
+                          ? 'max-h-0 opacity-0'
+                          : 'max-h-0 opacity-0'
                     }`}
                   >
                     <p className="max-w-[590px] pt-4 text-[19px] italic leading-[26px] text-white/80">
