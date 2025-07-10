@@ -14,13 +14,15 @@ const logos = [
 ]
 
 export default function LogoScroller() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     loop: true,
     renderMode: 'performance',
     drag: true,
-    mode: 'free',
+    mode: 'snap',
     slides: {
-      perView: '2',
+      perView: isMobile ? 2 : 4.1,
       spacing: 86,
     },
   })
@@ -29,7 +31,8 @@ export default function LogoScroller() {
     if (
       !slider.current ||
       !slider.current.track ||
-      !slider.current.track.details
+      !slider.current.track.details ||
+      !isMobile
     )
       return
 
