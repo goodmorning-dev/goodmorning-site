@@ -23,7 +23,7 @@ export default function LogoScroller() {
     drag: true,
     mode: 'snap',
     slides: {
-      perView: isMobile ? 2 : 4.1,
+      perView: isMobile ? 2.1 : 4.1,
       spacing: 86,
     },
   })
