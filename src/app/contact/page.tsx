@@ -16,24 +16,24 @@ export default function ContactPage() {
     <>
       {/* Contact Hero */}
       <section
-        className="relative bg-black py-48"
+        className="relative bg-black py-16 lg:py-48"
         style={{
           backgroundImage: "url('/images/contact-planet.png')",
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'left center',
+          backgroundPosition: 'left top',
           backgroundSize: 'contain',
         }}
       >
-        <div className="mx-auto flex max-w-8xl justify-end pr-24">
+        <div className="mx-auto flex max-w-8xl justify-end px-5 text-center lg:!pl-0 lg:!pr-24 lg:text-left">
           <div className="max-w-[560px]">
             <h1 className="header-1 mb-8">GM, frens</h1>
-            <p className="mb-24 max-w-[510px] text-[24px] leading-relaxed">
+            <p className="paragraph mb-24 max-w-[510px] !leading-relaxed lg:text-[24px]">
               <strong>Let us bring your vision to life.</strong> <br />
               Different time zones can’t scare us off. When you need us, we show
               up. Because real partnerships don’t run on a 9-to-5 schedule.
             </p>
 
-            <div className="space-y-16 text-white">
+            <div className="space-y-16 text-left">
               <div className="flex items-start gap-5">
                 <Image
                   src="/icons/email.png"
@@ -42,12 +42,12 @@ export default function ContactPage() {
                   height={56}
                 />
                 <div>
-                  <p className="mb-5 text-[26px] font-semibold">
+                  <p className="header-4 mb-5 lg:text-[26px]">
                     Reach us any time
                   </p>
                   <a
                     href="mailto:hello@goodmorning.dev"
-                    className="text-2xl text-primary hover:underline"
+                    className="paragraph text-primary hover:underline lg:text-[24px]"
                   >
                     hello@goodmorning.dev
                   </a>
@@ -62,12 +62,12 @@ export default function ContactPage() {
                   height={56}
                 />
                 <div>
-                  <p className="mb-5 text-[26px] font-semibold">
+                  <p className="header-4 mb-5 lg:text-[26px]">
                     Find us on Telegram and let’s chat
                   </p>
                   <a
                     href="tel:+359888010203"
-                    className="text-2xl text-primary hover:underline"
+                    className="paragraph text-primary hover:underline lg:text-[24px]"
                   >
                     +(359) 888 010 203
                   </a>
@@ -82,10 +82,10 @@ export default function ContactPage() {
                   height={56}
                 />
                 <div>
-                  <p className="mb-5 text-[26px] font-semibold">
+                  <p className="header-4 mb-5 lg:text-[26px]">
                     Or fill out the form below
                   </p>
-                  <p className="text-2xl">
+                  <p className="paragraph lg:text-[24px]">
                     And we’ll get back to you as soon as we can
                   </p>
                 </div>
@@ -96,7 +96,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="bg-gray py-40">
+      <section className="bg-gray px-5 py-16 lg:px-0 lg:py-40">
         <div className="mx-auto mb-20 max-w-4xl text-center">
           <h2 className="header-2 mx-auto max-w-md text-[56px]">
             <span className="gradient-underline">Looking</span> for your next{' '}
@@ -105,7 +105,7 @@ export default function ContactPage() {
           <p className="mt-8 text-xl font-semibold">
             It&apos;s only a few clicks away.
           </p>
-          <p className="mx-auto mt-8 max-w-[730px] text-xl">
+          <p className="paragraph mx-auto mt-8 max-w-[730px] lg:text-[20px]">
             Whether you&apos;re in need of a technical co-founder, an entire
             team to join forces with, or someone with the know-how to build an
             MVP from scratch, we&apos;re all ears. Drop us a message and
@@ -148,16 +148,16 @@ export default function ContactPage() {
             required
           />
 
-          <div className="flex justify-between">
-            <div className="flex items-center gap-6 text-xl">
+          <div className="flex flex-col justify-between lg:flex-row">
+            <div className="flex items-center gap-2 text-xl lg:gap-6">
               <input
                 type="checkbox"
                 id="terms"
                 name="terms"
                 required
-                className="h-[35px] w-[35px] appearance-none rounded-md border border-white/40 transition duration-150 checked:border-primary checked:bg-primary focus:outline-none"
+                className="h-[25px] w-[25px] appearance-none rounded-md border border-white/40 transition duration-150 checked:border-primary checked:bg-primary focus:outline-none lg:h-[35px] lg:w-[35px]"
               />
-              <label htmlFor="terms">
+              <label htmlFor="terms" className="paragraph lg:text-[20px]">
                 I Accept the{' '}
                 <a href="/terms" className="text-primary hover:underline">
                   Terms
@@ -165,10 +165,8 @@ export default function ContactPage() {
               </label>
             </div>
 
-            <div className="text-right">
-              <Button>
-                {isSubmitting ? 'Submitting...' : 'Submit'}
-              </Button>
+            <div className="mt-10 text-center lg:mt-0 lg:text-right">
+              <Button>{isSubmitting ? 'Submitting...' : 'Submit'}</Button>
             </div>
           </div>
         </form>
