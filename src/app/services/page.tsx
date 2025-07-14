@@ -34,20 +34,20 @@ export default function ServicesPage() {
     <main>
       {/* Hero Section */}
       <section
-        className="relative mx-auto py-52"
+        className="relative mx-auto py-32 lg:py-52"
         style={{
           backgroundImage: "url('/images/services-bg.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="mx-auto flex w-full max-w-8xl items-start justify-between gap-12">
+        <div className="mx-auto flex w-full max-w-8xl flex-col items-start justify-between gap-12 px-5 lg:flex-row lg:px-0">
           <div>
             <h1 className="header-1 max-w-3xl">Web3 development services</h1>
           </div>
 
           <div className="max-w-xl">
-            <p className="max-w-lg text-justify text-2xl tracking-[0.6px]">
+            <p className="paragraph max-w-lg text-justify lg:text-[24px]">
               Build smarter, scale faster with goodmorning - your Web3
               development services company. Explore our blockchain solutions
               designed to bring your ideas to life — from MVPs to full-scale
@@ -61,8 +61,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-40">
-        <h1 className="header-2 m-auto mb-8 max-w-5xl text-center !text-[56px]">
+      <section className="px-5 py-40 lg:px-0">
+        <h1 className="header-2 m-auto mb-8 max-w-5xl text-center lg:!text-[56px]">
           <span className="gradient-underline">Unlock new levels</span> with our
           blockchain development <span className="text-primary">services</span>
         </h1>
@@ -71,8 +71,8 @@ export default function ServicesPage() {
           from our menu and let's bring your ideas to life. Here's a quick look
           at our service areas.
         </p>
-        <div className="mx-auto flex max-w-8xl gap-12">
-          <div className="flex w-1/2 flex-col gap-12">
+        <div className="mx-auto flex max-w-8xl flex-col gap-12 lg:flex-row">
+          <div className="flex flex-col gap-12 lg:w-1/2">
             <div
               className="rounded-3xl bg-gray"
               style={{
@@ -109,9 +109,9 @@ export default function ServicesPage() {
                 className="w-full object-cover"
               />
             </div>
-            <div className="flex items-center gap-12">
+            <div className="flex flex-col items-center gap-12 lg:flex-row">
               <div
-                className="w-1/2 rounded-3xl bg-gray p-[30px]"
+                className="rounded-3xl bg-gray p-[30px] lg:w-1/2"
                 style={{
                   clipPath:
                     'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
@@ -135,7 +135,7 @@ export default function ServicesPage() {
                 </Link>
               </div>
               <div
-                className="w-1/2 rounded-3xl bg-gray p-[30px]"
+                className="rounded-3xl bg-gray p-[30px] lg:w-1/2"
                 style={{
                   clipPath:
                     'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
@@ -162,7 +162,7 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
-          <div className="flex w-1/2 flex-col gap-12">
+          <div className="flex flex-col gap-12 lg:w-1/2">
             <div
               className="rounded-3xl bg-gray"
               style={{
@@ -174,7 +174,7 @@ export default function ServicesPage() {
                 overflow: 'hidden',
               }}
             >
-              <div className="flex">
+              <div className="flex flex-col lg:flex-row">
                 <Image
                   src="/images/service-consultancy.png"
                   width={340}
@@ -240,7 +240,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Success Section */}
-      <section className="bg-gray py-40">
+      <section className="bg-gray px-5 py-16 lg:px-0 lg:py-40">
         <div className="mx-auto grid max-w-8xl grid-cols-1 items-center gap-12 md:grid-cols-2">
           <div>
             <img
@@ -251,7 +251,7 @@ export default function ServicesPage() {
           </div>
 
           <div>
-            <h2 className="header-2 mb-5 !text-[56px]">
+            <h2 className="header-2 mb-5 lg:!text-[56px]">
               Our recipe for success
             </h2>
             <p className="paragraph mb-8 leading-relaxed">
@@ -300,21 +300,22 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA section */}
-      <section className="relative py-64">
+      <section className="relative px-5 py-16 lg:px-0 lg:py-64">
         <div
           className="pointer-events-none absolute inset-0 bg-contain bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/images/cta-future-bg.png')" }}
         />
 
-        <div className="relative z-10 mx-auto flex max-w-8xl items-center justify-between">
+        <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
           <h2 className="header-2 max-w-xl">
+            {' '}
             Let's elevate your
             <br />
             Web3 journey
           </h2>
 
-          <div className="max-w-[500px]">
-            <p className="text-[24px] leading-[1.33] tracking-[0.6px]">
+          <div className="max-w-[500px] text-center lg:text-left">
+            <p className="paragraph leading-[1.33] tracking-[0.6px] lg:text-[24px]">
               Ready to bring your ideas to life? Let's chat and explore how our
               blockchain development services can help you level up in the Web3
               space.
