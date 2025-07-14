@@ -43,7 +43,7 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-8xl px-5 pb-36 pt-12 lg:px-0">
+      <section className="mx-auto max-w-8xl px-5 pb-16 pt-12 lg:px-0 lg:pb-36">
         <div className="mb-32">
           <Image
             src="/images/team-image.png"
@@ -63,7 +63,7 @@ export default function TeamPage() {
             </h2>
           </div>
 
-          <div className="max-w-[640px] text-center text-xl !font-normal lg:text-left">
+          <div className="paragraph max-w-[640px] text-center !font-normal lg:text-left lg:text-[20px]">
             We’re all obsessed with what we do — but we also know that great
             tech isn’t just about clean code, it’s about the minds behind it.
             Collaboration, bold thinking, and radical trust drive everything we
@@ -123,7 +123,7 @@ export default function TeamPage() {
       </section>
 
       {/* Team section */}
-      <section className="px-5 py-36 lg:px-0">
+      <section className="px-5 py-16 lg:px-0 lg:py-36">
         <div className="mx-auto max-w-8xl">
           <div className="text-center">
             <h2 className="header-2 mb-8 tracking-[1.2px]">
@@ -138,13 +138,13 @@ export default function TeamPage() {
       </section>
 
       {/* CTA section */}
-      <section className="relative bg-gray px-5 py-64 lg:px-0">
+      <section className="relative bg-gray px-5 py-16 lg:px-0 lg:py-64">
         <div
           className="pointer-events-none absolute inset-0 bg-contain bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/images/cta-future-bg-gray.png')" }}
         />
 
-        <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
+        <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 text-center lg:flex-row lg:gap-0 lg:text-left">
           <h2 className="header-2 max-w-xl">Let’s build something legendary</h2>
 
           <div className="max-w-[500px]">
