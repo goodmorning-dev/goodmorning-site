@@ -1,58 +1,50 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import clsx from 'clsx'
 import Image from 'next/image'
 import Button from '@/components/Button'
 import web3Cto from '@/constants/web3Cto'
-import { timelineData } from '@/constants/timelineData'
-import { useIsMobile } from '@/hooks/useIsMobile'
+import { ideaToProductSteps } from '@/constants/ideaToProductSteps'
 
 import partnerImg from '@/../public/images/partner.png'
 import testimonialImg from '@/../public/images/service-details-testimonial.png'
 
-interface TimelineItem {
-  year: string
+interface IdeaToProductItem {
+  step: string
   title: string
   description: string
   image: string
 }
 
 export default function ServicesDetailsPage() {
-  const [hasMounted, setHasMounted] = useState(false)
-  const isMobile = useIsMobile()
-
-  const leftColumn = timelineData.filter((_, i) => i % 2 === 0)
-  const rightColumn = timelineData.filter((_, i) => i % 2 !== 0)
-
-  useEffect(() => {
-    setHasMounted(true)
-  }, [])
-
-  const renderItem = (item: TimelineItem, isRight: boolean, index: number) => (
+  const renderItem = (item: IdeaToProductItem, isRight: boolean, index: number) => (
     <div
       key={index}
-      className={`flex flex-col items-start ${isRight ? 'mt-24 items-end text-right' : ''}`}
+      className={clsx(
+        'lg:w-[46%] flex flex-col items-start',
+        isRight && 'mt-24 items-end text-right',
+        index === 1 && 'lg:pr-[100px]',
+        index === 2 && 'lg:pl-[100px]'
+      )}
     >
       <div className="max-w-[520px]">
         <div className="relative mb-5 h-[40px]">
           <div
-            className={`absolute bottom-0 h-[9px] w-[9px] rounded-full bg-primary ${
-              isRight ? 'right-0' : 'left-0'
-            }`}
+            className={`absolute bottom-0 h-[9px] w-[9px] rounded-full bg-primary ${isRight ? 'right-0' : 'left-0'
+              }`}
           />
           <div
-            className={`absolute h-[35px] w-[1px] bg-primary/80 ${
-              isRight ? 'right-[4px]' : 'left-[4px]'
-            }`}
+            className={`absolute h-[35px] w-[1px] bg-primary/80 ${isRight ? 'right-[4px]' : 'left-[4px]'
+              }`}
           />
           <div
-            className={`absolute bottom-[40px] h-[1px] w-full bg-gradient-to-r from-transparent to-primary/80 lg:w-[500px] ${
-              isRight ? 'right-[4px]' : 'left-[4px] rotate-180'
-            }`}
+            className={`absolute bottom-[40px] h-[1px] w-full bg-gradient-to-r from-transparent to-primary/80 lg:w-[500px] ${isRight ? 'right-[4px]' : 'left-[4px] rotate-180'
+              }`}
           />
         </div>
         <h3 className="text-[40px] font-extrabold tracking-wider text-primary">
-          {item.year}
+          {item.step}
         </h3>
         <h4 className="header-4 mt-4">{item.title}</h4>
         <p className="mt-4 text-lg leading-8 tracking-[0.6px]">
@@ -62,7 +54,7 @@ export default function ServicesDetailsPage() {
       <div className="mt-6 w-full max-w-[500px]">
         <Image
           src={item.image}
-          alt={`Year ${item.year}`}
+          alt={`${item.step}`}
           width={500}
           height={300}
           className="w-full rounded-xl object-cover"
@@ -277,37 +269,25 @@ export default function ServicesDetailsPage() {
       <section className="relative z-10 bg-black px-5 pb-40 pt-36 text-white">
         <div className="mb-24 text-center">
           <h2 className="header-2">
-            <span className="gradient-underline">Our journey</span> through
+            <span className="gradient-underline">How we help</span> you go from
             <br />
-            space and <span className="text-primary">time</span>
+            <span className="text-primary">idea to product</span> (and beyond)
           </h2>
           <p className="paragraph mx-auto mt-8 max-w-[870px] !font-normal text-white/80">
-            We've been in the game for over 15 years – navigating shifts and
-            challenges, seizing opportunities, and staying ahead of the curve.
-            Our journey has been fueled by resilience, expertise, but above all
-            else – a truly relentless drive to innovate.
+            Our specialty is making things happen - from concept to scale. With our diverse skill set we provide the strategy and execution to build, launch and grow your product.
           </p>
         </div>
 
         {/* Timeline items */}
-        {hasMounted && (
-          <div
-            className="mx-auto grid max-w-7xl grid-cols-1 gap-x-10 gap-y-20 bg-contain bg-center bg-no-repeat lg:grid-cols-2"
-            style={{ backgroundImage: "url('/images/spiral-bg.png')" }}
-          >
-            {isMobile
-              ? timelineData.map((item, index) =>
-                  renderItem(item, false, index),
-                )
-              : [leftColumn, rightColumn].map((column, colIdx) => (
-                  <div key={colIdx} className="flex flex-col gap-24">
-                    {column.map((item, index) =>
-                      renderItem(item, colIdx === 1, index),
-                    )}
-                  </div>
-                ))}
-          </div>
-        )}
+        <div
+          className="mx-auto flex max-w-8xl flex-wrap justify-center gap-20 bg-contain bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/spiral-bg.png')" }}
+        >
+          {ideaToProductSteps.map((item, index) => {
+            const isRight = index % 2 !== 0
+            return renderItem(item, isRight, index)
+          })}
+        </div>
       </section>
 
       {/* Testimonial section */}
@@ -321,7 +301,7 @@ export default function ServicesDetailsPage() {
               blockchain.”
             </div>
 
-            <div className="mt-8 flex flex-col gap-2 text-left lg:flex-row lg:items-center lg:justify-between">
+            <div className="mt-8 flex gap-2 text-left items-center justify-between">
               <div>
                 <p className="paragraph !font-semibold lg:text-[25px]">
                   Ivo Georgiev
@@ -330,7 +310,7 @@ export default function ServicesDetailsPage() {
                   CEO, Ambire Wallet
                 </p>
               </div>
-              <div className="mt-4 lg:mt-0">
+              <div className="mt-4 w-[100px] lg:w-[150px]">
                 <Image
                   src="/logos/ambire-colored.png"
                   alt="Ambire Logo"
@@ -362,7 +342,7 @@ export default function ServicesDetailsPage() {
         />
 
         <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
-          <h2 className="header-2 max-w-xl">Let’s build something legendary</h2>
+          <h2 className="header-2 max-w-xl text-center lg:text-left">Let’s build something legendary</h2>
 
           <div className="max-w-[500px] text-center lg:text-left">
             <p className="paragraph leading-[1.33] tracking-[0.6px] lg:text-[24px]">
