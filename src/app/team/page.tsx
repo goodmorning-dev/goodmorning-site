@@ -1,11 +1,13 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import Button from '@/components/Button'
 import TeamSection from '@/components/Team'
 import { teamValues } from '@/constants/values'
 
 export default function TeamPage() {
+  const router = useRouter();
   return (
     <main>
       {/* Hero section */}
@@ -153,7 +155,7 @@ export default function TeamPage() {
               vision. Together, let's make Web3 better, smarter, and way more
               exciting.
             </p>
-            <Button className="mt-9" variant="primary">
+            <Button className="mt-9" variant="primary" onClick={() => router.push('/contact')}>
               Get in touch
             </Button>
           </div>

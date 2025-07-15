@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Button from '@/components/Button'
@@ -18,6 +18,8 @@ interface IdeaToProductItem {
 }
 
 export default function ServicesDetailsPage() {
+  const router = useRouter();
+
   const renderItem = (item: IdeaToProductItem, isRight: boolean, index: number) => (
     <div
       key={index}
@@ -163,7 +165,7 @@ export default function ServicesDetailsPage() {
           </div>
 
           <div className="mt-12 flex justify-center">
-            <Button variant="primary">Contact Us</Button>
+            <Button variant="primary" onClick={() => router.push('/contact')}>Contact Us</Button>
           </div>
         </div>
       </section>
@@ -248,7 +250,7 @@ export default function ServicesDetailsPage() {
                 </p>
               </li>
             </ul>
-            <Button className="mt-20 !text-white" variant="primary">
+            <Button className="mt-20 !text-white" variant="primary" onClick={() => router.push('/contact')}>
               Get in touch
             </Button>
           </div>
@@ -350,7 +352,7 @@ export default function ServicesDetailsPage() {
               vision. Together, let's make Web3 better, smarter, and way more
               exciting.
             </p>
-            <Button className="mt-9" variant="primary">
+            <Button className="mt-9" variant="primary" onClick={() => router.push('/contact')}>
               Get in Touch
             </Button>
           </div>

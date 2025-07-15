@@ -1,5 +1,6 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import Button from '@/components/Button'
 import Image from 'next/image'
@@ -8,6 +9,8 @@ import steps from '@/constants/successAcordion'
 import { FaPlus, FaMinus } from 'react-icons/fa'
 
 export default function ServicesPage() {
+  const router = useRouter()
+
   const [openIndex, setOpenIndex] = useState<number | null>(0)
   const [closingIndex, setClosingIndex] = useState<number | null>(null)
 
@@ -53,7 +56,7 @@ export default function ServicesPage() {
               designed to bring your ideas to life — from MVPs to full-scale
               infrastructure.
             </p>
-            <Button className="mt-8" variant="primary">
+            <Button className="mt-8" variant="primary" onClick={() => router.push('/contact')}>
               Get in Touch
             </Button>
           </div>
@@ -320,7 +323,7 @@ export default function ServicesPage() {
               blockchain development services can help you level up in the Web3
               space.
             </p>
-            <Button className="mt-9" variant="primary">
+            <Button className="mt-9" variant="primary" onClick={() => router.push('/contact')}>
               Contact Us
             </Button>
           </div>

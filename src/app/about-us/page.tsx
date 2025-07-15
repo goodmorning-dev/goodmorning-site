@@ -1,5 +1,6 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -19,7 +20,9 @@ interface TimelineItem {
 
 export default function AboutPage() {
   const [hasMounted, setHasMounted] = useState(false)
+
   const isMobile = useIsMobile()
+  const router = useRouter()
 
   const leftColumn = timelineData.filter((_, i) => i % 2 === 0)
   const rightColumn = timelineData.filter((_, i) => i % 2 !== 0)
@@ -95,7 +98,7 @@ export default function AboutPage() {
               impact – helping visionary teams across the globe build bold,
               decentralized futures.
             </p>
-            <Button className="mt-8" variant="primary">
+            <Button className="mt-8" variant="primary" onClick={() => router.push('/contact')}>
               Get in Touch
             </Button>
           </div>
@@ -265,7 +268,7 @@ export default function AboutPage() {
               Got a project in mind? Let’s chat and see how we can bring it to
               life – faster, smarter, and Web3 ready.
             </p>
-            <Button className="mt-9" variant="primary">
+            <Button className="mt-9" variant="primary" onClick={() => router.push('/contact')}>
               Contact Us
             </Button>
           </div>

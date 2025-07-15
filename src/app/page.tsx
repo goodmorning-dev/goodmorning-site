@@ -1,3 +1,6 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import Button from '@/components/Button'
 import FeatureCard from '@/components/home/FeatureCard'
@@ -11,6 +14,7 @@ import techKnowledge from '@/constants/techKnowledge'
 import knowledgeBg from '@/../public/images/knowledge-bg.png'
 
 export default function HomePage() {
+  const router = useRouter()
   return (
     <div>
       {/* Hero section */}
@@ -50,7 +54,7 @@ export default function HomePage() {
               new or scaling an existing project, we bring the expertise to make
               it happen.
             </p>
-            <Button className="mt-8" variant="primary">
+            <Button className="mt-8" variant="primary" onClick={() => router.push('/contact')}>
               Contact Us
             </Button>
           </div>
@@ -72,6 +76,7 @@ export default function HomePage() {
                 className="m-auto mt-2 lg:m-0"
                 outlined
                 variant="secondary"
+                onClick={() => router.push('/about-us')}
               >
                 About Us
               </Button>
@@ -119,7 +124,7 @@ export default function HomePage() {
               Web3 is full of opportunities – let's make sure you seize them
               with services tailored to your vision.
             </p>
-            <Button variant="secondary" outlined>
+            <Button variant="secondary" outlined onClick={() => router.push('/services')}>
               Explore all services
             </Button>
           </div>
@@ -250,7 +255,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-12 flex justify-center">
-            <Button variant="primary">Get in touch</Button>
+            <Button variant="primary" onClick={() => router.push('/contact')}>Get in touch</Button>
           </div>
         </div>
       </section>
@@ -286,7 +291,7 @@ export default function HomePage() {
               Connect with us today to explore how we can elevate your Web3
               project on new heights.
             </p>
-            <Button>Contact us</Button>
+            <Button onClick={() => router.push('/contact')}>Contact us</Button>
           </div>
         </div>
       </section>
