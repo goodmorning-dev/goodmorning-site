@@ -10,8 +10,8 @@ const footerItems: FooterCategory[] = [
   {
     title: 'Services',
     items: [
-      { label: 'Tech co-founder', href: '/services/technical-co-founder' },
-      { label: 'Web3 consulting', href: '/services/expert-web3-consultancy' },
+      { label: 'Tech co-founder', href: '/services/co-founder' },
+      { label: 'Web3 consulting', href: '/services/web3-consultancy' },
       { label: 'MVP development', href: '/services/mvp-development' },
       { label: 'Staff augmentation', href: '/services/team-augmentation' },
       {
