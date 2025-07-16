@@ -10,23 +10,26 @@ const footerItems: FooterCategory[] = [
   {
     title: 'Services',
     items: [
-      { label: 'Tech co-founder', href: '#' },
-      { label: 'Web3 consulting', href: '#' },
-      { label: 'MVP development', href: '#' },
-      { label: 'Staff augmentation', href: '#' },
-      { label: 'Web3 technical auditing', href: '#' },
-      { label: 'All services', href: '#' },
+      { label: 'Tech co-founder', href: '/services/technical-co-founder' },
+      { label: 'Web3 consulting', href: '/services/expert-web3-consultancy' },
+      { label: 'MVP development', href: '/services/mvp-development' },
+      { label: 'Staff augmentation', href: '/services/team-augmentation' },
+      {
+        label: 'Web3 technical auditing',
+        href: '/services/web3-technical-auditing',
+      },
+      { label: 'All services', href: '/services' },
     ],
   },
   {
     title: 'Company',
     items: [
-      { label: 'About us', href: '#' },
-      { label: 'Team', href: '#' },
-      { label: 'Case Studies', href: '#' },
-      { label: 'Blog', href: '#' },
-      { label: 'Careers', href: '#' },
-      { label: 'Get in touch', href: '#' },
+      { label: 'About us', href: '/about-us' },
+      { label: 'Team', href: '/team' },
+      { label: 'Case Studies', href: '/case-studies' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Get in touch', href: '/contact' },
     ],
   },
 ]
