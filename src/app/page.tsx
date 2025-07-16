@@ -159,9 +159,14 @@ export default function HomePage() {
                         'polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 0 100%)',
                     }}
                   />
-                  <div className="relative z-20 flex max-w-[480px] flex-col justify-center space-y-3 p-[30px] text-white">
-                    <h4 className="header-4">{card.title}</h4>
-                    <p className="paragraph lg:text-[20px]">{card.desc}</p>
+                  <div className="flex items-end justify-between p-[30px]">
+                    <div className="relative z-20 flex max-w-[420px] flex-col justify-center space-y-3 text-white">
+                      <h4 className="header-4">{card.title}</h4>
+                      <p className="paragraph lg:text-[20px]">{card.desc}</p>
+                    </div>
+                    <span className="z-20 font-bold tracking-[2.3px] text-primary transition-colors duration-300 group-hover:text-white">
+                      VIEW MORE <span className="ml-3 text-xl">→</span>
+                    </span>
                   </div>
                 </div>
               </div>
