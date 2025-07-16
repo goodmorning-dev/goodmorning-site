@@ -54,7 +54,11 @@ export default function HomePage() {
               new or scaling an existing project, we bring the expertise to make
               it happen.
             </p>
-            <Button className="mt-8" variant="primary" onClick={() => router.push('/contact')}>
+            <Button
+              className="mt-8"
+              variant="primary"
+              onClick={() => router.push('/contact')}
+            >
               Contact Us
             </Button>
           </div>
@@ -109,7 +113,7 @@ export default function HomePage() {
       {/* Services section */}
       <section className="py-36">
         <div className="mx-auto flex max-w-8xl flex-col items-center justify-between gap-24 px-4 md:flex-row">
-          <div className="space-y-7 lg:min-w-[34.5rem]">
+          <div className="space-y-7 lg:w-[35%] lg:min-w-[34.5rem]">
             <h1 className="header-2 relative leading-[1.2]">
               <span className="relative z-10 inline-block">
                 <span className="gradient-underline">
@@ -124,38 +128,41 @@ export default function HomePage() {
               Web3 is full of opportunities – let's make sure you seize them
               with services tailored to your vision.
             </p>
-            <Button variant="secondary" outlined onClick={() => router.push('/services')}>
+            <Button
+              variant="secondary"
+              outlined
+              onClick={() => router.push('/services')}
+            >
               Explore all services
             </Button>
           </div>
 
-          <div className="flex flex-col gap-9">
+          <div className="flex flex-col gap-9 lg:w-[65%]">
             {services.map((card, idx) => (
               <div
                 key={idx}
-                className="flex flex-col bg-gray lg:flex-row"
-                style={{
-                  clipPath:
-                    'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
-                  WebkitClipPath:
-                    'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
-                  borderRadius: '20px',
-                  overflow: 'hidden',
-                }}
+                onClick={() => router.push(card.link)}
+                className="group relative h-[240px] cursor-pointer overflow-hidden rounded-[25px] transition-all duration-300"
               >
-                <Image
-                  width={240}
-                  height={230}
-                  src={card.image}
-                  alt="Service"
-                  className="w-full rounded-md object-cover lg:w-[240px]"
-                />
-                <div className="flex flex-col justify-center space-y-3 px-[25px] py-[30px]">
-                  <h4 className={`header-4 text-primary`}>
-                    {card.title}{' '}
-                    <span className="text-white">{card.subtitle}</span>
-                  </h4>
-                  <p className="paragraph text-white lg:text-[20px]">{card.desc}</p>
+                <div className="transition-inset absolute inset-[7px] z-0 rounded-[15px] bg-secondary duration-100" />
+
+                <div className="absolute inset-0 z-0 before:absolute before:inset-0 before:z-10 before:rounded-[25px] before:bg-[linear-gradient(to_top,rgba(30,30,30,0.6),transparent)] before:transition-colors before:duration-300 group-hover:before:bg-secondary/80">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    fill
+                    className="group-hover:clip-normal object-cover transition-[clip-path] duration-500 ease-in-out"
+                    style={{
+                      clipPath:
+                        'polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 0 100%)',
+                      WebkitClipPath:
+                        'polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 0 100%)',
+                    }}
+                  />
+                  <div className="relative z-20 flex max-w-[480px] flex-col justify-center space-y-3 p-[30px] text-white">
+                    <h4 className="header-4">{card.title}</h4>
+                    <p className="paragraph lg:text-[20px]">{card.desc}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -255,7 +262,9 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-12 flex justify-center">
-            <Button variant="primary" onClick={() => router.push('/contact')}>Get in touch</Button>
+            <Button variant="primary" onClick={() => router.push('/contact')}>
+              Get in touch
+            </Button>
           </div>
         </div>
       </section>

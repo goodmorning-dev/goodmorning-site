@@ -98,4 +98,15 @@
     background-position: right 1.25rem center;
     background-size: 1rem;
   }
+
+  .clip-normal {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%) !important;
+    -webkit-clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 0,
+      100% 100%,
+      0 100%
+    ) !important;
+  }
 }
