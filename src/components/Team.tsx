@@ -1,3 +1,4 @@
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import team from '@/constants/team'
 import Button from '@/components/Button'
@@ -7,6 +8,7 @@ interface TeamSectionProps {
 }
 
 export default function TeamSection({ short = false }: TeamSectionProps) {
+  const router = useRouter()
   const visibleTeam = short ? team.slice(0, 8) : team
 
   return (
@@ -53,7 +55,12 @@ export default function TeamSection({ short = false }: TeamSectionProps) {
 
       {short && (
         <div className="mt-16 text-center">
-          <Button variant="secondary" outlined background="bg-gray">
+          <Button
+            variant="secondary"
+            outlined
+            background="bg-gray"
+            onClick={() => router.push('/team')}
+          >
             Meet Everyone
           </Button>
         </div>

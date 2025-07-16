@@ -1,9 +1,12 @@
+import { useRouter } from 'next/navigation'
 import blog from '@/constants/blog'
 import Button from '@/components/Button'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function BlogCards() {
+  const router = useRouter()
+
   return (
     <div>
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -57,7 +60,9 @@ export default function BlogCards() {
 
               <div>
                 <h3 className="header-4 mb-3">{post.title}</h3>
-                <p className="paragraph lg:text-[20px] lg:tracking-[0.6px]">{post.excerpt}</p>
+                <p className="paragraph lg:text-[20px] lg:tracking-[0.6px]">
+                  {post.excerpt}
+                </p>
               </div>
 
               <Link
@@ -71,7 +76,12 @@ export default function BlogCards() {
         ))}
       </div>
       <div className="mt-16 text-center">
-        <Button variant="secondary" outlined background="bg-gray">
+        <Button
+          variant="secondary"
+          outlined
+          background="bg-gray"
+          onClick={() => router.push('/blog')}
+        >
           View All
         </Button>
       </div>
