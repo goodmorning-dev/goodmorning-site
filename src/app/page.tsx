@@ -137,12 +137,12 @@ export default function HomePage() {
             </Button>
           </div>
 
-          <div className="flex flex-col gap-9 lg:w-[65%]">
+          <div className="flex w-full flex-col gap-9 lg:w-[65%]">
             {services.map((card, idx) => (
               <div
                 key={idx}
                 onClick={() => router.push(card.link)}
-                className="group relative h-[240px] cursor-pointer overflow-hidden rounded-[25px] transition-all duration-300"
+                className="group relative h-[280px] cursor-pointer overflow-hidden rounded-[25px] transition-all duration-300 lg:h-[240px]"
               >
                 <div className="transition-inset absolute inset-[7px] z-0 rounded-[15px] bg-secondary duration-100" />
 
@@ -159,8 +159,8 @@ export default function HomePage() {
                         'polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 0 100%)',
                     }}
                   />
-                  <div className="flex items-end justify-between p-[30px]">
-                    <div className="relative z-20 flex max-w-[420px] flex-col justify-center space-y-3 text-white">
+                  <div className="flex h-full flex-col justify-between p-[30px] lg:flex-row lg:items-end">
+                    <div className="relative z-20 flex max-w-[95%] lg:max-w-[420px] flex-col justify-center space-y-3 text-white">
                       <h4 className="header-4">{card.title}</h4>
                       <p className="paragraph lg:text-[20px]">{card.desc}</p>
                     </div>
