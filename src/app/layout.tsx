@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 export const metadata = {
   title: 'GoodMorning',
   description: 'Web3 development studio',
+  robots: 'noindex, nofollow'
 }
 
 export default function RootLayout({
