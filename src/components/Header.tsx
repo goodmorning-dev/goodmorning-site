@@ -15,6 +15,9 @@ export default function Header() {
   const [openMenu, setOpenMenu] = useState<string | null>(null)
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const [showHeader, setShowHeader] = useState(true)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(
+    'Services',
+  )
   const lastScrollY = useRef(0)
 
   useEffect(() => {
@@ -141,9 +144,18 @@ export default function Header() {
 
         {/* Social Icons */}
         <div className="hidden items-center gap-2 lg:flex">
-          <SocialIcon href="#" icon={<FaFacebookF size={20} />} />
-          <SocialIcon href="#" icon={<FaLinkedinIn size={20} />} />
-          <SocialIcon href="#" icon={<FaXTwitter size={20} />} />
+          <SocialIcon
+            href="https://www.facebook.com/goodmorningdevs"
+            icon={<FaFacebookF size={20} />}
+          />
+          <SocialIcon
+            href="https://www.linkedin.com/company/goodmorningdevs"
+            icon={<FaLinkedinIn size={20} />}
+          />
+          <SocialIcon
+            href="https://x.com/goodmorningdevs"
+            icon={<FaXTwitter size={20} />}
+          />
         </div>
 
         {/* Mobile Hamburger */}
@@ -161,52 +173,93 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMobileOpen && (
-        <div className="absolute left-0 right-0 top-[110px] z-40 flex max-h-[calc(100vh-110px)] flex-col gap-4 overflow-y-auto bg-gray px-6 py-8 shadow-xl backdrop-blur-md transition-all duration-300 lg:hidden">
-          {navItems.map(({ label, href, children }) =>
-            children ? (
-              <div key={label} className="mb-4">
-                <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-white/70">
-                  {label}
-                </p>
-                <div className="ml-2 flex flex-col gap-2 border-l border-white/10 pl-4">
-                  {children.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setIsMobileOpen(false)}
+        <div className="fixed inset-0 top-[110px] z-40 flex h-[calc(100vh-110px)] flex-col justify-between overflow-y-auto bg-gray px-6 py-8 shadow-xl backdrop-blur-md transition-all duration-300 lg:hidden">
+          <div>
+            {navItems.map(({ label, href, children }) =>
+              children ? (
+                <div key={label} className="mb-2 py-3">
+                  <button
+                    onClick={() =>
+                      setActiveDropdown((prev) =>
+                        prev === label ? null : label,
+                      )
+                    }
+                    className="flex w-full items-center justify-between text-left text-sm font-semibold uppercase tracking-wide text-white/70"
+                  >
+                    <span>{label}</span>
+                    <svg
                       className={clsx(
-                        'rounded-lg px-3 py-2 text-white transition-all duration-200',
-                        pathname === item.href
-                          ? 'bg-primary font-medium text-black'
-                          : 'hover:bg-white/10',
+                        'h-4 w-4 transform transition-transform duration-200',
+                        activeDropdown === label && 'rotate-180',
                       )}
+                      viewBox="0 0 10 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setIsMobileOpen(false)}
-                className={clsx(
-                  'rounded-lg px-3 py-3 text-white transition-all duration-200',
-                  pathname === href
-                    ? 'bg-primary font-medium text-black'
-                    : 'hover:bg-white/10',
-                )}
-              >
-                {label}
-              </Link>
-            ),
-          )}
+                      <path
+                        d="M1 1L5 5L9 1"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </button>
 
-          <div className="mt-6 flex gap-4 border-t border-white/10 pt-6 pb-10">
-            <SocialIcon href="#" icon={<FaFacebookF size={20} />} />
-            <SocialIcon href="#" icon={<FaLinkedinIn size={20} />} />
-            <SocialIcon href="#" icon={<FaXTwitter size={20} />} />
+                  {activeDropdown === label && (
+                    <div className="ml-2 mt-2 flex flex-col gap-2 border-l border-white/10 pl-4">
+                      {children.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => {
+                            setIsMobileOpen(false)
+                            setActiveDropdown(null)
+                          }}
+                          className={clsx(
+                            'rounded-lg px-3 py-2 text-white transition-all duration-200',
+                            pathname === item.href
+                              ? 'bg-primary font-medium text-black'
+                              : 'hover:bg-white/10',
+                          )}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setIsMobileOpen(false)}
+                  className={clsx(
+                    'block rounded-lg px-3 py-3 text-white transition-all duration-200',
+                    pathname === href
+                      ? 'bg-primary font-medium text-black'
+                      : 'hover:bg-white/10',
+                  )}
+                >
+                  {label}
+                </Link>
+              ),
+            )}
+          </div>
+
+          {/* Sticky Social Icons Bottom */}
+          <div className="mt-auto flex gap-4 border-t border-white/10 pb-12 pt-6">
+            <SocialIcon
+              href="https://www.facebook.com/goodmorningdevs"
+              icon={<FaFacebookF size={20} />}
+            />
+            <SocialIcon
+              href="https://www.linkedin.com/company/goodmorningdevs/"
+              icon={<FaLinkedinIn size={20} />}
+            />
+            <SocialIcon
+              href="https://x.com/goodmorningdevs"
+              icon={<FaXTwitter size={20} />}
+            />
           </div>
         </div>
       )}
