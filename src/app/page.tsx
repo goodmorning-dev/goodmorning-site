@@ -9,6 +9,7 @@ import TeamSection from '@/components/Team'
 import Blog from '@/components/Blog'
 import TestimonialsSlider from '@/components/home/TestimonialsSlider'
 import ReadMoreLink from '@/components/ReadMoreLink'
+import BubblesBackground from '@/components/BubblesBackground'
 import features from '@/constants/features'
 import services from '@/constants/services'
 import techKnowledge from '@/constants/techKnowledge'
@@ -172,6 +173,8 @@ export default function HomePage() {
                     />
                   </div>
                 </div>
+
+                <BubblesBackground className="opacity-0 group-hover:opacity-100" />
               </div>
             ))}
           </div>

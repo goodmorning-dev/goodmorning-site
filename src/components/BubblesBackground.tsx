@@ -1,8 +1,15 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import clsx from 'clsx'
 
-export default function BubblesBackground() {
+interface BubblesBackgroundProps {
+  className?: string
+}
+
+export default function BubblesBackground({
+  className,
+}: BubblesBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -56,7 +63,10 @@ export default function BubblesBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 z-0 h-full w-full"
+      className={clsx(
+        'absolute inset-0 z-0 h-full w-full transition-opacity duration-500 ease-in-out',
+        className,
+      )}
       style={{
         pointerEvents: 'none',
         borderRadius: 'inherit',
