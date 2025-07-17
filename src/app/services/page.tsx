@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import Button from '@/components/Button'
+import ReadMoreLink from '@/components/ReadMoreLink'
 import Image from 'next/image'
 import Link from 'next/link'
 import steps from '@/app/services/constants/successAcordion'
@@ -56,7 +57,11 @@ export default function ServicesPage() {
               designed to bring your ideas to life — from MVPs to full-scale
               infrastructure.
             </p>
-            <Button className="mt-8" variant="primary" onClick={() => router.push('/contact')}>
+            <Button
+              className="mt-8"
+              variant="primary"
+              onClick={() => router.push('/contact')}
+            >
               Get in Touch
             </Button>
           </div>
@@ -97,12 +102,7 @@ export default function ServicesPage() {
                   strategy, build scalable architecture, and lead your dev team
                   from day one.
                 </p>
-                <Link
-                  href="#"
-                  className="mt-5 font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
-                >
-                  VIEW MORE <span className="ml-3 text-xl">→</span>
-                </Link>
+                <ReadMoreLink className="mt-5" href="#" label="VIEW MORE" />
               </div>
               <Image
                 src="/images/service-cofounder.png"
@@ -130,12 +130,7 @@ export default function ServicesPage() {
                   rock-solid MVPs that get you to market quickly - without
                   cutting corners.
                 </p>
-                <Link
-                  href="#"
-                  className="mt-5 font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
-                >
-                  VIEW MORE <span className="ml-3 text-xl">→</span>
-                </Link>
+                <ReadMoreLink className="mt-5" href="#" label="VIEW MORE" />
               </div>
               <div
                 className="rounded-3xl bg-gray p-[30px] lg:w-1/2"
@@ -156,12 +151,7 @@ export default function ServicesPage() {
                   into your infrastructure and tell you exactly what's solid and
                   what needs fixing.
                 </p>
-                <Link
-                  href="#"
-                  className="mt-5 font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
-                >
-                  VIEW MORE <span className="ml-3 text-xl">→</span>
-                </Link>
+                <ReadMoreLink className="mt-5" href="#" label="VIEW MORE" />
               </div>
             </div>
           </div>
@@ -194,12 +184,7 @@ export default function ServicesPage() {
                     struggle, we break it down by offering expert guidance,
                     adding confidence, and taking away the headaches.
                   </p>
-                  <Link
-                    href="#"
-                    className="mt-5 font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
-                  >
-                    VIEW MORE <span className="ml-3 text-xl">→</span>
-                  </Link>
+                  <ReadMoreLink className="mt-5" href="#" label="VIEW MORE" />
                 </div>
               </div>
             </div>
@@ -223,12 +208,7 @@ export default function ServicesPage() {
                   <br /> Scaling up feels even better without the long hiring
                   process.
                 </p>
-                <Link
-                  href="#"
-                  className="mt-5 font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
-                >
-                  VIEW MORE <span className="ml-3 text-xl">→</span>
-                </Link>
+                <ReadMoreLink className="mt-5" href="#" label="VIEW MORE" />
               </div>
               <Image
                 src="/images/service-augmentation.png"
@@ -323,7 +303,11 @@ export default function ServicesPage() {
               blockchain development services can help you level up in the Web3
               space.
             </p>
-            <Button className="mt-9" variant="primary" onClick={() => router.push('/contact')}>
+            <Button
+              className="mt-9"
+              variant="primary"
+              onClick={() => router.push('/contact')}
+            >
               Contact Us
             </Button>
           </div>

@@ -3,9 +3,9 @@
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import clsx from 'clsx'
 import Button from '@/components/Button'
+import ReadMoreLink from '@/components/ReadMoreLink'
 import { web3Impact } from '@/app/about-us/constants/web3Impact'
 import { timelineData } from '@/app/about-us/constants/timelineData'
 import { useIsMobile } from '@/hooks/useIsMobile'
@@ -98,7 +98,11 @@ export default function AboutPage() {
               impact – helping visionary teams across the globe build bold,
               decentralized futures.
             </p>
-            <Button className="mt-8" variant="primary" onClick={() => router.push('/contact')}>
+            <Button
+              className="mt-8"
+              variant="primary"
+              onClick={() => router.push('/contact')}
+            >
               Get in Touch
             </Button>
           </div>
@@ -221,12 +225,11 @@ export default function AboutPage() {
                   {item.subtitle}
                 </p>
 
-                <Link
+                <ReadMoreLink
+                  className="mt-5 lg:text-[16px]"
                   href={item.link}
-                  className="mt-5 inline-block text-sm font-semibold tracking-[1px] text-primary transition-colors duration-300 hover:text-white"
-                >
-                  VIEW PROJECT <span className="ml-3 text-xl">→</span>
-                </Link>
+                  label="VIEW PROJECT"
+                />
               </div>
             </div>
           ))}
@@ -268,7 +271,11 @@ export default function AboutPage() {
               Got a project in mind? Let’s chat and see how we can bring it to
               life – faster, smarter, and Web3 ready.
             </p>
-            <Button className="mt-9" variant="primary" onClick={() => router.push('/contact')}>
+            <Button
+              className="mt-9"
+              variant="primary"
+              onClick={() => router.push('/contact')}
+            >
               Contact Us
             </Button>
           </div>

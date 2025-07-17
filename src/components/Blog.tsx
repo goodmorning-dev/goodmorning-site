@@ -2,7 +2,7 @@ import { useRouter } from 'next/navigation'
 import blog from '@/constants/blog'
 import Button from '@/components/Button'
 import Image from 'next/image'
-import Link from 'next/link'
+import ReadMoreLink from '@/components/ReadMoreLink'
 
 export default function BlogCards() {
   const router = useRouter()
@@ -65,12 +65,11 @@ export default function BlogCards() {
                 </p>
               </div>
 
-              <Link
+              <ReadMoreLink
+                className="mt-5"
                 href={post.link}
-                className="mt-5 font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
-              >
-                READ MORE <span className="ml-3 text-xl">→</span>
-              </Link>
+                label="READ MORE"
+              />
             </div>
           </div>
         ))}

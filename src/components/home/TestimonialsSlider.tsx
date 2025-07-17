@@ -3,7 +3,7 @@
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import Image from 'next/image'
-import Link from 'next/link'
+import ReadMoreLink from '@/components/ReadMoreLink'
 import { useIsMobile } from '@/hooks/useIsMobile'
 import { testimonials } from '@/constants/testimonials'
 
@@ -56,12 +56,11 @@ export default function TestimonialsSlider() {
               </p>
 
               {testimonial.link && (
-                <Link
+                <ReadMoreLink
+                  className="mt-10"
                   href={testimonial.link}
-                  className="text-[14px] mt-10 inline-flex font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white lg:text-[16px]"
-                >
-                  READ CASE STUDY <span className="ml-3 text-xl">→</span>
-                </Link>
+                  label="READ CASE STUDY"
+                />
               )}
             </div>
           </div>

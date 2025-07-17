@@ -8,6 +8,7 @@ import LogoScroller from '@/components/home/LogoScroller'
 import TeamSection from '@/components/Team'
 import Blog from '@/components/Blog'
 import TestimonialsSlider from '@/components/home/TestimonialsSlider'
+import ReadMoreLink from '@/components/ReadMoreLink'
 import features from '@/constants/features'
 import services from '@/constants/services'
 import techKnowledge from '@/constants/techKnowledge'
@@ -160,13 +161,15 @@ export default function HomePage() {
                     }}
                   />
                   <div className="flex h-full flex-col justify-between p-[30px] lg:flex-row lg:items-end">
-                    <div className="relative z-20 flex max-w-[95%] lg:max-w-[420px] flex-col justify-center space-y-3 text-white">
+                    <div className="relative z-20 flex max-w-[95%] flex-col justify-center space-y-3 text-white lg:max-w-[420px]">
                       <h4 className="header-4">{card.title}</h4>
                       <p className="paragraph lg:text-[20px]">{card.desc}</p>
                     </div>
-                    <span className="z-20 font-bold tracking-[2.3px] text-primary transition-colors duration-300 group-hover:text-white">
-                      VIEW MORE <span className="ml-3 text-xl">→</span>
-                    </span>
+                    <ReadMoreLink
+                      className="z-20 group-hover:text-white"
+                      href=""
+                      label="VIEW MORE"
+                    />
                   </div>
                 </div>
               </div>

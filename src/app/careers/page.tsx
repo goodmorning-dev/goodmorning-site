@@ -10,6 +10,7 @@ import TestimonialsSlider from './components/GallerySlider'
 import Input from '@/components/Input'
 import features from './constants/features'
 import positions from '@/constants/positions'
+import ReadMoreLink from '@/components/ReadMoreLink'
 import { FaPlus, FaMinus } from 'react-icons/fa'
 
 export default function CareersPage() {
@@ -379,12 +380,7 @@ export default function CareersPage() {
                           <p className="paragraph my-4 !font-normal lg:text-[20px]">
                             {job.shortDescription}
                           </p>
-                          <Link
-                            href={job.link}
-                            className="font-bold tracking-[2.3px] text-primary transition-colors duration-300 hover:text-white"
-                          >
-                            READ MORE <span className="ml-3 text-xl">→</span>
-                          </Link>
+                          <ReadMoreLink href={job.link} label="READ MORE" />
                         </div>
                       ))}
                     </div>
