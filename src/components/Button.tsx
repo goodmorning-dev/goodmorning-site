@@ -57,6 +57,27 @@ export default function Button({
         />
       )}
 
+      <span
+        className="pointer-events-none absolute inset-0 z-20 overflow-hidden rounded-md"
+        style={{
+          clipPath,
+          WebkitClipPath: clipPath,
+        }}
+      >
+        <span
+          className={clsx(
+            'absolute left-[-100%] top-1/2 w-[120%] transform opacity-0 blur-sm transition-all duration-700 ease-in-out group-hover:left-[100%] group-hover:opacity-80',
+            isSecondary
+              ? 'bg-gradient-to-r from-transparent via-white to-transparent'
+              : 'bg-gradient-to-r from-transparent via-black to-transparent',
+          )}
+          style={{
+            height: '6px',
+            transform: 'translateY(-50%) rotate(20deg)',
+          }}
+        />
+      </span>
+
       {/* Foreground button content */}
       <span
         className={clsx(
