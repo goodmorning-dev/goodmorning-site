@@ -4,8 +4,8 @@ import { useRouter } from 'next/navigation'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Button from '@/components/Button'
-import web3Cto from '@/constants/web3Cto'
-import { ideaToProductSteps } from '@/constants/ideaToProductSteps'
+import web3Cto from '@/app/services/co-founder/constants/web3Cto'
+import { ideaToProductSteps } from '@/app/services/co-founder/constants/ideaToProductSteps'
 
 import partnerImg from '@/../public/images/partner.png'
 import testimonialImg from '@/../public/images/service-details-testimonial.png'
@@ -18,31 +18,38 @@ interface IdeaToProductItem {
 }
 
 export default function ServicesDetailsPage() {
-  const router = useRouter();
+  const router = useRouter()
 
-  const renderItem = (item: IdeaToProductItem, isRight: boolean, index: number) => (
+  const renderItem = (
+    item: IdeaToProductItem,
+    isRight: boolean,
+    index: number,
+  ) => (
     <div
       key={index}
       className={clsx(
-        'lg:w-[46%] flex flex-col items-start',
+        'flex flex-col items-start lg:w-[46%]',
         isRight && 'mt-24 items-end text-right',
         index === 1 && 'lg:pr-[100px]',
-        index === 2 && 'lg:pl-[100px]'
+        index === 2 && 'lg:pl-[100px]',
       )}
     >
       <div className="max-w-[520px]">
         <div className="relative mb-5 h-[40px]">
           <div
-            className={`absolute bottom-0 h-[9px] w-[9px] rounded-full bg-primary ${isRight ? 'right-0' : 'left-0'
-              }`}
+            className={`absolute bottom-0 h-[9px] w-[9px] rounded-full bg-primary ${
+              isRight ? 'right-0' : 'left-0'
+            }`}
           />
           <div
-            className={`absolute h-[35px] w-[1px] bg-primary/80 ${isRight ? 'right-[4px]' : 'left-[4px]'
-              }`}
+            className={`absolute h-[35px] w-[1px] bg-primary/80 ${
+              isRight ? 'right-[4px]' : 'left-[4px]'
+            }`}
           />
           <div
-            className={`absolute bottom-[40px] h-[1px] w-full bg-gradient-to-r from-transparent to-primary/80 lg:w-[500px] ${isRight ? 'right-[4px]' : 'left-[4px] rotate-180'
-              }`}
+            className={`absolute bottom-[40px] h-[1px] w-full bg-gradient-to-r from-transparent to-primary/80 lg:w-[500px] ${
+              isRight ? 'right-[4px]' : 'left-[4px] rotate-180'
+            }`}
           />
         </div>
         <h3 className="text-[40px] font-extrabold tracking-wider text-primary">
@@ -165,7 +172,9 @@ export default function ServicesDetailsPage() {
           </div>
 
           <div className="mt-12 flex justify-center">
-            <Button variant="primary" onClick={() => router.push('/contact')}>Contact Us</Button>
+            <Button variant="primary" onClick={() => router.push('/contact')}>
+              Contact Us
+            </Button>
           </div>
         </div>
       </section>
@@ -250,7 +259,11 @@ export default function ServicesDetailsPage() {
                 </p>
               </li>
             </ul>
-            <Button className="mt-20 !text-white" variant="primary" onClick={() => router.push('/contact')}>
+            <Button
+              className="mt-20 !text-white"
+              variant="primary"
+              onClick={() => router.push('/contact')}
+            >
               Get in touch
             </Button>
           </div>
@@ -276,7 +289,9 @@ export default function ServicesDetailsPage() {
             <span className="text-primary">idea to product</span> (and beyond)
           </h2>
           <p className="paragraph mx-auto mt-8 max-w-[870px] !font-normal text-white/80">
-            Our specialty is making things happen - from concept to scale. With our diverse skill set we provide the strategy and execution to build, launch and grow your product.
+            Our specialty is making things happen - from concept to scale. With
+            our diverse skill set we provide the strategy and execution to
+            build, launch and grow your product.
           </p>
         </div>
 
@@ -303,7 +318,7 @@ export default function ServicesDetailsPage() {
               blockchain.”
             </div>
 
-            <div className="mt-8 flex gap-2 text-left items-center justify-between">
+            <div className="mt-8 flex items-center justify-between gap-2 text-left">
               <div>
                 <p className="paragraph !font-semibold lg:text-[25px]">
                   Ivo Georgiev
@@ -344,7 +359,9 @@ export default function ServicesDetailsPage() {
         />
 
         <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
-          <h2 className="header-2 max-w-xl text-center lg:text-left">Let’s build something legendary</h2>
+          <h2 className="header-2 max-w-xl text-center lg:text-left">
+            Let’s build something legendary
+          </h2>
 
           <div className="max-w-[500px] text-center lg:text-left">
             <p className="paragraph leading-[1.33] tracking-[0.6px] lg:text-[24px]">
@@ -352,7 +369,11 @@ export default function ServicesDetailsPage() {
               vision. Together, let's make Web3 better, smarter, and way more
               exciting.
             </p>
-            <Button className="mt-9" variant="primary" onClick={() => router.push('/contact')}>
+            <Button
+              className="mt-9"
+              variant="primary"
+              onClick={() => router.push('/contact')}
+            >
               Get in Touch
             </Button>
           </div>

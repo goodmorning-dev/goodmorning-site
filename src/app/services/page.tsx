@@ -5,7 +5,7 @@ import { useState } from 'react'
 import Button from '@/components/Button'
 import Image from 'next/image'
 import Link from 'next/link'
-import steps from '@/constants/successAcordion'
+import steps from '@/app/services/constants/successAcordion'
 import { FaPlus, FaMinus } from 'react-icons/fa'
 
 export default function ServicesPage() {
