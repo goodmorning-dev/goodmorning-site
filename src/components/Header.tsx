@@ -48,6 +48,18 @@ export default function Header() {
     }
   }, [isMobileOpen])
 
+  useEffect(() => {
+    if (isMobileOpen) {
+      const matchedDropdown = navItems.find((item) =>
+        item.children?.some((child) => child.href === pathname),
+      )
+
+      if (matchedDropdown) {
+        setActiveDropdown(matchedDropdown.label)
+      }
+    }
+  }, [isMobileOpen, pathname])
+
   return (
     <header
       className={clsx(
