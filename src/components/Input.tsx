@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { MdOutlineFileUpload } from 'react-icons/md'
 
 interface InputProps {
   name: string
@@ -13,6 +14,7 @@ interface InputProps {
     | 'textarea'
     | 'select'
     | 'multiselect'
+    | 'upload'
   options?: { label: string; value: string }[]
   required?: boolean
   placeholder?: string
@@ -84,6 +86,39 @@ export default function Input({
         <label htmlFor={name} className={labelClass}>
           {label} {required && '*'}
         </label>
+      </div>
+    )
+  }
+
+  if (type === 'upload') {
+    return (
+      <div className="relative w-full">
+        <label
+          htmlFor={name}
+          className={`${inputClass} flex cursor-pointer items-center justify-between pr-12`}
+        >
+          <span className="truncate">{value || '‎'}</span>
+          <MdOutlineFileUpload className="absolute right-5 h-7 w-7 text-white/80 peer-focus:text-primary" />
+        </label>
+
+        <input
+          id={name}
+          name={name}
+          type="file"
+          required={required}
+          accept=".pdf, .doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
+          onChange={(e) => {
+            const file = e.target.files?.[0]
+            setValue(file?.name || '')
+          }}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+        />
+
+        <span className={labelClass}>
+          {label} {required && '*'}
+        </span>
       </div>
     )
   }
