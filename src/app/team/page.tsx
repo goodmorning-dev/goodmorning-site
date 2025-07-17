@@ -7,7 +7,7 @@ import TeamSection from '@/components/Team'
 import { teamValues } from '@/constants/values'
 
 export default function TeamPage() {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <main>
       {/* Hero section */}
@@ -85,8 +85,8 @@ export default function TeamPage() {
             return (
               <div
                 key={index}
-                className={`flex flex-col-reverse items-center gap-12 lg:flex-row lg:gap-32 ${
-                  !isEven ? 'md:flex-row-reverse' : ''
+                className={`flex flex-col-reverse items-center gap-12 lg:gap-32 ${
+                  isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 }`}
               >
                 <div className="max-w-[650px]">
@@ -155,7 +155,11 @@ export default function TeamPage() {
               vision. Together, let's make Web3 better, smarter, and way more
               exciting.
             </p>
-            <Button className="mt-9" variant="primary" onClick={() => router.push('/contact')}>
+            <Button
+              className="mt-9"
+              variant="primary"
+              onClick={() => router.push('/contact')}
+            >
               Get in touch
             </Button>
           </div>
