@@ -2,6 +2,7 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import team from '@/constants/team'
 import Button from '@/components/Button'
+import BubblesBackground from '@/components/BubblesBackground'
 
 interface TeamSectionProps {
   short?: boolean
@@ -47,6 +48,7 @@ export default function TeamSection({ short = false }: TeamSectionProps) {
               <p className="px-6 text-[24px] leading-[34px] tracking-[0.7px]">
                 {member.hoverText}
               </p>
+              <BubblesBackground />
             </div>
           </div>
         ))}
