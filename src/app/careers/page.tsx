@@ -403,7 +403,7 @@ export default function CareersPage() {
       {/* Join team section */}
       <section className="py-36">
         <div className="mx-auto flex max-w-8xl flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-0">
-          <div className="flex w-1/2 flex-col items-center justify-center space-y-8 lg:items-start lg:justify-start">
+          <div className="px-5 flex w-full flex-col items-center justify-center space-y-8 lg:px-0 lg:w-1/2 lg:items-start lg:justify-start">
             <h2 className="header-2 max-w-2xl text-center lg:text-left">
               <span className="gradient-underline">Join</span> the
               <br /> goodmorning <span className="text-primary">team</span>
