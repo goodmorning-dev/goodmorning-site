@@ -260,9 +260,11 @@ export default function ServicesDetailsPage() {
               </li>
             </ul>
             <Button
-              className="mt-20 !text-white"
+              className="mt-20"
               variant="primary"
               onClick={() => router.push('/contact')}
+              hoverColor='bg-secondary'
+              hoverTextColor='text-white'
             >
               Get in touch
             </Button>

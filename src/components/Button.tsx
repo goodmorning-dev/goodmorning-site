@@ -8,6 +8,8 @@ interface ButtonProps {
   className?: string
   background?: string
   onClick?: () => void
+  hoverColor?: string
+  hoverTextColor?: string
 }
 
 export default function Button({
@@ -17,6 +19,8 @@ export default function Button({
   className,
   background = 'bg-black',
   onClick,
+  hoverColor,
+  hoverTextColor,
 }: ButtonProps) {
   const isSecondary = variant === 'secondary'
   const borderColor = isSecondary ? 'border-secondary' : 'border-primary'
@@ -32,6 +36,14 @@ export default function Button({
 
   const clipPath =
     'polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%)'
+
+  const hoverBgPrimary = hoverColor
+    ? `group-hover:${hoverColor}`
+    : 'group-hover:bg-white'
+
+  const hoverTextPrimary = hoverTextColor
+    ? `group-hover:${hoverTextColor}`
+    : 'group-hover:text-black'
 
   return (
     <button
@@ -85,7 +97,7 @@ export default function Button({
           'rounded-md text-base font-bold uppercase tracking-[2.3px] transition-all duration-300',
           outlined
             ? clsx(background, hoverBgColor)
-            : `${bgColor} text-black ${borderColor} group-hover:bg-white`,
+            : `${bgColor} text-black ${borderColor} ${hoverBgPrimary} ${hoverTextPrimary}`,
         )}
         style={{
           clipPath,
