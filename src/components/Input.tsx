@@ -18,6 +18,8 @@ interface InputProps {
   options?: { label: string; value: string }[]
   required?: boolean
   placeholder?: string
+  value?: string
+  onChange?: (e: React.ChangeEvent<any>) => void
 }
 
 export default function Input({
@@ -27,9 +29,17 @@ export default function Input({
   options = [],
   required = false,
   placeholder = '',
+  value: controlledValue,
+  onChange,
 }: InputProps) {
   const [focused, setFocused] = useState(false)
-  const [value, setValue] = useState('')
+  const [internalValue, setInternalValue] = useState('')
+  const value = controlledValue !== undefined ? controlledValue : internalValue
+
+  const handleChange = (e: React.ChangeEvent<any>) => {
+    onChange?.(e)
+    setInternalValue(e.target.value)
+  }
 
   const isActive = focused || value !== ''
 
@@ -46,7 +56,8 @@ export default function Input({
     placeholder: ' ',
     onFocus: () => setFocused(true),
     onBlur: () => setFocused(false),
-    onChange: (e: React.ChangeEvent<any>) => setValue(e.target.value),
+    onChange: handleChange,
+    value,
   }
 
   if (type === 'textarea') {
@@ -110,7 +121,12 @@ export default function Input({
           className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
           onChange={(e) => {
             const file = e.target.files?.[0]
-            setValue(file?.name || '')
+            const fileName = file?.name || ''
+            setInternalValue(fileName)
+            onChange?.({
+              ...e,
+              target: { ...e.target, value: fileName },
+            })
           }}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
