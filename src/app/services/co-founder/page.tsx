@@ -127,7 +127,7 @@ export default function ServicesDetailsPage() {
         <div className="relative z-20 mx-auto max-w-8xl px-5 lg:px-0">
           <h2 className="header-2 mb-7 text-center tracking-[1.2px]">
             <span className="gradient-underline">Who is</span> the{' '}
-            <span className="text-primary">Web3 CTO</span>
+            <span className="text-primary">Web3 co-founder</span>
             <br /> as a service for?
           </h2>
           <p className="paragraph mx-auto max-w-[52rem] text-center">
