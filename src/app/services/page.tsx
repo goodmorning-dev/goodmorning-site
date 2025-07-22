@@ -51,10 +51,10 @@ export default function ServicesPage() {
           </div>
 
           <div className="max-w-xl">
-            <p className="paragraph max-w-lg text-justify lg:text-[24px]">
+            <p className="paragraph max-w-lg lg:text-[24px]">
               Build smarter, scale faster with goodmorning - your Web3
               development services company. Explore our blockchain solutions
-              designed to bring your ideas to life — from MVPs to full-scale
+              designed to bring your ideas to life - from MVPs to full-scale
               infrastructure.
             </p>
             <Button
