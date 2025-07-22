@@ -86,7 +86,7 @@ export default function CareersPage() {
               With 10+ years in the technological world and a team that has
               stuck together through most of it, we know how to turn ideas into
               game-changing solutions. Our skills, styles, and strengths are in
-              perfect sync, making innova" feel seamless.
+              perfect sync, making innovation feel seamless.
             </p>
             <Button
               className="m-auto mt-2 lg:m-0"
