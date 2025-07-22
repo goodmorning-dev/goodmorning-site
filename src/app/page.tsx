@@ -73,10 +73,12 @@ export default function HomePage() {
               </h2>
               <span className="gradient-underline header-2 !mt-0">synergy</span>
               <p className="paragraph font-regular text-center lg:text-left lg:!text-[20px]">
-                With over a decade of experience in blockchain technology,
-                goodmorning is dedicated to empowering innovative companies. Our
-                strong team, with more than 80% tenure, is committed to
-                delivering exceptional Web3 solutions tailored to your needs.
+                After a decade of building together, we’ve got more than just
+                skills - we’ve got synergy. A crew of thinkers and tech
+                optimists, we thrive on turning complex ideas into real-world
+                solutions. From early-stage MVPs to complex blockchain
+                infrastructure, we bring deep expertise and just the right
+                amount of chaos to push boundaries and build what matters.
               </p>
               <Button
                 className="m-auto mt-2 lg:m-0"
