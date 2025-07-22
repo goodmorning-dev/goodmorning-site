@@ -204,7 +204,7 @@ export default function HomePage() {
       <section className="relative mx-auto max-w-8xl px-5 pt-32 lg:px-0">
         <div>
           <h2 className="header-2 mb-7 text-center leading-[1.2]">
-            Our Web3 <span className="gradient-underline">client's</span>
+            Our Web3 <span className="gradient-underline">clients</span>
             <br />
             <span className="text-primary">success stories</span>
           </h2>
