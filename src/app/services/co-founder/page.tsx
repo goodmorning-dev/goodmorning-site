@@ -309,7 +309,7 @@ export default function ServicesDetailsPage() {
         </div>
       </section>
 
-      {/* Testimonial section */}
+      {/* Testimonial section
       <section className="relative bg-white px-5 py-16 text-black lg:px-0 lg:py-64">
         <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-24">
           <div className="max-w-[730px]">
@@ -340,7 +340,6 @@ export default function ServicesDetailsPage() {
             </div>
           </div>
 
-          {/* Right - Testimonial Image */}
           <div className="text-center lg:text-left">
             <Image
               src={testimonialImg}
@@ -351,7 +350,7 @@ export default function ServicesDetailsPage() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA section */}
       <section className="relative bg-gray px-5 py-16 lg:px-0 lg:py-64">
@@ -362,21 +361,20 @@ export default function ServicesDetailsPage() {
 
         <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
           <h2 className="header-2 max-w-xl text-center lg:text-left">
-            Let’s build something legendary
+            Ready to build what’s next?
           </h2>
 
           <div className="max-w-[500px] text-center lg:text-left">
             <p className="paragraph leading-[1.33] tracking-[0.6px] lg:text-[24px]">
-              We bring the code, the brains, and the energy. You bring the
-              vision. Together, let's make Web3 better, smarter, and way more
-              exciting.
+              If you’re looking for a Web3-savvy tech partner who can think like
+              a founder and build like an engineer, you’re in the right place.
             </p>
             <Button
               className="mt-9"
               variant="primary"
               onClick={() => router.push('/contact')}
             >
-              Get in Touch
+              Let's talk
             </Button>
           </div>
         </div>
