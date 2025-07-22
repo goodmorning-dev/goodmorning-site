@@ -248,7 +248,10 @@ export default function ServicesPage() {
                     onClick={() => toggle(index)}
                     className="header-3 flex w-full items-center justify-between text-left tracking-[0.86px] focus:outline-none"
                   >
-                    {step.title}
+                    <span className="header-3 tracking-[0.86px]">
+                      <span className="text-primary">Step {index + 1}:</span>
+                      <span className="ml-2">{step.title}</span>
+                    </span>
                     {openIndex === index ? (
                       <FaMinus className="text-primary" size={20} />
                     ) : (
