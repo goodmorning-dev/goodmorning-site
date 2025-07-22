@@ -169,7 +169,7 @@ export default function CareersPage() {
             <h2 className="header-3 mb-2">Check out our open positions</h2>
             <p className="paragraph lg:text-[20px]">Become part of our team</p>
           </div>
-          <Button variant="primary" onClick={() => router.push('/careers')}>
+          <Button variant="primary" onClick={() => router.push('#join-form')}>
             Apply Now
           </Button>
         </div>
