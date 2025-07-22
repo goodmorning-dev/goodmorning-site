@@ -33,7 +33,7 @@ export default function CareersPage() {
     }
   }
   return (
-    <main>
+    <main className="scroll-smooth">
       {/* Hero Section */}
       <section
         className="relative mx-auto py-16 lg:py-40"
@@ -46,6 +46,14 @@ export default function CareersPage() {
         <div className="mx-auto flex w-full max-w-8xl flex-col items-center justify-between gap-12 px-5 lg:flex-row">
           <div>
             <h1 className="header-1 max-w-2xl">Are YOU our new teammate?</h1>
+            <Button
+              className="mt-8"
+              variant="secondary"
+              outlined
+              onClick={() => router.push('#join-form')}
+            >
+              See open positions
+            </Button>
           </div>
 
           <div className="max-w-xl">
@@ -396,9 +404,9 @@ export default function CareersPage() {
       </section>
 
       {/* Join team section */}
-      <section className="py-36">
+      <section id="join-form" className="py-36">
         <div className="mx-auto flex max-w-8xl flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-0">
-          <div className="px-5 flex w-full flex-col items-center justify-center space-y-8 lg:px-0 lg:w-1/2 lg:items-start lg:justify-start">
+          <div className="flex w-full flex-col items-center justify-center space-y-8 px-5 lg:w-1/2 lg:items-start lg:justify-start lg:px-0">
             <h2 className="header-2 max-w-2xl text-center lg:text-left">
               <span className="gradient-underline">Join</span> the
               <br /> goodmorning <span className="text-primary">team</span>

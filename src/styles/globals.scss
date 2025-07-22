@@ -9,6 +9,10 @@
 @import '@fontsource/red-hat-display/900.css';
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   html,
   body {
     @apply bg-black font-sans leading-8 text-white;
