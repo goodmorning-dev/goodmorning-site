@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 import { FaFacebookF, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
+import { FaTelegramPlane } from 'react-icons/fa'
 import { navItems } from '@/constants/navItems'
 import SocialIcon from '@/components/SocialIcon'
 import logo from '@/../public/logo.png'
@@ -168,6 +169,10 @@ export default function Header() {
             href="https://x.com/goodmorningdevs"
             icon={<FaXTwitter size={20} />}
           />
+          <SocialIcon
+            href="https://t.me/goranstoyanov"
+            icon={<FaTelegramPlane size={20} />}
+          />
         </div>
 
         {/* Mobile Hamburger */}
@@ -271,6 +276,10 @@ export default function Header() {
             <SocialIcon
               href="https://x.com/goodmorningdevs"
               icon={<FaXTwitter size={20} />}
+            />
+            <SocialIcon
+              href="https://t.me/goranstoyanov"
+              icon={<FaTelegramPlane size={20} />}
             />
           </div>
         </div>
