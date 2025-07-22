@@ -86,7 +86,7 @@ export default function ServicesDetailsPage() {
         <div className="mx-auto flex w-full max-w-8xl flex-col items-start justify-between gap-12 px-5 lg:flex-row lg:px-0">
           <div>
             <h1 className="header-1 max-w-3xl">Web3 technical co-founder</h1>
-            <p className="paragraph mt-8 max-w-lg text-justify lg:text-[24px]">
+            <p className="paragraph mt-8 max-w-lg lg:text-[24px]">
               Transform your vision into reality with hands-on tech leadership
               and execution.
             </p>
@@ -105,12 +105,12 @@ export default function ServicesDetailsPage() {
             </h1>
           </div>
           <div className="max-w-[640px]">
-            <p className="paragraph text-justify">
+            <p className="paragraph">
               Every successful product needs a solid technical backbone - but
               not every founder needs to be a tech expert. That's where we come
               in.
             </p>
-            <p className="paragraph mt-8 text-justify">
+            <p className="paragraph mt-8">
               Think of us as your hands-on Web3 technical co-founder: part CTO,
               part product strategist, part problem-solver. Whether you're
               building your first MVP or navigating complex Web3 infrastructure,
