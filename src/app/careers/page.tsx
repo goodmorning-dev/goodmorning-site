@@ -423,24 +423,26 @@ export default function CareersPage() {
               className="mx-auto w-full space-y-12"
             >
               <Input
-                name="position"
-                label="Choose position"
-                type="select"
+                name="name"
+                label="Your name"
+                type="text"
                 required
-                options={[
-                  { label: 'Front-End Developer', value: 'frontend' },
-                  { label: 'Back-End Developer', value: 'backend' },
-                  { label: 'Full-Stack Developer', value: 'fullstack' },
-                ]}
+                placeholder="Enter your name"
+              />
+              <Input
+                name="email"
+                label="Your email"
+                type="email"
+                required
+                placeholder="Enter your email"
               />
 
               <Input name="cv-modal" label="Upload CV" type="upload" required />
 
               <Input
                 name="message"
-                label="Email / Do you want to share something else with us?"
+                label="Do you want to share something else with us?"
                 type="textarea"
-                required
               />
 
               <div className="flex flex-col">
