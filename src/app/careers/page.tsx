@@ -147,17 +147,6 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Testimonials section */}
-      <section className="relative mx-auto px-5 pb-16 pt-36 lg:px-0">
-        <div>
-          <h2 className="header-2 mb-7 text-center leading-[1.2]">
-            <span className="gradient-underline">Explore</span> our vibrant team{' '}
-            <span className="text-primary">culture</span>
-          </h2>
-        </div>
-        <TestimonialsSlider />
-      </section>
-
       {/* Trusted companies section */}
       <section className="relative overflow-hidden py-20">
         <div
@@ -173,6 +162,17 @@ export default function CareersPage() {
             Apply Now
           </Button>
         </div>
+      </section>
+
+      {/* CTA section */}
+      <section className="relative mx-auto px-5 pb-16 pt-36 lg:px-0">
+        <div>
+          <h2 className="header-2 mb-7 text-center leading-[1.2]">
+            <span className="gradient-underline">Explore</span> our vibrant team{' '}
+            <span className="text-primary">culture</span>
+          </h2>
+        </div>
+        <TestimonialsSlider />
       </section>
 
       {/* Web3 Impact Section */}
