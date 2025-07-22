@@ -107,7 +107,7 @@ export default function ServicesPage() {
                 src="/images/service-cofounder.png"
                 width={700}
                 height={400}
-                alt="Web3 technical cofounder as a service"
+                alt="Web3 technical co-founder as a service"
                 className="w-full object-cover"
               />
             </div>
@@ -171,7 +171,7 @@ export default function ServicesPage() {
                   src="/images/service-consultancy.png"
                   width={340}
                   height={340}
-                  alt="Web3 technical cofounder as a service"
+                  alt="Web3 technical cof-ounder as a service"
                   className="w-1/2 w-full object-cover"
                 />
                 <div className="p-8">
