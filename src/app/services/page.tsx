@@ -5,7 +5,6 @@ import { useState } from 'react'
 import Button from '@/components/Button'
 import ReadMoreLink from '@/components/ReadMoreLink'
 import Image from 'next/image'
-import Link from 'next/link'
 import steps from '@/app/services/constants/successAcordion'
 import { FaPlus, FaMinus } from 'react-icons/fa'
 
