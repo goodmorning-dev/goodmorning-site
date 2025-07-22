@@ -412,7 +412,8 @@ export default function CareersPage() {
               <br /> goodmorning <span className="text-primary">team</span>
             </h2>
             <p className="paragraph !my-6 lg:text-[20px]">
-              You are only 3 clicks away
+              Not finding the job that best suits you? Fill out the form below
+              and tell us what skills you have to complement our team.
             </p>
             <form
               id="upload"
