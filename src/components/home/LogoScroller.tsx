@@ -7,11 +7,9 @@ import { useIsMobile } from '@/hooks/useIsMobile'
 
 const logos = [
   '/logos/limechain.png',
-  '/logos/kinetik.png',
   '/logos/ambire.png',
-  '/logos/limechain.png',
-  '/logos/kinetik.png',
-  '/logos/ambire.png',
+  '/logos/adex.png',
+  '/logos/incentivai.png',
 ]
 
 export default function LogoScroller() {
@@ -70,7 +68,12 @@ export default function LogoScroller() {
           key={i}
           className="keen-slider__slide flex w-auto items-center justify-center"
         >
-          <img src={src} height={54} alt={`Logo ${i}`} />
+          <img
+            src={src}
+            height={54}
+            alt={`Logo ${i}`}
+            className="brightness-0 invert"
+          />
         </div>
       ))}
     </div>
