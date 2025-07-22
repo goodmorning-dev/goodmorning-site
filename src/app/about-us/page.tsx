@@ -265,6 +265,7 @@ export default function AboutPage() {
                 <ReadMoreLink
                   className="mt-5 lg:text-[16px]"
                   href={item.link}
+                  nofollow
                   label="VIEW PROJECT"
                 />
               </div>
