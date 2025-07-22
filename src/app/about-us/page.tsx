@@ -93,7 +93,7 @@ export default function AboutPage() {
           </div>
 
           <div className="max-w-xl">
-            <p className="paragraph max-w-lg text-justify lg:text-[24px]">
+            <p className="paragraph max-w-lg lg:text-[24px]">
               At goodmorning, we turn blockchain technology into real-world
               impact – helping visionary teams across the globe build bold,
               decentralized futures.
