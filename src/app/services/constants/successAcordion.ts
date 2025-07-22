@@ -1,6 +1,6 @@
 const successSteps = [
   {
-    title: 'Lion & Strategy Development',
+    title: 'Consultation & Strategy Development',
     content:
       'We start with a deep dive into your goals, product vision, and analysis of every hidden corner of your market. No fluff – just clear thinking and honest conversations to map out a game plan that’s actually doable.',
   },
