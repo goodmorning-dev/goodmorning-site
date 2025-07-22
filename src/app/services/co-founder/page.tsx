@@ -85,7 +85,7 @@ export default function ServicesDetailsPage() {
       >
         <div className="mx-auto flex w-full max-w-8xl flex-col items-start justify-between gap-12 px-5 lg:flex-row lg:px-0">
           <div>
-            <h1 className="header-1 max-w-3xl">Web3 technical cofounder</h1>
+            <h1 className="header-1 max-w-3xl">Web3 technical co-founder</h1>
             <p className="paragraph mt-8 max-w-lg text-justify lg:text-[24px]">
               Transform your vision into reality with hands-on tech leadership
               and execution.
