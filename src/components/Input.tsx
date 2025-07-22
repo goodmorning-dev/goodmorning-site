@@ -80,7 +80,6 @@ export default function Input({
         <select
           {...commonProps}
           multiple={type === 'multiselect'}
-          defaultValue={type === 'multiselect' ? [] : ''}
           className={`${inputClass} appearance-none`}
         >
           {type !== 'multiselect' && (
