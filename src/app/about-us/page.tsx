@@ -58,9 +58,46 @@ export default function AboutPage() {
           {item.year}
         </h3>
         <h4 className="header-4 mt-4">{item.title}</h4>
-        <p className="mt-4 text-lg leading-8 tracking-[0.6px]">
-          {item.description}
-        </p>
+        <div className="mt-4 text-lg leading-8 tracking-[0.6px]">
+          {item.year === '2012' ? (
+            <>
+              We launched DevLabs, our playground for cutting-edge tech, and
+              became early adopters of TypeScript, Node.js, React, and React
+              Native. We collaborated with major players like E.ON and a Fortune
+              500 hospitality client, building internal data visualization
+              tools. And our in-house spin-offs,{' '}
+              <a
+                href="https://ehr.bg"
+                className="text-primary underline transition hover:opacity-80"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                eHR.bg
+              </a>{' '}
+              and{' '}
+              <a
+                href="https://legitsign.com"
+                className="text-primary underline transition hover:opacity-80"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LegitSign.com
+              </a>{' '}
+              grew into full-fledged companies.
+            </>
+          ) : item.year === '2021' ? (
+            <>
+              With a decade of experience and a team stacked with extensive
+              know-how looking for the next big thing, we saw the future – and
+              it was blockchain. We rebranded as{' '}
+              <span className="text-primary">goodmorning</span> – a Web3
+              development company – and set out on our current mission to build,
+              scale, and secure the next generation of decentralized tech.
+            </>
+          ) : (
+            <>{item.description}</>
+          )}
+        </div>
       </div>
       <div className="mt-6 w-full max-w-[500px]">
         <Image

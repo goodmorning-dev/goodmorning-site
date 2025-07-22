@@ -10,21 +10,21 @@ export const timelineData = [
     year: '2009',
     title: 'Reinventing ourselves',
     description:
-      'With the financial crisis reshaping industries, we embraced the challenge and made a pivot to the first online insurance brokerage, or shall we say marketplace. And it was just as much of a game-changer back then as it remains even to this day.',
+      'We built the first online insurance brokerage - a game-changer then, and still relevant today. That pivot taught us how to thrive in chaos and rethink what’s possible.',
     image: '/images/about/2009.png',
   },
   {
     year: '2010',
     title: 'New horizons',
     description:
-      'At that time we already had a pretty good development team. Our hunger for growth pushed us towards outsourcing and we began working with U.S. clients on high-stakes projects. As our expertise grew, so did our partnerships - with visionary startups, tech disruptors, and even Y Combinator-backed companies.',
+      'Our development team grew fast. With solid skills and serious ambition, we began partnering with U.S. clients on high-stakes projects - including Y Combinator-backed startups and tech disruptors.',
     image: '/images/about/2010.png',
   },
   {
     year: '2012',
     title: 'Scaling innovation',
     description:
-      'We went all-in on Saas, partnering with major players in the game like E.ON and other industry leaders (some now worth millions, though NDAs keep us quiet). With a team of top-tier engineers, we launched DevLabs, pioneering Web2 innovation and becoming early adopters of TypeScript, React, React Native, Rust and other tech stacks. Our drive to push tech forward led to building in-house projects like eHR.bg and LegitSign.com which are now fully functioning companies - proof of our ambition to create lasting solutions.',
+      'We launched DevLabs, our playground for cutting-edge tech, and became early adopters of TypeScript, Node.js, React, and React Native. We collaborated with major players like E.ON and a Fortune 500 hospitality client, building internal data visualization tools. And our in-house spin-offs, eHR.bg and LegitSign.com, grew into full-fledged companies.',
     image: '/images/about/2012.png',
   },
   {
