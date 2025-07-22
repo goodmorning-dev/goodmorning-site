@@ -4,8 +4,8 @@ import { useState } from 'react'
 import blog from './constants/blog'
 import categories from './constants/categories'
 import ReadMoreLink from '@/components/ReadMoreLink'
-import Button from '@/components/Button'
-import Input from '@/components/Input'
+import Categories from './components/Categories'
+import Newsletter from './components/Newsletter'
 import Image from 'next/image'
 
 export default function BlogPage() {
@@ -67,6 +67,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+
       <section className="bg-black px-5 py-16 lg:px-0 lg:py-40">
         <div className="mx-auto grid max-w-8xl grid-cols-1 gap-12 lg:grid-cols-[370px_1fr]">
           {/* Sidebar */}
@@ -79,69 +80,31 @@ export default function BlogPage() {
                 'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
             }}
           >
-            {/* Categories */}
-            <div className="rounded-2xl bg-gray">
-              <h3 className="header-3 px-6 py-5 lg:text-[32px]">
-                Blog Categories
-              </h3>
-              <ul className="flex flex-col">
-                {categories.map((cat, idx) => (
-                  <li
-                    key={idx}
-                    className={`paragraph rounded-md- cursor-pointer px-6 py-4 !font-normal transition ${
-                      idx === 0
-                        ? 'bg-primary text-black'
-                        : 'text-white hover:bg-primary/40'
-                    }`}
-                  >
-                    {cat}
-                  </li>
-                ))}
-              </ul>
+            {/* Categories - only desktop */}
+            <div className="hidden lg:block">
+              <Categories categories={categories} />
             </div>
 
-            {/* Newsletter */}
-            <div
-              className="rounded-2xl bg-gray p-6"
-              style={{
-                clipPath:
-                  'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
-                WebkitClipPath:
-                  'polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%)',
-              }}
-            >
-              <h3 className="header-3 mb-3 lg:text-[32px]">
-                Subscribe to newsletter
-              </h3>
-              <p className="paragraph mb-10 text-white/80 lg:text-[18px]">
-                Subscribe to receive the latest blog posts to your inbox every
-                week.
-              </p>
-              <form onSubmit={handleSubmit}>
-                <Input
-                  label="Email address"
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="Email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <Button className="mt-6">Subscribe</Button>
-              </form>
-              <p className="paragraph mt-5 !text-[16px] italic text-white/50">
-                By subscribing you agree to our
-                <br />
-                <a href="#" className="underline">
-                  Privacy Policy
-                </a>
-                .
-              </p>
+            {/* Newsletter - only desktop */}
+            <div className="hidden lg:block">
+              <Newsletter
+                email={email}
+                setEmail={setEmail}
+                isLoading={isLoading}
+                success={success}
+                error={error}
+                handleSubmit={handleSubmit}
+              />
             </div>
           </div>
 
           {/* Blog Content */}
           <div className="flex flex-col gap-20">
+            {/* Categories - mobile toggle */}
+            <div className="block lg:hidden">
+              <Categories categories={categories} />
+            </div>
+
             {/* Featured Post */}
             <div
               className="overflow-hidden rounded-3xl shadow-lg"
@@ -203,7 +166,7 @@ export default function BlogPage() {
               </div>
             </div>
 
-            {/* Grid of remaining posts */}
+            {/* Blog */}
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
               {remainingPosts.map((post, idx) => (
                 <div
@@ -274,6 +237,18 @@ export default function BlogPage() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Newsletter - mobile */}
+            <div className="block lg:hidden">
+              <Newsletter
+                email={email}
+                setEmail={setEmail}
+                isLoading={isLoading}
+                success={success}
+                error={error}
+                handleSubmit={handleSubmit}
+              />
             </div>
           </div>
         </div>
