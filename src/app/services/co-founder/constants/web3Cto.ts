@@ -12,16 +12,16 @@ const web3Cto = [
       'You focus on the vision - we handle the tech. From idea to execution, we translate concepts into working, scalable products, manage dev teams, and make sure nothing gets lost in translation.',
   },
   {
-    icon: BriefcaseIcon,
-    title: 'Investors & Venture capitalists',
-    description:
-      'We help de-risk your investments by ensuring projects are technically sound, scalable, and built for long-term growth.',
-  },
-  {
     icon: EngineersIcon,
     title: 'Early-stage startups',
     description:
       'Launching is tough. With the right partner, it becomes strategic. We help you choose the right stack, structure your architecture, and build the foundation your startup needs.',
+  },
+  {
+    icon: BriefcaseIcon,
+    title: 'Investors & Venture capitalists',
+    description:
+      'We help de-risk your investments by ensuring projects are technically sound, scalable, and built for long-term growth.',
   },
   {
     icon: TelegramIcon,
