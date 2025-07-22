@@ -1,7 +1,7 @@
 const services = [
   {
     image: '/images/service1.png',
-    title: 'Technical Co-Founder to propel your vision',
+    title: 'Technical co-founder to propel your vision',
     desc: "Got the vision but need the technical brainpower? We'll step in as your technical co-founder and help you navigate the Web…",
     link: '/services',
   },
@@ -13,7 +13,7 @@ const services = [
   },
   {
     image: '/images/service3.png',
-    title: 'Team augmentation to strengthen your work force',
+    title: 'Team augmentation to strengthen your workforce',
     desc: "If you're in need of an extra pair of hands (or maybe ten), let us plug in our Web3 devs, engineers and blockchain wizards right into…",
     link: '/services',
   },
