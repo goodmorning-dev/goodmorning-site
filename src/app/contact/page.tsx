@@ -43,7 +43,7 @@ export default function ContactPage() {
                 />
                 <div>
                   <p className="header-4 mb-5 lg:text-[26px]">
-                    Reach us any time
+                    Reach us anytime
                   </p>
                   <a
                     href="mailto:hello@goodmorning.dev"
@@ -63,8 +63,18 @@ export default function ContactPage() {
                 />
                 <div>
                   <p className="header-4 mb-5 lg:text-[26px]">
-                    Find us on Telegram and let’s chat
+                    Find us on{' '}
+                    <a
+                      href="https://t.me/goranstoyanov"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-secondary transition hover:underline"
+                    >
+                      Telegram
+                    </a>{' '}
+                    and let’s chat
                   </p>
+
                   <a
                     href="tel:+359888010203"
                     className="paragraph text-primary hover:underline lg:text-[24px]"
