@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { FaFacebookF, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
+import { FaTelegramPlane } from 'react-icons/fa'
 import footerItems from '@/constants/footerItems'
 import SocialIcon from '@/components/SocialIcon'
 import logo from '@/../public/logo.png'
@@ -12,13 +13,15 @@ export default function Footer() {
         <div className="mx-auto flex max-w-8xl flex-col justify-between gap-8 px-5 pb-10 md:flex-row lg:px-0">
           <div className="max-w-2xl">
             <div className="mb-6">
-              <Image
-                src={logo}
-                alt="GoodMorning Logo"
-                width={80}
-                height={50}
-                priority
-              />
+              <Link href="/" aria-label="Home">
+                <Image
+                  src={logo}
+                  alt="GoodMorning Logo"
+                  width={80}
+                  height={50}
+                  priority
+                />
+              </Link>
             </div>
             <p className="mb-3 text-base">BUIDL what matters</p>
             <p className="mb-5 leading-relaxed opacity-60">
@@ -28,15 +31,33 @@ export default function Footer() {
               development, wallet development, and Web3 technical consulting.
             </p>
 
-            <p className="mb-7">hello@goodmorning.dev</p>
+            <a
+              href="mailto:hello@goodmorning.dev"
+              className="mb-7 inline-block text-white transition-colors duration-200 hover:text-primary"
+            >
+              hello@goodmorning.dev
+            </a>
 
             <div className="flex gap-3">
-              <SocialIcon href="#" size={40} icon={<FaFacebookF size={14} />} />
-              <SocialIcon href="#" size={40} icon={<FaXTwitter size={14} />} />
               <SocialIcon
-                href="#"
+                href="https://www.facebook.com/goodmorningdevs"
+                size={40}
+                icon={<FaFacebookF size={14} />}
+              />
+              <SocialIcon
+                href="https://x.com/goodmorningdevs"
+                size={40}
+                icon={<FaXTwitter size={14} />}
+              />
+              <SocialIcon
+                href="https://www.linkedin.com/company/goodmorningdevs/"
                 size={40}
                 icon={<FaLinkedinIn size={14} />}
+              />
+              <SocialIcon
+                href="https://t.me/goranstoyanov"
+                size={40}
+                icon={<FaTelegramPlane size={14} />}
               />
             </div>
           </div>
@@ -78,7 +99,7 @@ export default function Footer() {
             Terms of Services
           </Link>
           <Link
-            href="#"
+            href="/sitemap"
             className="text-white/60 transition-colors duration-200 hover:text-white"
           >
             Sitemap
