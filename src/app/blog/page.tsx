@@ -56,7 +56,7 @@ export default function BlogPage() {
           </div>
 
           <div className="max-w-xl">
-            <p className="paragraph max-w-lg text-justify lg:text-[24px]">
+            <p className="paragraph max-w-lg lg:text-[24px]">
               Get the inside scoop on Web3 - game-changing tech,
               behind-the-scenes action, and a front-seat experience of our
               wildest success stories. From big ideas to exciting experiments,
