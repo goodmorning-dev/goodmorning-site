@@ -26,7 +26,7 @@ const features = [
     icon: TvlIcon,
     title: '$100M+ TVL',
     description:
-      "Security and scalability aren't just buzzwords – they're our track record. With over $100M+ TVL, we build secure, high-performing solutions that investors and users trust.",
+      "Security and scalability aren't just buzzwords - they're our track record. With over $100M+ in digital assets entrusted to our solutions, we build secure, high-performing systems that investors and users rely on.",
   },
 ]
 
