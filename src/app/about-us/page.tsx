@@ -184,7 +184,7 @@ export default function AboutPage() {
       </section>
 
       {/* Web3 Impact Section */}
-      <section className="bg-black px-5 py-36 text-white">
+      <section className="bg-black px-5 pt-12 pb-36 text-white">
         <div className="mb-24 text-center">
           <h2 className="header-2 mx-auto max-w-2xl">
             <span className="gradient-underline">Beyond the code:</span> our{' '}
