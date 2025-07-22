@@ -216,7 +216,7 @@ export default function HomePage() {
       </section>
 
       {/* Blue sunset background between sections */}
-      <div className="relative z-20 h-[360px]">
+      <div className="relative z-20 h-[160px]">
         <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2">
           <Image
             src="/images/blue-sunset.png"
