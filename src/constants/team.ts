@@ -24,6 +24,13 @@ const team: Member[] = [
     joinedCompanyDate: '05/11/2010',
   },
   {
+    image: '/images/team/Bobby.jpg',
+    name: 'Bobby Itskov',
+    position: 'Blockchain Developer',
+    hoverText: '日本好き.',
+    joinedCompanyDate: '01/02/2013',
+  },
+  {
     name: 'Jordan Enev',
     image: '/images/team/Dancho.jpg',
     position: 'Lead Engineer',
@@ -37,6 +44,28 @@ const team: Member[] = [
     hoverText:
       'Maker. Micro influencer (or not). Wannabe Entrepreneur. Currently focused on React, React Native, NodeJS.',
     joinedCompanyDate: '25/10/2012',
+  },
+  {
+    image: '/images/team/Niki.jpg',
+    name: 'Niki Atanasow',
+    position: 'Back-end Engineer',
+    hoverText: 'Sports car enthusiast, Always driving. Sometimes racing.',
+    joinedCompanyDate: '02/10/2015',
+  },
+  {
+    image: '/images/team/Petromir.jpg',
+    name: 'Petromir Petrov',
+    position: 'Front-end Engineer',
+    hoverText:
+      'Interested in everything tech. Scared of printers(except 3d ones).',
+    joinedCompanyDate: '13/06/2022',
+  },
+  {
+    image: '/images/team/Gery.jpg',
+    name: 'Gery Mihaylova',
+    position: 'Front-end Engineer',
+    hoverText: 'Art maker & Cooking lover.',
+    joinedCompanyDate: '04/07/2017',
   },
   {
     image: '/images/team/Preso.jpg',
@@ -65,13 +94,6 @@ const team: Member[] = [
     position: 'Web Developer',
     hoverText: 'Party-time bus driver, Sportswear model, Bartender.',
     joinedCompanyDate: '24/10/2012',
-  },
-  {
-    image: '/images/team/Bobby.jpg',
-    name: 'Bobby Itskov',
-    position: 'Blockchain Developer',
-    hoverText: '日本好き.',
-    joinedCompanyDate: '01/02/2013',
   },
   {
     image: '/images/team/Nade.jpg',
@@ -117,13 +139,6 @@ const team: Member[] = [
     joinedCompanyDate: '02/09/2015',
   },
   {
-    image: '/images/team/Niki.jpg',
-    name: 'Niki Atanasow',
-    position: 'Back-end Engineer',
-    hoverText: 'Sports car enthusiast, Always driving. Sometimes racing.',
-    joinedCompanyDate: '02/10/2015',
-  },
-  {
     image: '/images/team/Ceco.jpg',
     name: 'Ceco Mihaylov',
     position: 'Back-end Engineer',
@@ -147,26 +162,11 @@ const team: Member[] = [
     joinedCompanyDate: '26/06/2017',
   },
   {
-    image: '/images/team/Gery.jpg',
-    name: 'Gery Mihaylova',
-    position: 'Front-end Engineer',
-    hoverText: 'Art maker & Cooking lover.',
-    joinedCompanyDate: '04/07/2017',
-  },
-  {
     image: '/images/team/Teddy.jpg',
     name: 'Teddy Ivanova',
     position: 'Marketing & Projects',
     hoverText: 'Zen philosopher & Avid learner.',
     joinedCompanyDate: '01/02/2021',
-  },
-  {
-    image: '/images/team/Petromir.jpg',
-    name: 'Petromir Petrov',
-    position: 'Front-end Engineer',
-    hoverText:
-      'Interested in everything tech. Scared of printers(except 3d ones).',
-    joinedCompanyDate: '13/06/2022',
   },
   {
     image: '/images/team/Boyo.jpg',
