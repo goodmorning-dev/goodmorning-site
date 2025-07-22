@@ -94,7 +94,7 @@ export default function ServicesPage() {
             >
               <div className="p-8">
                 <h2 className="header-3 mb-5">
-                  Web3 technical cofounder as a service
+                  Web3 technical co-founder as a service
                 </h2>
                 <p className="paragraph mb-6 !font-normal">
                   Got the vision but need the technical brainpower? We step in
