@@ -120,8 +120,8 @@ export default function AboutPage() {
           <p className="paragraph mx-auto mt-8 max-w-[870px] !font-normal text-white/80">
             We've been in the game for over 15 years – navigating shifts and
             challenges, seizing opportunities, and staying ahead of the curve.
-            Our journey has been fueled by resilience, expertise, but above all
-            else – a truly relentless drive to innovate.
+            What drives us? Relentless curiosity, bold thinking, and a serious
+            passion for building tech that matters.
           </p>
         </div>
 
