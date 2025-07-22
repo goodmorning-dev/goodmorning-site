@@ -311,7 +311,7 @@ export default function HomePage() {
           <div className="max-w-lg space-y-6">
             <p className="paragraph lg:!text-[24px]">
               Connect with us today to explore how we can elevate your Web3
-              project on new heights.
+              project to new heights.
             </p>
             <Button onClick={() => router.push('/contact')}>Contact us</Button>
           </div>
