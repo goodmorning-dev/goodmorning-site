@@ -184,7 +184,7 @@ export default function AboutPage() {
       </section>
 
       {/* Web3 Impact Section */}
-      <section className="bg-black px-5 pt-12 pb-36 text-white">
+      <section className="bg-black px-5 pb-36 pt-12 text-white">
         <div className="mb-24 text-center">
           <h2 className="header-2 mx-auto max-w-2xl">
             <span className="gradient-underline">Beyond the code:</span> our{' '}
@@ -202,7 +202,8 @@ export default function AboutPage() {
           {web3Impact.map((item, idx) => (
             <div
               key={idx}
-              className="break-inside-avoid overflow-hidden rounded-2xl"
+              onClick={() => router.push(item.link)}
+              className="break-inside-avoid overflow-hidden rounded-2xl transition-transform duration-300 hover:scale-[1.03] hover:cursor-pointer hover:shadow-2xl"
               style={{
                 clipPath:
                   'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)',
@@ -220,7 +221,7 @@ export default function AboutPage() {
               />
 
               <div className="rounded-b-[25px] bg-gray p-6">
-                {item.tags && (
+                {/* {item.tags && (
                   <div className="mb-4 flex flex-wrap gap-2">
                     {item.tags.map((tag, i) => (
                       <span
@@ -255,7 +256,7 @@ export default function AboutPage() {
                       </span>
                     ))}
                   </div>
-                )}
+                )} */}
 
                 <h4 className="header-4">{item.title}</h4>
                 <p className="mt-3 text-xl leading-7 tracking-[0.4px]">
