@@ -13,7 +13,8 @@ export default function BlogCards() {
         {blog.map((post, idx) => (
           <div
             key={idx}
-            className="flex h-full flex-col overflow-hidden rounded-3xl bg-gray text-white shadow-lg transition hover:shadow-xl"
+            onClick={() => router.push(post.link)}
+            className="group flex h-full cursor-pointer flex-col overflow-hidden rounded-3xl bg-gray text-white shadow-lg transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl"
           >
             <div className="relative h-[250px] w-full overflow-hidden">
               <Image
