@@ -17,7 +17,16 @@ module.exports = {
       maxWidth: {
         '8xl': '86rem',
       },
+      animation: {
+        'fade-in': 'fadeIn 1.2s ease-out forwards',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0, transform: 'translateY(16px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+      },
     },
   },
-   plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography')],
 }

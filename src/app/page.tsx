@@ -49,7 +49,7 @@ export default function HomePage() {
               <br />
               operating <span className="gradient-underline">globally</span>
             </h1>
-            <p className="paragraph font-regular mt-12 max-w-4xl lg:!text-[24px]">
+            <p className="paragraph font-regular animate-fade-in mt-12 max-w-4xl translate-y-4 opacity-0 lg:!text-[24px]">
               As a Web3 development studio, at goodmorning we craft tailored
               blockchain services to help startups and industry leaders navigate
               the ever-evolving Web3 space. Whether you're launching something
