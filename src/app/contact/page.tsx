@@ -119,7 +119,7 @@ export default function ContactPage() {
             Whether you&apos;re in need of a technical co-founder, an entire
             team to join forces with, or someone with the know-how to build an
             MVP from scratch, we&apos;re all ears. Drop us a message and
-            let&apos;s build together. We promise we read
+            let&apos;s build together. We promise we read everything.
           </p>
         </div>
 
