@@ -200,13 +200,12 @@ export default function ServicesPage() {
               }}
             >
               <div className="p-8 pb-14">
-                <h2 className="header-3 mb-5">Staff (team) augmentation</h2>
+                <h2 className="header-3 mb-5">Staff augmentation</h2>
                 <p className="paragraph mb-6 !font-normal">
                   If you're in need of an extra pair of hands (or maybe ten),
-                  let us plug in our Web3 devs, engineers and blockchain wizards
-                  right into your team.
-                  <br /> Scaling up feels even better without the long hiring
-                  process.
+                  let us plug in our Web3 devs, engineers and blockchain experts
+                  right into your team. Scaling up feels even better without the
+                  long hiring process.
                 </p>
                 <ReadMoreLink className="mt-5" href="#" label="VIEW MORE" />
               </div>
