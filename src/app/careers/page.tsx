@@ -57,12 +57,12 @@ export default function CareersPage() {
           </div>
 
           <div className="max-w-xl">
-            <p className="paragraph max-w-lg text-justify lg:text-[24px]">
+            <p className="paragraph max-w-lg lg:text-[24px]">
               We're not just building products - we're shaping the future, and
               we're always looking for fresh perspectives and people who love
               pushing boundaries to join the ride. Whether you're a blockchain
-              guru with 10+ years of experience or a high school student,
-              passionate to learn and innovate, there's a spot for you here.
+              guru or a high school student, passionate to learn and innovate,
+              there's a spot for you here.
             </p>
             <Button
               className="mt-8"
