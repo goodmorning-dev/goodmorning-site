@@ -7,7 +7,7 @@ const techKnowledge = [
     icon: ExpertiseIcon,
     title: "We're highly experienced in",
     description:
-      'Solidity/Vyper development and security, as well as secure and easy-to-use front-ends in React or React Native.',
+      'Developing secure and scalable smart contracts powering blockchain applications. We also craft intuitive, user-friendly dApps, mobile applications, and browser extensions.',
   },
   {
     icon: FlowerIcon,
@@ -19,7 +19,7 @@ const techKnowledge = [
     icon: StackIcon,
     title: "We're flexible in terms of tech stacks",
     description:
-      "Typescript, React, Node.js, Go and Rust are just some of the tech stacks we're most familiar with.",
+      "We're flexible in terms of tech stacks: Solidity, Typescript, React, React Native, Node.js, Go and Rust are just some of the tech stacks we're most familiar with.",
   },
 ]
 
