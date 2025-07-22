@@ -263,8 +263,8 @@ export default function ServicesDetailsPage() {
               className="mt-20"
               variant="primary"
               onClick={() => router.push('/contact')}
-              hoverColor='bg-secondary'
-              hoverTextColor='text-white'
+              hoverColor="bg-secondary"
+              hoverTextColor="text-white"
             >
               Get in touch
             </Button>
