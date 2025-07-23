@@ -77,17 +77,20 @@ export default function ServicesDetailsPage() {
       <section
         className="relative mx-auto py-32 lg:py-52"
         style={{
-          backgroundImage: "url('/images/services-auditing.png')",
+          backgroundImage: "url('/images/services-mvp-development.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
         <div className="mx-auto flex w-full max-w-8xl flex-col items-start justify-between gap-12 px-5 lg:flex-row lg:px-0">
           <div>
-            <h1 className="header-1 max-w-3xl">Staff augmentation services</h1>
+            <h1 className="header-1 max-w-3xl">
+              Web3 MVP development services
+            </h1>
             <p className="paragraph mt-8 max-w-lg lg:text-[24px]">
-              Supercharge your development with our specialized Web3 team
-              augmentation service tailored to your unique project needs.
+              Break into the market and get a taste of real-world success with
+              our MVP development services. Build, launch and validate faster so
+              you can scale your product with ease and attract investors.
             </p>
           </div>
         </div>
@@ -98,17 +101,18 @@ export default function ServicesDetailsPage() {
         <div className="mx-auto flex w-full max-w-8xl flex-col items-start items-center justify-between gap-5 px-5 lg:flex-row lg:px-0">
           <div>
             <h1 className="header-2 max-w-[615px] !leading-[1.3] lg:text-[56px]">
-              <span className="text-primary">Top-tier</span> talent,
+              <span className="text-primary">Your MVP</span> won't, build itself
+              -
               <br />
-              <span className="gradient-underline">on demand</span>
+              <span className="gradient-underline">but we can!</span>
             </h1>
           </div>
           <div className="max-w-[640px]">
             <p className="paragraph">
-              We bring the right expertise to you exactly when you need it, so
-              you can skip the hiring headaches. Whether you’re building or
-              scaling, our experts seamlessly integrate into your existing team,
-              delivering real impact from day one.
+              You’ve got the vision, we’ve got the expertise - all that’s left
+              to do is to make it all real. No more endless brainstorming -
+              let’s turn your Web3 idea into a real, working product. Let’s
+              BUIDL what matters together!
             </p>
           </div>
         </div>
@@ -118,26 +122,21 @@ export default function ServicesDetailsPage() {
       <section className="py-32">
         <div className="relative z-20 mx-auto max-w-8xl px-5 lg:px-0">
           <h2 className="header-2 mb-7 text-center tracking-[1.2px]">
-            <span className="gradient-underline">Who are</span> the blockchain
-            <br />
-            <span className="text-primary"> staff augmentation</span> services
-            for?
+            <span className="gradient-underline">Who is</span> the{' '}
+            <span className="text-primary">Web3 MVP</span> service for?
           </h2>
           <p className="paragraph mx-auto max-w-[52rem] text-center">
-            Need expert blockchain developers to complement your in-house staff?
-            Our team augmentation services are designed for fast-moving startups
-            and tech innovators to scale effortlessly. Whether you need
-            specialized Web3 expertise, additional hands on deck for a major
-            project, or a dedicated team to extend your capabilities, we provide
-            top-tier talent that integrates seamlessly with your workflow—so you
-            can build faster without the overhead of traditional hiring.
+            Well, the short answer is, for you - if you’re serious about
+            launching a product that actually works. Whether you're a startup, a
+            product manager, or a non-technical founder, we build MVPs that get
+            THE results.
           </p>
 
           <div className="mt-20 flex flex-wrap justify-center gap-10">
             {web3Cto.map(({ icon, title, description }, index) => (
               <div
                 key={index}
-                className="min-h-[460px] w-full max-w-[430px] items-center rounded-2xl bg-gray px-6 py-10 text-center"
+                className="min-h-[440px] w-full max-w-[430px] items-center rounded-2xl bg-gray px-6 py-10 text-center"
                 style={{
                   clipPath:
                     'polygon(0 0, calc(100% - 55px) 0, 100% 55px, 100% 100%, 0 100%)',
@@ -189,10 +188,10 @@ export default function ServicesDetailsPage() {
               <span className="text-primary">goodmorning</span>?
             </h2>
             <p className="paragraph mt-8 lg:text-[20px]">
-              We don’t just fill the empty spots in your team, we build
-              solutions. Our experts blend into your company structure
-              seamlessly, bringing over a decade of technical knowledge to
-              supercharge your development process.
+              As a Web3 MVP development company, we craft launch-ready products
+              designed for real adoption. With a decade of experience, we
+              balance speed, strategy, and security to ensure your MVP is built
+              to scale. Here’s how:
             </p>
             <ul className="ml-2 mt-10 space-y-8">
               <li className="flex items-start gap-6">
@@ -211,7 +210,8 @@ export default function ServicesDetailsPage() {
                   </svg>
                 </div>
                 <p className="paragraph lg:text-[24px]">
-                  Access top-tier Web3 talent on demand.
+                  We get your MVP to market fast without compromising on
+                  quality.
                 </p>
               </li>
 
@@ -231,7 +231,8 @@ export default function ServicesDetailsPage() {
                   </svg>
                 </div>
                 <p className="paragraph lg:text-[24px]">
-                  Flexible engagement models to match your project needs.
+                  With over a decade of experience in the field, we know the
+                  tech inside and out.
                 </p>
               </li>
 
@@ -251,8 +252,8 @@ export default function ServicesDetailsPage() {
                   </svg>
                 </div>
                 <p className="paragraph lg:text-[24px]">
-                  Rapid scaling to ensure you meet your critical deadlines
-                  without compromising on quality.
+                  We build custom MVPs tailored to your vision and target
+                  market.
                 </p>
               </li>
             </ul>
@@ -286,9 +287,10 @@ export default function ServicesDetailsPage() {
             <span className="gradient-underline">How</span> it works?
           </h2>
           <p className="paragraph mx-auto mt-8 max-w-[870px] !font-normal text-white/80">
-            With a solid experience in Web3, we provide the expertise,
-            flexibility, and support you need to scale efficiently and skip the
-            hiring hassles.
+            We like keeping things agile, smooth and effective. By the time we
+            launch, your MVP isn’t just functional - it’s optimized,
+            market-ready, and positioned for growth. Here’s how we bring your
+            MVP to life:
           </p>
         </div>
 
@@ -313,15 +315,14 @@ export default function ServicesDetailsPage() {
 
         <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
           <h2 className="header-2 max-w-xl text-center lg:text-left">
-            Make your team unstoppable
+            From idea to reality - faster than you think
           </h2>
 
           <div className="max-w-[500px] text-center lg:text-left">
             <p className="paragraph leading-[1.33] tracking-[0.6px] lg:text-[24px]">
-              You don’t need more resumes - you need the right people, ready to
-              build. Leave the hiring stress in the past and take your
-              development to a whole new level with our staff augmentation
-              services.
+              Your competitors are moving fast - don’t fall behind. Let’s launch
+              your Web3 MVP and get real user feedback, investment, and
+              traction.
             </p>
             <Button
               className="mt-9"

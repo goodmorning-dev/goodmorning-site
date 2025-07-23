@@ -1,37 +1,37 @@
 export const ideaToProductSteps = [
   {
     step: 'Step 1',
-    title: 'Understanding your needs',
+    title: 'Product discovery & Scope definition',
     description:
-      'Define your project scope, pinpoint skill gaps, and select the best engagement model for your needs',
+      'We identify your core problem, target audience and must-have features. We also ensure there are no surprises down the road - you’ll know exactly what’s being built, how long it takes, and how much it costs',
     image: '/images/productSteps/step1.png',
   },
   {
     step: 'Step 2',
-    title: 'Candidate selection & Vetting',
+    title: 'UX/UI design & Prototyping',
     description:
-      'Craft a curated list of pre-vetted experts, ensuring top-tier technical skills and culture fit',
+      'We craft an intuitive and engaging design prototype and refine your product before the initial phases of development',
     image: '/images/productSteps/step2.png',
   },
   {
     step: 'Step 3',
-    title: 'Seamless integration',
+    title: 'Development & Agile iterations',
     description:
-      'Onboard new team members seamlessly with the right tools and workflow alignment',
+      'We get down to the fun stuff - build essential features, integrate real-time feedback, refine and optimize. We cover everything, from security and performance to scalability',
     image: '/images/productSteps/step3.png',
   },
   {
     step: 'Step 4',
-    title: 'Continuous support & Performance monitoring',
+    title: 'Testing & Refinement',
     description:
-      'Provide ongoing support and adapt to shifting project needs for optimal productivity',
+      'We leave no room for bugs and glitches by running extensive testing to make sure everything runs smoothly prior to launch',
     image: '/images/productSteps/step4.png',
   },
   {
     step: 'Step 5',
-    title: 'Project completion & Knowledge handover',
+    title: 'Launch & Scale preparation',
     description:
-      'Ensure a smooth transition after project wrap-up and provide post-engagement support',
+      'We go live and the journey continues. We monitor performance, plan for long-term growth and maximize impact by fine-tuning features',
     image: '/images/productSteps/step5.png',
   },
 ]
