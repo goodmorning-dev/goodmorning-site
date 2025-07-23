@@ -140,7 +140,7 @@ export default function ServicesDetailsPage() {
             {web3Cto.map(({ icon, title, description }, index) => (
               <div
                 key={index}
-                className="min-h-[510px] w-full max-w-[430px] items-center rounded-2xl bg-gray px-6 py-10 text-center"
+                className="min-h-[460px] w-full max-w-[430px] items-center rounded-2xl bg-gray px-6 py-10 text-center"
                 style={{
                   clipPath:
                     'polygon(0 0, calc(100% - 55px) 0, 100% 55px, 100% 100%, 0 100%)',
