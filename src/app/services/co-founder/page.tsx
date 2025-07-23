@@ -159,7 +159,7 @@ export default function ServicesDetailsPage() {
                     height={60}
                   />
                 </div>
-                <div className="flex h-full max-h-[260px] flex-col justify-center">
+                <div className="flex h-full max-h-[260px] flex-col">
                   <h3 className="header-4 mx-auto mb-4 max-w-[350px]">
                     {title}
                   </h3>
