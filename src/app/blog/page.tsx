@@ -50,13 +50,13 @@ export default function BlogPage() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="mx-auto flex w-full max-w-8xl flex-col items-start justify-between gap-12 px-5 lg:flex-row lg:px-0">
+        <div className="mx-auto flex w-full max-w-8xl flex-col items-start justify-between gap-12 px-5 lg:px-0">
           <div>
-            <h1 className="header-1 max-w-2xl">Follow our Web3 journey</h1>
+            <h1 className="header-1">Follow our Web3 journey</h1>
           </div>
 
-          <div className="max-w-xl">
-            <p className="paragraph max-w-lg lg:text-[24px]">
+          <div className="max-w-4xl">
+            <p className="paragraph lg:text-[24px]">
               Get the inside scoop on Web3 - game-changing tech,
               behind-the-scenes action, and a front-seat experience of our
               wildest success stories. From big ideas to exciting experiments,
