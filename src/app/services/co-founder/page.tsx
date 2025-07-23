@@ -8,7 +8,7 @@ import web3Cto from '@/app/services/co-founder/constants/web3Cto'
 import { ideaToProductSteps } from '@/app/services/co-founder/constants/ideaToProductSteps'
 
 import partnerImg from '@/../public/images/partner.png'
-import testimonialImg from '@/../public/images/service-details-testimonial.png'
+// import testimonialImg from '@/../public/images/service-details-testimonial.png'
 
 interface IdeaToProductItem {
   step: string
