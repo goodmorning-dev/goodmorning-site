@@ -48,28 +48,10 @@ export default function CareersPage() {
             <h1 className="header-1 max-w-2xl">Are YOU our new teammate?</h1>
             <Button
               className="mt-8"
-              variant="secondary"
-              outlined
+              variant="primary"
               onClick={() => router.push('#join-form')}
             >
               See open positions
-            </Button>
-          </div>
-
-          <div className="max-w-xl">
-            <p className="paragraph max-w-lg lg:text-[24px]">
-              We're not just building products - we're shaping the future, and
-              we're always looking for fresh perspectives and people who love
-              pushing boundaries to join the ride. Whether you're a blockchain
-              guru or a high school student, passionate to learn and innovate,
-              there's a spot for you here.
-            </p>
-            <Button
-              className="mt-8"
-              variant="primary"
-              onClick={() => router.push('/contact')}
-            >
-              Get in Touch
             </Button>
           </div>
         </div>
@@ -82,6 +64,13 @@ export default function CareersPage() {
               <span className="gradient-underline">Welcome</span> to{' '}
               <span className="text-primary">goodmorning</span>
             </h2>
+            <p className="paragraph font-regular text-center lg:text-left lg:!text-[20px]">
+              We're not just building products - we're shaping the future, and
+              we're always looking for fresh perspectives and people who love
+              pushing boundaries to join the ride. Whether you're a blockchain
+              guru or a high school student, passionate to learn and innovate,
+              there's a spot for you here.
+            </p>
             <p className="paragraph font-regular text-center lg:text-left lg:!text-[20px]">
               With 10+ years in the technological world and a team that has
               stuck together through most of it, we know how to turn ideas into
