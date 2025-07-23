@@ -8,7 +8,6 @@ import web3Cto from './constants/web3Cto'
 import { ideaToProductSteps } from './constants/ideaToProductSteps'
 
 import partnerImg from '@/../public/images/partner.png'
-// import testimonialImg from '@/../public/images/service-details-testimonial.png'
 
 interface IdeaToProductItem {
   step: string
@@ -32,6 +31,7 @@ export default function ServicesDetailsPage() {
         isRight && 'mt-24 items-end text-right',
         index === 1 && 'lg:pr-[100px]',
         index === 2 && 'lg:pl-[100px]',
+        index === 5 && 'lg:pr-[100px]',
       )}
     >
       <div className="max-w-[520px]">
@@ -78,17 +78,17 @@ export default function ServicesDetailsPage() {
       <section
         className="relative mx-auto py-32 lg:py-52"
         style={{
-          backgroundImage: "url('/images/services-details-hero.png')",
+          backgroundImage: "url('/images/services-consultancy.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
         <div className="mx-auto flex w-full max-w-8xl flex-col items-start justify-between gap-12 px-5 lg:flex-row lg:px-0">
           <div>
-            <h1 className="header-1 max-w-3xl">Web3 technical co-founder</h1>
+            <h1 className="header-1 max-w-3xl">Web3 consulting services</h1>
             <p className="paragraph mt-8 max-w-lg lg:text-[24px]">
-              Transform your vision into reality with hands-on tech leadership
-              and execution.
+              Get specialized guidance to help you navigate and build in the
+              decentralized economy.
             </p>
           </div>
         </div>
@@ -99,24 +99,18 @@ export default function ServicesDetailsPage() {
         <div className="mx-auto flex w-full max-w-8xl flex-col items-start items-center justify-between gap-5 px-5 lg:flex-row lg:px-0">
           <div>
             <h1 className="header-2 max-w-[615px] !leading-[1.3] lg:text-[56px]">
-              <span className="text-primary">Web3 co-founder</span> as a
-              service: Your vision, our{' '}
-              <span className="gradient-underline">tech expertise</span>
+              <span className="text-primary">Web3</span> technical
+              <span className="gradient-underline">consultancy</span>
             </h1>
           </div>
           <div className="max-w-[640px]">
             <p className="paragraph">
-              Every successful product needs a solid technical backbone - but
-              not every founder needs to be a tech expert. That's where we come
-              in.
-            </p>
-            <p className="paragraph mt-8">
-              Think of us as your hands-on Web3 technical co-founder: part CTO,
-              part product strategist, part problem-solver. Whether you're
-              building your first MVP or navigating complex Web3 infrastructure,
-              we offer the leadership, execution, and technical firepower to
-              turn your idea into a real-world product - without you needing to
-              write a single line of code.
+              Navigate the decentralized world with goodmorning - a boutique
+              web3 consulting company. Whether you’re building your first dApp,
+              designing a tokenized ecosystem, or scaling protocol
+              infrastructure, we provide hands-on guidance and engineering
+              support across the full blockchain stack - from architecture and
+              smart contracts to integration and UX design.
             </p>
           </div>
         </div>
@@ -127,21 +121,23 @@ export default function ServicesDetailsPage() {
         <div className="relative z-20 mx-auto max-w-8xl px-5 lg:px-0">
           <h2 className="header-2 mb-7 text-center tracking-[1.2px]">
             <span className="gradient-underline">Who is</span> the{' '}
-            <span className="text-primary">Web3 co-founder</span>
-            <br /> as a service for?
+            <span className="text-primary">Web3 technical consultancy</span>
+            <br /> service for?
           </h2>
           <p className="paragraph mx-auto max-w-[52rem] text-center">
-            Whether you're building your first product or scaling your next
-            venture, having a Web3 technical co-founder can be a game-changer.
-            This service is designed for founders, teams, and investors who need
-            expert tech leadership without the overhead of hiring full-time.
+            Our Web3 technical consulting services are designed for visionaries
+            ready to disrupt the status quo. Whether you're a startup looking to
+            join the Web3 party or an established company that needs a little
+            push from someone who knows how to navigate its complexities, we
+            provide the insights and strategies you need to thrive in the
+            decentralized landscape.
           </p>
 
           <div className="mt-20 flex flex-wrap justify-center gap-10">
             {web3Cto.map(({ icon, title, description }, index) => (
               <div
                 key={index}
-                className="min-h-[430px] w-full max-w-[430px] items-center rounded-2xl bg-gray px-6 py-10 text-center"
+                className="min-h-[510px] w-full max-w-[430px] items-center rounded-2xl bg-gray px-6 py-10 text-center"
                 style={{
                   clipPath:
                     'polygon(0 0, calc(100% - 55px) 0, 100% 55px, 100% 100%, 0 100%)',
@@ -189,14 +185,16 @@ export default function ServicesDetailsPage() {
         <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
           <div className="max-w-2xl">
             <h2 className="header-2">
-              <span className="gradient-underline">Why partner</span> with{' '}
-              <span className="text-primary">goodmorning</span>?
+              <span className="gradient-underline">Why trust</span>{' '}
+              <span className="text-primary">goodmorning</span> for web3
+              development consulting?
             </h2>
             <p className="paragraph mt-8 lg:text-[20px]">
-              You need more than just code - you need a partner who gets the big
-              picture. We bring 15+ years of experience building products across
-              fintech, SaaS, and Web3 - and we've done it with small teams,
-              global clients, and complex tech stacks.
+              Your project doesn’t need more guesswork - it needs clarity,
+              confidence, and a strategy that works. Which is exactly what you
+              get with a team like ours that’s been in the trenches - across
+              Web2, Web3, mobile, and cloud. We don’t just follow trends; we
+              build real, usable solutions that stand the test of time.
             </p>
             <ul className="ml-2 mt-10 space-y-8">
               <li className="flex items-start gap-6">
@@ -215,7 +213,7 @@ export default function ServicesDetailsPage() {
                   </svg>
                 </div>
                 <p className="paragraph lg:text-[24px]">
-                  Experts in launching & scaling tech ventures
+                  Full-stack expertise - from front end to smart contracts
                 </p>
               </li>
 
@@ -235,7 +233,8 @@ export default function ServicesDetailsPage() {
                   </svg>
                 </div>
                 <p className="paragraph lg:text-[24px]">
-                  Proven leadership in complex product builds
+                  End-to-end Web3 knowledge to help you connect the dots across
+                  the entire tech stack
                 </p>
               </li>
 
@@ -255,7 +254,7 @@ export default function ServicesDetailsPage() {
                   </svg>
                 </div>
                 <p className="paragraph lg:text-[24px]">
-                  Track record of hiring and leading world-class devs
+                  A strategy tailored to your vision, challenges, and goals
                 </p>
               </li>
             </ul>
@@ -309,49 +308,6 @@ export default function ServicesDetailsPage() {
         </div>
       </section>
 
-      {/* Testimonial section
-      <section className="relative bg-white px-5 py-16 text-black lg:px-0 lg:py-64">
-        <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-24">
-          <div className="max-w-[730px]">
-            <div className="header-4 border-l-4 border-secondary bg-[#d8d8d833] px-10 py-8 !font-medium italic !leading-[1.6] lg:text-[32px]">
-              “Goodmorning is the ultimate web3 development studio. Our work
-              with them has been seamless and we've been mightily impressed by
-              their knowledge, expertise and deep understanding of all things
-              blockchain.”
-            </div>
-
-            <div className="mt-8 flex items-center justify-between gap-2 text-left">
-              <div>
-                <p className="paragraph !font-semibold lg:text-[25px]">
-                  Ivo Georgiev
-                </p>
-                <p className="paragraph mt-2 text-secondary lg:text-[25px]">
-                  CEO, Ambire Wallet
-                </p>
-              </div>
-              <div className="mt-4 w-[100px] lg:w-[150px]">
-                <Image
-                  src="/logos/ambire-colored.png"
-                  alt="Ambire Logo"
-                  width={150}
-                  height={70}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center lg:text-left">
-            <Image
-              src={testimonialImg}
-              alt="Testimonial Person"
-              className="rounded-xl"
-              width={520}
-              height={535}
-            />
-          </div>
-        </div>
-      </section> */}
-
       {/* CTA section */}
       <section className="relative bg-gray px-5 py-16 lg:px-0 lg:py-64">
         <div
@@ -361,13 +317,13 @@ export default function ServicesDetailsPage() {
 
         <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
           <h2 className="header-2 max-w-xl text-center lg:text-left">
-            Ready to build what’s next?
+            Web3 moves fast - can you keep up?
           </h2>
 
           <div className="max-w-[500px] text-center lg:text-left">
             <p className="paragraph leading-[1.33] tracking-[0.6px] lg:text-[24px]">
-              If you’re looking for a Web3-savvy tech partner who can think like
-              a founder and build like an engineer, you’re in the right place.
+              It’s easy when you let experts who’ve been shaping the space for
+              years lead the way to your success. Ready to make the first step?
             </p>
             <Button
               className="mt-9"
