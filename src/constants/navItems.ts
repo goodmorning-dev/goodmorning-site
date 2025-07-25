@@ -2,14 +2,17 @@ export const navItems = [
   {
     label: 'Services',
     children: [
-      { label: 'Web3 technical co-founder', href: '/services/co-founder' },
-      { label: 'Web3 consulting services', href: '/services/consulting' },
-      { label: 'Staff augmentation services', href: '/services/augmentation' },
+      { label: 'Web3 technical co-founder', href: '/services/web3-co-founder' },
+      { label: 'Web3 consulting services', href: '/services/web3-consulting' },
+      {
+        label: 'Staff augmentation services',
+        href: '/services/staff-augmentation',
+      },
       {
         label: 'Web3 MVP development services',
-        href: '/services/mvp-development',
+        href: '/services/web3-mvp-development',
       },
-      { label: 'Web3 technical auditing', href: '/services/auditing' },
+      { label: 'Web3 technical auditing', href: '/services/web3-auditing' },
     ],
   },
   {
