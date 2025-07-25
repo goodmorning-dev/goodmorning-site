@@ -6,6 +6,6 @@ export const metadata = {
 
 import Careers from './Careers'
 
-export default function Web3CoFounderPage() {
+export default function CareersPage() {
   return <Careers />
 }

@@ -6,6 +6,6 @@ export const metadata = {
 
 import Blog from './Blog'
 
-export default function Web3CoFounderPage() {
+export default function BlogPage() {
   return <Blog />
 }

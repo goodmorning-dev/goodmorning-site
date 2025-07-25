@@ -6,6 +6,6 @@ export const metadata = {
 
 import AboutUs from './AboutUs'
 
-export default function Web3CoFounderPage() {
+export default function AboutUsPage() {
   return <AboutUs />
 }
