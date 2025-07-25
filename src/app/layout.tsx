@@ -4,9 +4,10 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'GoodMorning',
-  description: 'Web3 development studio',
-  robots: 'noindex, nofollow'
+  title: 'goodmorning | The Web3 Development Studio',
+  description:
+    'Launch, scale, and secure your blockchain project with goodmorning - the Web3 development studio trusted by top teams and recognized by the Ethereum Foundation.',
+  robots: 'noindex, nofollow',
 }
 
 export default function RootLayout({
