@@ -3,7 +3,7 @@ export const ideaToProductSteps = [
     step: 'Step 1',
     title: 'Discovery & Needs assessment',
     description: 'Define how Web3 fits into your roadmap',
-    image: '/images/productSteps/step1.png',
+    image: '/images/productSteps/web3-consulting/step1.png',
   },
   {
     step: 'Step 2',
@@ -34,6 +34,6 @@ export const ideaToProductSteps = [
     step: 'Step 6',
     title: 'Deployment & Long-term strategy',
     description: 'Provide post-launch support and ongoing advisory',
-    image: '/images/productSteps/step6.png',
+    image: '/images/productSteps/web3-consulting/step6.png',
   },
 ]
