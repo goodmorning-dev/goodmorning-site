@@ -114,7 +114,7 @@ export default function Header() {
                 >
                   {openMenu === label && (
                     <div
-                      className="w-[300px] overflow-hidden bg-gray shadow-xl backdrop-blur-md"
+                      className="w-[300px] overflow-hidden bg-gray bg-[url('/images/gradient-bg.png')] bg-cover bg-right shadow-xl backdrop-blur-md"
                       style={{
                         clipPath:
                           'polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%)',
