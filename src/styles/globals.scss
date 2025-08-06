@@ -37,6 +37,48 @@
       color 9999s ease-out;
     transition-delay: 9999s;
   }
+
+  ::selection {
+    background: #12d5ca;
+    color: #000000;
+    text-shadow: none;
+  }
+
+  ::-moz-selection {
+    background: #12d5ca;
+    color: #000000;
+    text-shadow: none;
+  }
+
+  a::selection,
+  button::selection {
+    background: #5959ff;
+    color: #ffffff;
+    text-shadow: none;
+  }
+
+  a::-moz-selection,
+  button::-moz-selection {
+    background: #5959ff;
+    color: #ffffff;
+    text-shadow: none;
+  }
+
+  code::selection,
+  pre::selection,
+  .font-mono::selection {
+    background: rgba(18, 213, 202, 0.3);
+    color: #ffffff;
+    text-shadow: none;
+  }
+
+  code::-moz-selection,
+  pre::-moz-selection,
+  .font-mono::-moz-selection {
+    background: rgba(18, 213, 202, 0.3);
+    color: #ffffff;
+    text-shadow: none;
+  }
 }
 
 @layer components {
