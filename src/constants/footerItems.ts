@@ -26,8 +26,8 @@ const footerItems: FooterCategory[] = [
     items: [
       { label: 'About us', href: '/about-us' },
       { label: 'Team', href: '/team' },
-      { label: 'Case Studies', href: '/case-studies' },
-      { label: 'Blog', href: '/blog' },
+      // { label: 'Case Studies', href: '/case-studies' },
+      // { label: 'Blog', href: '/blog' },
       { label: 'Careers', href: '/careers' },
       { label: 'Get in touch', href: '/contact' },
     ],
