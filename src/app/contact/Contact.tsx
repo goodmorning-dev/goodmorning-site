@@ -76,10 +76,10 @@ export default function ContactPage() {
                   </p>
 
                   <a
-                    href="tel:+359888010203"
+                    href="tel:+359876261055"
                     className="paragraph text-primary hover:underline lg:text-[24px]"
                   >
-                    +(359) 888 010 203
+                    +(359) 876 261 055
                   </a>
                 </div>
               </div>
