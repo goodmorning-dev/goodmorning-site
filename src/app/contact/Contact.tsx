@@ -46,10 +46,10 @@ export default function ContactPage() {
                     Reach us anytime
                   </p>
                   <a
-                    href="mailto:hello@goodmorning.dev"
+                    href="mailto:gm@goodmorning.dev"
                     className="paragraph text-primary hover:underline lg:text-[24px]"
                   >
-                    hello@goodmorning.dev
+                    gm@goodmorning.dev
                   </a>
                 </div>
               </div>

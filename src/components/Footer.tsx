@@ -32,10 +32,10 @@ export default function Footer() {
             </p>
 
             <a
-              href="mailto:hello@goodmorning.dev"
+              href="mailto:gm@goodmorning.dev"
               className="mb-7 inline-block text-white transition-colors duration-200 hover:text-primary"
             >
-              hello@goodmorning.dev
+              gm@goodmorning.dev
             </a>
 
             <div className="flex gap-3">
