@@ -55,13 +55,13 @@ export default function TestimonialsSlider() {
                 “{testimonial.text}”
               </p>
 
-              {testimonial.link && (
+              {/* {testimonial.link && (
                 <ReadMoreLink
                   className="mt-10"
                   href={testimonial.link}
                   label="READ CASE STUDY"
                 />
-              )}
+              )} */}
             </div>
           </div>
         ))}
