@@ -15,16 +15,16 @@ export const navItems = [
       { label: 'Web3 technical auditing', href: '/services/web3-auditing' },
     ],
   },
-  {
-    label: 'Success stories',
-    href: '/success',
-  },
+  // {
+  //   label: 'Success stories',
+  //   href: '/success',
+  // },
   {
     label: 'About',
     children: [
       { label: 'About us', href: '/about-us' },
       { label: 'Careers', href: '/careers' },
-      { label: 'Blog', href: '/blog' },
+      // { label: 'Blog', href: '/blog' },
       { label: 'Contact us', href: '/contact' },
     ],
   },
