@@ -4,8 +4,10 @@ export const metadata = {
     'No fluff - just real stories, deep insights, and experiments from the Web3 trenches. The goodmorning blog shares lessons from blockchain’s front lines.',
 }
 
-import Blog from './Blog'
+// import Blog from './Blog'
+import { notFound } from 'next/navigation'
 
 export default function BlogPage() {
-  return <Blog />
+  // return <Blog />
+  notFound()
 }

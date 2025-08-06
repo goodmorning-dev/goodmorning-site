@@ -275,7 +275,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Blog section */}
+      {/* Blog section
       <section className="bg-gray py-36">
         <div className="mx-auto max-w-8xl">
           <div className="text-center">
@@ -290,7 +290,7 @@ export default function AboutPage() {
           </div>
           <Blog />
         </div>
-      </section>
+      </section> */}
 
       {/* CTA section */}
       <section className="relative px-5 py-16 lg:px-0 lg:py-64">
