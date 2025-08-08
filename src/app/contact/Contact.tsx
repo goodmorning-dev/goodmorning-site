@@ -16,7 +16,7 @@ export default function ContactPage() {
     <>
       {/* Contact Hero */}
       <section
-        className="relative bg-black py-16 lg:py-48"
+        className="relative bg-black py-12 md:py-16 lg:py-24"
         style={{
           backgroundImage: "url('/images/contact-planet.png')",
           backgroundRepeat: 'no-repeat',
@@ -24,45 +24,47 @@ export default function ContactPage() {
           backgroundSize: 'contain',
         }}
       >
-        <div className="mx-auto flex max-w-8xl justify-end px-5 text-center lg:!pl-0 lg:!pr-24 lg:text-left">
+        <div className="mx-auto flex max-w-8xl justify-end px-5 text-center lg:!pl-0 lg:!pr-16 lg:text-left">
           <div className="max-w-[560px]">
-            <h1 className="header-1 mb-8">GM, frens</h1>
-            <p className="paragraph mb-24 max-w-[510px] !leading-relaxed lg:text-[24px]">
+            <h1 className="header-1 mb-6 text-[36px] md:text-[44px] lg:text-[56px]">
+              GM, frens
+            </h1>
+            <p className="paragraph mb-12 max-w-[510px] !leading-relaxed text-[16px] md:text-[18px] lg:text-[20px]">
               <strong>Let us bring your vision to life.</strong> <br />
               Different time zones can’t scare us off. When you need us, we show
               up. Because real partnerships don’t run on a 9-to-5 schedule.
             </p>
 
-            <div className="space-y-16 text-left">
-              <div className="flex items-start gap-5">
+            <div className="space-y-8 md:space-y-10 text-left">
+              <div className="flex items-start gap-3 md:gap-4">
                 <Image
                   src="/icons/email.png"
                   alt="Email Icon"
-                  width={56}
-                  height={56}
+                  width={44}
+                  height={44}
                 />
                 <div>
-                  <p className="header-4 mb-5 lg:text-[26px]">
+                  <p className="header-4 mb-3 text-[18px] md:text-[20px] lg:text-[22px]">
                     Reach us anytime
                   </p>
                   <a
                     href="mailto:gm@goodmorning.dev"
-                    className="paragraph text-primary hover:underline lg:text-[24px]"
+                    className="paragraph text-[16px] md:text-[18px] lg:text-[20px] text-primary hover:underline"
                   >
                     gm@goodmorning.dev
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-5">
+              <div className="flex items-start gap-3 md:gap-4">
                 <Image
                   src="/icons/telegram.png"
                   alt="Telegram Icon"
-                  width={56}
-                  height={56}
+                  width={44}
+                  height={44}
                 />
                 <div>
-                  <p className="header-4 mb-5 lg:text-[26px]">
+                  <p className="header-4 mb-3 text-[18px] md:text-[20px] lg:text-[22px]">
                     Find us on{' '}
                     <a
                       href="https://t.me/goranstoyanov"
@@ -77,25 +79,25 @@ export default function ContactPage() {
 
                   <a
                     href="tel:+359876261055"
-                    className="paragraph text-primary hover:underline lg:text-[24px]"
+                    className="paragraph text-[16px] md:text-[18px] lg:text-[20px] text-primary hover:underline"
                   >
                     +(359) 876 261 055
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-5">
+              <div className="flex items-start gap-3 md:gap-4">
                 <Image
                   src="/icons/form.png"
                   alt="Form Icon"
-                  width={56}
-                  height={56}
+                  width={44}
+                  height={44}
                 />
                 <div>
-                  <p className="header-4 mb-5 lg:text-[26px]">
+                  <p className="header-4 mb-3 text-[18px] md:text-[20px] lg:text-[22px]">
                     Or fill out the form below
                   </p>
-                  <p className="paragraph lg:text-[24px]">
+                  <p className="paragraph text-[16px] md:text-[18px] lg:text-[20px]">
                     And we’ll get back to you as soon as we can
                   </p>
                 </div>
