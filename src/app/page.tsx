@@ -320,7 +320,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      Insights section
+      {/* Insights section */}
       <section className="bg-gray py-36">
         <div className="mx-auto max-w-8xl px-5 lg:px-0">
           <div className="text-center">
