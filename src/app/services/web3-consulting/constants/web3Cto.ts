@@ -1,6 +1,6 @@
 import GearsIcon from '@/../public/icons/gears.png'
 import BriefcaseIcon from '@/../public/icons/briefcase.png'
-import EngineersIcon from '@/../public/icons/engineers.png'
+import PeopleIcon from '@/../public/icons/people.png'
 import TelegramIcon from '@/../public/icons/telegram.png'
 import JoystickIcon from '@/../public/icons/joystick.png'
 
@@ -12,7 +12,7 @@ const web3Cto = [
       'If you’re building a blockchain-powered solution but need some strategic advice to ensure your vision is built on a solid foundation, trust our experts to help you go from idea to execution.',
   },
   {
-    icon: EngineersIcon,
+    icon: PeopleIcon,
     title: 'Established businesses and enterprises',
     description:
       'Interested in integrating blockchain into your operations? Our team will help you understand how Web3 can enhance efficiency, security, and engagement, without wasting time and resources.',

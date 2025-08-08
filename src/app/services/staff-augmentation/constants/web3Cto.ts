@@ -1,8 +1,7 @@
 import GearsIcon from '@/../public/icons/gears.png'
 import BriefcaseIcon from '@/../public/icons/briefcase.png'
-import EngineersIcon from '@/../public/icons/engineers.png'
+import PeopleIcon from '@/../public/icons/people.png'
 import TelegramIcon from '@/../public/icons/telegram.png'
-import JoystickIcon from '@/../public/icons/joystick.png'
 
 const web3Cto = [
   {
@@ -12,7 +11,7 @@ const web3Cto = [
       'Move at the speed of your own ambition with our flexible talent solutions. We fill gaps in your existing team and accelerate timelines so you can meet your project deadlines without the long-term hiring commitments.',
   },
   {
-    icon: EngineersIcon,
+    icon: PeopleIcon,
     title: 'Product companies expanding their tech teams',
     description:
       'New features and markets bring new challenges. Conquer them by bringing in our specialized talent to boost your product quality and ensure timely delivery.',

@@ -1,6 +1,6 @@
 import GearsIcon from '@/../public/icons/gears.png'
 import BriefcaseIcon from '@/../public/icons/briefcase.png'
-import EngineersIcon from '@/../public/icons/engineers.png'
+import PeopleIcon from '@/../public/icons/people.png'
 import TelegramIcon from '@/../public/icons/telegram.png'
 import JoystickIcon from '@/../public/icons/joystick.png'
 
@@ -12,7 +12,7 @@ const web3Cto = [
       'You focus on the vision - we handle the tech. From idea to execution, we translate concepts into working, scalable products, manage dev teams, and make sure nothing gets lost in translation.',
   },
   {
-    icon: EngineersIcon,
+    icon: PeopleIcon,
     title: 'Early-stage startups',
     description:
       'Launching is tough. With the right partner, it becomes strategic. We help you choose the right stack, structure your architecture, and build the foundation your startup needs.',

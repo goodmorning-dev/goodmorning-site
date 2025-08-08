@@ -1,6 +1,6 @@
 import GearsIcon from '@/../public/icons/gears.png'
 import BriefcaseIcon from '@/../public/icons/briefcase.png'
-import EngineersIcon from '@/../public/icons/engineers.png'
+import PeopleIcon from '@/../public/icons/people.png'
 import TelegramIcon from '@/../public/icons/telegram.png'
 
 const web3Cto = [
@@ -11,7 +11,7 @@ const web3Cto = [
       'We know your ideas are game-changing, but investors and users still need proof. We’ll build a working MVP so you can validate market demands, collect feedback, and raise funds without any unnecessary moves and investments.',
   },
   {
-    icon: EngineersIcon,
+    icon: PeopleIcon,
     title: 'Non-technical founders',
     description:
       'Who says you need to be a developer to launch a killer product? If you have the vision, leave the tech strategy, design and development to us and focus on the big picture of your business',
