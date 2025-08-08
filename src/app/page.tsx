@@ -321,7 +321,7 @@ export default function HomePage() {
       </section>
 
       {/* Insights section */}
-      <section className="bg-gray py-36">
+      {/* <section className="bg-gray py-36">
         <div className="mx-auto max-w-8xl px-5 lg:px-0">
           <div className="text-center">
             <h2 className="header-2 mb-8 tracking-[1.2px]">
@@ -335,7 +335,7 @@ export default function HomePage() {
           </div>
           <Blog />
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }
