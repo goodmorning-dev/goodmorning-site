@@ -7,12 +7,14 @@ import ReadMoreLink from '@/components/ReadMoreLink'
 import Image from 'next/image'
 import steps from '@/app/services/constants/successAcordion'
 import { FaPlus, FaMinus } from 'react-icons/fa'
+import { faqData } from './constants/faq'
 
 export default function ServicesPage() {
   const router = useRouter()
 
   const [openIndex, setOpenIndex] = useState<number | null>(0)
   const [closingIndex, setClosingIndex] = useState<number | null>(null)
+    const [openFAQ, setOpenFAQ] = useState<number | null>(0)
 
   const toggle = (index: number) => {
     if (openIndex === index) {
@@ -279,6 +281,66 @@ export default function ServicesPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-black px-5 py-16 lg:px-0 lg:py-32">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="header-2 mb-16 text-center text-[48px] lg:text-[64px]">FAQ</h2>
+          
+          <div className="space-y-4">
+            {faqData.map((item, index) => (
+              <div
+                key={index}
+                className="rounded-2xl bg-lightGray transition-all duration-300 ease-in-out"
+              >
+                <button
+                  onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
+                  className="flex w-full items-center justify-between p-6 text-left focus:outline-none"
+                >
+                  <span className="header-4 pr-4 text-[18px] md:text-[20px] lg:text-[22px]">
+                    {item.question}
+                  </span>
+                  <div className="flex-shrink-0">
+                    {openFAQ === index ? (
+                      <svg
+                        className="h-6 w-6 text-primary transition-transform duration-300"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
+                      </svg>
+                    ) : (
+                      <svg
+                        className="h-6 w-6 text-primary transition-transform duration-300"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                      </svg>
+                    )}
+                  </div>
+                </button>
+                
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out border-t border-textGray ${
+                    openFAQ === index
+                      ? 'max-h-96 opacity-100 pt-4'
+                      : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="px-6 pb-6">
+                    <p className="paragraph text-[16px] leading-relaxed text-white/80 md:text-[18px]">
+                      {item.answer}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
