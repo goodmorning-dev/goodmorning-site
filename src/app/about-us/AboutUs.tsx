@@ -202,7 +202,7 @@ export default function AboutPage() {
           {web3Impact.map((item, idx) => (
             <div
               key={idx}
-              onClick={() => router.push(item.link)}
+              onClick={() => window.open(item.link, '_blank', 'noopener,noreferrer')}
               className="break-inside-avoid overflow-hidden rounded-2xl transition-transform duration-300 hover:scale-[1.03] hover:cursor-pointer hover:shadow-2xl"
               style={{
                 clipPath:
