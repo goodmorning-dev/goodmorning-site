@@ -24,6 +24,9 @@ export default function ContactPage() {
           backgroundSize: 'contain',
         }}
       >
+         {/* Pulsing planet glow overlay */}
+        <div className="planet-glow hidden lg:block" aria-hidden="true" />
+
         <div className="mx-auto flex max-w-8xl justify-end px-5 text-center lg:!pl-0 lg:!pr-16 lg:text-left">
           <div className="max-w-[560px]">
             <h1 className="header-1 mb-6 text-[36px] md:text-[44px] lg:text-[56px]">
