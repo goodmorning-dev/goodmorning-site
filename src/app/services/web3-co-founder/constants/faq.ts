@@ -25,7 +25,7 @@ export const faqData = [
   },
   {
     question: "What does a Web3 technical co-founder actually do?",
-    answer: "They lead everything from smart contract design and protocol selection to assembling and managing a Web3 dev team. It’s a hybrid role that blends strategic thinking with deep technical execution - - especially critical in complex environments like DeFi, infrastructure, or multi-chain systems."
+    answer: "They lead everything from smart contract design and protocol selection to assembling and managing a Web3 dev team. It’s a hybrid role that blends strategic thinking with deep technical execution - especially critical in complex environments like DeFi, infrastructure, or multi-chain systems."
   },
   {
     question: "What do Web3 technical co-founder terms include, and how do they differ from consulting?",
