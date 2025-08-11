@@ -40,14 +40,8 @@ export default function Footer() {
 
             <div className="flex gap-3">
               <SocialIcon
-                href="https://www.facebook.com/goodmorningdevs"
-                label="Facebook"
-                size={40}
-                icon={<FaFacebookF size={14} />}
-              />
-              <SocialIcon
                 href="https://x.com/goodmorningdevs"
-                label="Twitter"
+                label="X"
                 size={40}
                 icon={<FaXTwitter size={14} />}
               />
@@ -62,6 +56,12 @@ export default function Footer() {
                 label="Telegram"
                 size={40}
                 icon={<FaTelegramPlane size={14} />}
+              />
+              <SocialIcon
+                href="https://www.facebook.com/goodmorningdevs"
+                label="Facebook"
+                size={40}
+                icon={<FaFacebookF size={14} />}
               />
             </div>
           </div>
