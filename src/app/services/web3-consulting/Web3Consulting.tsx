@@ -88,10 +88,10 @@ export default function ServicesDetailsPage() {
       >
         <div className="mx-auto flex w-full max-w-8xl flex-col items-start justify-between gap-12 px-5 lg:flex-row lg:px-0">
           <div>
-            <h1 className="header-1 max-w-3xl">Staff augmentation services</h1>
+            <h1 className="header-1 max-w-3xl">Web3 consulting services</h1>
             <p className="paragraph mt-8 max-w-lg lg:text-[24px]">
-              Supercharge your development with our specialized Web3 team
-              augmentation service tailored to your unique project needs.
+              Get specialized guidance to help you navigate and build in the
+              decentralized economy.
             </p>
           </div>
         </div>
@@ -102,15 +102,17 @@ export default function ServicesDetailsPage() {
         <div className="mx-auto flex w-full max-w-8xl flex-col items-start items-center justify-between gap-5 px-5 lg:flex-row lg:px-0">
           <div>
             <h1 className="header-2 max-w-[615px] !leading-[1.3] lg:text-[56px]">
-              <span className="text-primary">Top-tier</span> talent, on demand
+              <span className="text-primary">Web3</span> technical consultancy
             </h1>
           </div>
           <div className="max-w-[640px]">
             <p className="paragraph">
-              We bring the right expertise to you exactly when you need it, so
-              you can skip the hiring headaches. Whether you’re building or
-              scaling, our experts seamlessly integrate into your existing team,
-              delivering real impact from day one.
+              Navigate the decentralized world with goodmorning - a boutique
+              web3 consulting company. Whether you’re building your first dApp,
+              designing a tokenized ecosystem, or scaling protocol
+              infrastructure, we provide hands-on guidance and engineering
+              support across the full blockchain stack - from architecture and
+              smart contracts to integration and UX design.
             </p>
           </div>
         </div>
@@ -311,8 +313,10 @@ export default function ServicesDetailsPage() {
       {/* FAQ Section */}
       <section className="bg-black px-5 py-16 lg:px-0 lg:py-32">
         <div className="mx-auto max-w-4xl">
-          <h2 className="header-2 mb-16 text-center text-[48px] lg:text-[64px]">FAQ</h2>
-          
+          <h2 className="header-2 mb-16 text-center text-[48px] lg:text-[64px]">
+            FAQ
+          </h2>
+
           <div className="space-y-4">
             {faqData.map((item, index) => (
               <div
@@ -334,7 +338,12 @@ export default function ServicesDetailsPage() {
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M20 12H4"
+                        />
                       </svg>
                     ) : (
                       <svg
@@ -343,16 +352,21 @@ export default function ServicesDetailsPage() {
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 4v16m8-8H4"
+                        />
                       </svg>
                     )}
                   </div>
                 </button>
-                
+
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out border-t border-textGray ${
+                  className={`overflow-hidden border-t border-textGray transition-all duration-300 ease-in-out ${
                     openFAQ === index
-                      ? 'max-h-96 opacity-100 pt-4'
+                      ? 'max-h-96 pt-4 opacity-100'
                       : 'max-h-0 opacity-0'
                   }`}
                 >
