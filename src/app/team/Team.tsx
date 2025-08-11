@@ -66,10 +66,10 @@ export default function TeamPage() {
           </div>
 
           <div className="paragraph max-w-[640px] text-center !font-normal lg:text-left lg:text-[20px]">
-            We’re all obsessed with what we do — but we also know that great
+            We’re all obsessed with what we do - but we also know that great
             tech isn’t just about clean code, it’s about the minds behind it.
             Collaboration, bold thinking, and radical trust drive everything we
-            build. When you work with us, you’re not just hiring devs — you’re
+            build. When you work with us, you’re not just hiring devs - you’re
             teaming up with a crew that’s all in, from first spark to final
             launch (and beyond).
           </div>

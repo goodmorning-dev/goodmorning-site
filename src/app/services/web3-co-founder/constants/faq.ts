@@ -1,7 +1,7 @@
 export const faqData = [
   {
     question: "What is a Web3 technical co-founder, and how do you fill that role?",
-    answer: "A Web3 technical co-founder is part strategist, part engineer, and part product lead — someone who helps you turn your idea into a real, working product. At goodmorning, we fill that role by owning everything from architecture decisions and dev team management to MVP execution and long-term scaling."
+    answer: "A Web3 technical co-founder is part strategist, part engineer, and part product lead - someone who helps you turn your idea into a real, working product. At goodmorning, we fill that role by owning everything from architecture decisions and dev team management to MVP execution and long-term scaling."
   },
   {
     question: "Is hiring a Web3 technical co-founder better than a full-time CTO?",
@@ -21,11 +21,11 @@ export const faqData = [
   },
   {
     question: "What if I only need short-term help or MVP-level leadership?",
-    answer: "That’s exactly where our Web3 MVP development services come in. If you’re not ready for long-term technical leadership, we can help you build and launch an MVP first — and revisit your hiring needs after traction."
+    answer: "That’s exactly where our Web3 MVP development services come in. If you’re not ready for long-term technical leadership, we can help you build and launch an MVP first - and revisit your hiring needs after traction."
   },
   {
     question: "What does a Web3 technical co-founder actually do?",
-    answer: "They lead everything from smart contract design and protocol selection to assembling and managing a Web3 dev team. It’s a hybrid role that blends strategic thinking with deep technical execution — especially critical in complex environments like DeFi, infrastructure, or multi-chain systems."
+    answer: "They lead everything from smart contract design and protocol selection to assembling and managing a Web3 dev team. It’s a hybrid role that blends strategic thinking with deep technical execution - - especially critical in complex environments like DeFi, infrastructure, or multi-chain systems."
   },
   {
     question: "What do Web3 technical co-founder terms include, and how do they differ from consulting?",

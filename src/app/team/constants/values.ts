@@ -12,7 +12,7 @@ export const teamValues = [
     highlight: 'Communication',
     subtitle: ': No BS, just real talk',
     description:
-      "You won't find corporate fluff here. We keep things transparent, collaborative, and human — the way it should be when you're building something that matters. We're big on feedback too — we don't just listen, we actually hear it, act on it, and grow from it.",
+      "You won't find corporate fluff here. We keep things transparent, collaborative, and human - the way it should be when you're building something that matters. We're big on feedback too - we don't just listen, we actually hear it, act on it, and grow from it.",
     image: '/images/values/communication.png',
   },
   {
@@ -20,7 +20,7 @@ export const teamValues = [
     highlight: 'Personal touch',
     subtitle: ': No cookie-cutter thinking',
     description:
-      "Every team member brings their own flavor to the table — and that's our edge. Our diverse skills, perspectives, and personalities spark the kind of creative problem-solving your project deserves.",
+      "Every team member brings their own flavor to the table - and that's our edge. Our diverse skills, perspectives, and personalities spark the kind of creative problem-solving your project deserves.",
     image: '/images/values/personal-touch.png',
   },
   {
