@@ -91,19 +91,25 @@ export default function Footer() {
         </span>
         <div className="mt-2 flex gap-6 md:mt-0">
           <Link
+            href="/terms"
+            className="text-white/60 transition-colors duration-200 hover:text-white"
+          >
+            Terms of Service
+          </Link>
+          <Link
             href="/privacy-policy"
             className="text-white/60 transition-colors duration-200 hover:text-white"
           >
             Privacy Policy
           </Link>
           <Link
-            href="/terms"
+            href="/Cookie-policy"
             className="text-white/60 transition-colors duration-200 hover:text-white"
           >
-            Terms of Services
+            Privacy policy
           </Link>
           <Link
-            href="/sitemap"
+            href="/Cookie-policy"
             className="text-white/60 transition-colors duration-200 hover:text-white"
           >
             Sitemap
