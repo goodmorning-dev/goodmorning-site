@@ -18,7 +18,7 @@ export default function TermsPage() {
         }}
       >
         <div className="mx-auto max-w-8xl text-center lg:text-left">
-          <h1 className="header-1 mb-8">Terms of Services</h1>
+          <h1 className="header-1 mb-8">Terms of Service</h1>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-black" />

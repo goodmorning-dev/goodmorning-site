@@ -1,57 +1,108 @@
-_Last updated: July 17, 2025_
+# Terms of Service
+**Last updated:** 12 August 2025
 
-# 1. Acceptance of Terms
+Welcome to **goodmorning.dev**. By accessing or using our website or contacting us for services, you agree to these Terms of Service (“Terms”). Please read them carefully.
 
-By accessing or using our website or services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
+If you do not agree to these Terms, you should not use our website or engage our services.
 
-# 2. Services Provided
+---
 
-Lime Labs Ltd provides blockchain-related development services, smart contract auditing, MVP development, and consulting services. The scope of services will be defined in individual agreements.
+## 1. Who we are
 
-# 3. Eligibility
+**GOODMORNING LTD** (“we”, “us”, “our”) is a blockchain and software development consultancy. We are registered in Bulgaria:
 
-To use our services, you must be at least 18 years old and capable of entering into binding contracts.
+- **Registered address:** 11, Ostrava str., Varna, Bulgaria
+- **Company ID / VAT number:** 207083926 / BG 207083926
+- **Contact email:** privacy@goodmorning.dev
 
-# 4. User Responsibilities
+---
 
-You agree not to use the site or services:
+## 2. Scope of these Terms
 
-- For any unlawful purpose
-- To solicit others to perform or participate in unlawful acts
-- To violate any international, federal, or local laws or regulations
-- To infringe upon our intellectual property or that of others
-- To transmit viruses or malicious code
+These Terms apply to:
+- Use of our website at **goodmorning.dev**.
+- Enquiries and communications with us via our contact forms, email, or other channels.
+- Any preliminary information shared before a separate written contract is signed.
 
-We reserve the right to terminate your use of the service for violating any of the prohibited uses.
+**Important:** If we enter into a separate written agreement with you for development, consulting, or other services, that agreement will take precedence over these Terms.
 
-# 5. Intellectual Property
+---
 
-All content, trademarks, logos, and materials on our website are the property of Lime Labs Ltd or its licensors. You may not reproduce, duplicate, copy, sell, resell or exploit any portion of the Service without express written permission.
+## 3. No financial or investment advice
 
-# 6. Payment and Fees
+Although we work in blockchain and Web3 technology, nothing on our website or in our communications should be considered:
+- Financial advice
+- Investment advice
+- Legal advice
 
-Details regarding fees, payment methods, and billing cycles will be defined in your individual service agreement with us.
+Any examples, case studies, or project descriptions are for informational purposes only. You should always do your own research and seek independent advice before making financial or investment decisions.
 
-# 7. Limitation of Liability
+---
 
-To the maximum extent permitted by law, Lime Labs Ltd shall not be liable for any indirect, incidental, special, consequential or punitive damages, including lost profits, data loss, or other damages resulting from your use of the service.
+## 4. Blockchain-related risks
 
-# 8. Disclaimer
+If you engage us for blockchain development or consultancy, you acknowledge that:
+- Blockchain technologies are experimental and involve risks, including technical failures, vulnerabilities, or market volatility.
+- Transactions on public blockchains are irreversible.
+- We are **not responsible** for losses caused by smart contract bugs, network downtime, wallet breaches, or third-party service failures.
 
-Our services are provided “as is” and “as available” without any warranties of any kind, either express or implied.
+---
 
-# 9. Governing Law
+## 5. Intellectual property
 
-These Terms shall be governed and construed in accordance with the laws of the Republic of Bulgaria, without regard to its conflict of law provisions.
+Unless otherwise agreed in writing:
+- All content on our website (text, images, code, design) is owned by **GOODMORNING LTD** or our licensors.
+- You may not copy, modify, distribute, or reuse our content without our prior written permission.
+- Any intellectual property created during a client engagement will be governed by the terms in the relevant contract.
 
-# 10. Changes to Terms
+---
 
-We may update these Terms of Service from time to time. The most current version will always be posted on our website. Continued use of the site or services after any changes constitutes acceptance of those changes.
+## 6. Acceptable use
 
-# 11. Contact Us
+You agree not to:
+- Use our website in a way that breaks the law or infringes anyone’s rights.
+- Attempt to gain unauthorised access to our systems.
+- Upload malicious code or attempt to disrupt our website.
 
-If you have any questions about these Terms, please contact us at:
+---
 
-**Email:** [privacy@limachain.tech](mailto:privacy@limachain.tech)  
-**Phone:** [+359 884 913 747](tel:+359884913747)  
-**Address:** Sofia 1113, Sofia Municipality, Iztok District, 23A "Dragan Tsankov" Blvd., office 6, Bulgaria
+## 7. Third-party links and services
+
+Our website may contain links to third-party sites. We are not responsible for the content, privacy practices, or terms of those third parties.
+
+---
+
+## 8. Limitation of liability
+
+To the maximum extent permitted by law:
+- We are not liable for any indirect, incidental, or consequential damages arising from your use of our website or reliance on its content.
+- Our total liability for any claim related to your use of the website will not exceed €100.
+- This limitation does not apply where prohibited by law.
+
+---
+
+## 9. Privacy and cookies
+
+Your use of our website is also governed by our:
+- **Privacy Policy** (https://goodmorning.dev/privacy-policy)
+- **Cookie Policy** (https://goodmorning.dev/cookie-policy)
+
+---
+
+## 10. Governing law and jurisdiction
+
+These Terms are governed by the laws of **Bulgaria**. Any disputes will be subject to the exclusive jurisdiction of the Bulgarian courts.
+
+---
+
+## 11. Changes to these Terms
+
+We may update these Terms from time to time. Any changes will be posted on this page with the “last updated” date. Continued use of our website after changes means you accept the updated Terms.
+
+---
+
+**Contact us**  
+For questions about these Terms, contact:  
+**GOODMORNING LTD**  
+11, Ostrava str., Varna, Bulgaria  
+Email: **privacy@goodmorning.dev**

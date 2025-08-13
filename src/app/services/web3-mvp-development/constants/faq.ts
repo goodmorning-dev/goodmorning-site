@@ -1,4 +1,4 @@
-export const faqData = [
+﻿export const faqData = [
   {
     question: "What do your Web3 MVP development services include?",
     answer: "Our Web3 MVP development services cover everything from product discovery to launch. We help you define the core problem, design intuitive user flows, build smart contracts and dApp logic, test rigorously, and launch a fully functional product - fast, lean, and ready for feedback."
@@ -8,12 +8,12 @@ export const faqData = [
     answer: "Depending on scope and complexity, most MVPs take between 1 and 4 months. We focus on delivering fast without cutting corners - so you can start testing your idea in the real world as soon as possible."
   },
   {
-    question: "What’s the difference between a Web3 POC, prototype, and MVP?",
-    answer: "- A Proof of Concept (POC) tests whether something is technically possible - it’s internal, quick, and low-code.\n- A prototype is more visual and interactive - great for testing UX and flow.\n- A Minimum Viable Product (MVP) is the first live version of your product that users can engage with - fully functional and designed to validate your idea in the market."
+    question: "What's the difference between a Web3 POC, prototype, and MVP?",
+    answer: "- A Proof of Concept (POC) tests whether something is technically possible - it's internal, quick, and low-code.<br>- A prototype is more visual and interactive - great for testing UX and flow.<br>- A Minimum Viable Product (MVP) is the first live version of your product that users can engage with - fully functional and designed to validate your idea in the market."
   },
   {
     question: "What kind of feedback loops do you include during MVP development?",
-    answer: "We involve you at every critical stage - from wireframes and design mockups to dev milestones and pre-launch testing. Bi-weekly demos, async feedback tools, and shared workspaces ensure we’re always aligned and able to course-correct quickly."
+    answer: "We involve you at every critical stage - from wireframes and design mockups to dev milestones and pre-launch testing. Bi-weekly demos, async feedback tools, and shared workspaces ensure we're always aligned and able to course-correct quickly."
   },
   {
     question: "How much does Web3 MVP development typically cost?",
@@ -21,7 +21,7 @@ export const faqData = [
   },
   {
     question: "What makes Web3 MVP development different from Web2?",
-    answer: "Web3 MVPs require expertise in smart contracts, blockchain security, tokenomics, and decentralized UX. At goodmorning, we’ve built MVPs that nail these essentials, so you can launch with confidence."
+    answer: "Web3 MVPs require expertise in smart contracts, blockchain security, tokenomics, and decentralized UX. At goodmorning, we've built MVPs that nail these essentials, so you can launch with confidence."
   },
   {
     question: "How do I know what features to include in my MVP?",

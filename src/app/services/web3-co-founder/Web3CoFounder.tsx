@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import clsx from 'clsx'
 import Image from 'next/image'
+import Link from 'next/link'
 import Button from '@/components/Button'
 import web3Cto from './constants/web3Cto'
 import { ideaToProductSteps } from './constants/ideaToProductSteps'
@@ -74,6 +75,25 @@ export default function ServicesDetailsPage() {
       </div>
     </div>
   )
+
+  const renderFAQAnswer = (answer: string, index: number) => {
+    // Check if this is the specific FAQ item that needs the link
+    if (index === 5 && answer.includes('Web3 MVP development services')) {
+      return (
+        <span>
+          That's exactly where our{' '}
+          <Link 
+            href="/services/web3-mvp-development" 
+            className="text-primary hover:text-secondary underline transition-colors duration-200"
+          >
+            Web3 MVP development services
+          </Link>{' '}
+          come in. If you're not ready for long-term technical leadership, we can help you build and launch an MVP first — and revisit your hiring needs after traction.
+        </span>
+      )
+    }
+    return answer
+  }
 
   return (
     <main>
@@ -405,7 +425,7 @@ export default function ServicesDetailsPage() {
                 >
                   <div className="px-6 pb-6">
                     <p className="paragraph text-[16px] leading-relaxed text-white/80 md:text-[18px]">
-                      {item.answer}
+                      {renderFAQAnswer(item.answer, index)}
                     </p>
                   </div>
                 </div>
