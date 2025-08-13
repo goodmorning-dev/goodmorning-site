@@ -135,7 +135,7 @@ export default function ServicesDetailsPage() {
             and tech innovators to scale effortlessly. Whether you need
             specialized Web3 expertise, additional hands on deck for a major
             project, or a dedicated team to extend your capabilities, we provide
-            top-tier talent that integrates seamlessly with your workflow—so you
+            top-tier talent that integrates seamlessly with your workflow-so you
             can build faster without the overhead of traditional hiring.
           </p>
 
