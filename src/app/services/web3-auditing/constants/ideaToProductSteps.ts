@@ -1,37 +1,36 @@
 export const ideaToProductSteps = [
   {
     step: 'Step 1',
-    title: 'Understanding your needs',
-    description:
-      'Define your project scope, pinpoint skill gaps, and select the best engagement model for your needs',
+    title: 'Initial assessment & Scope definition',
+    description: 'Define your goals, audit depth, and key risk areas.',
     image: '/images/productSteps/step1.png',
   },
   {
     step: 'Step 2',
-    title: 'Candidate selection & Vetting',
+    title: 'Codebase & Infrastructure review',
     description:
-      'Craft a curated list of pre-vetted experts, ensuring top-tier technical skills and culture fit',
+      'Evaluate code viability and test for security vulnerabilities.',
     image: '/images/productSteps/step2.png',
   },
   {
     step: 'Step 3',
-    title: 'Seamless integration',
+    title: 'Security & Compliance check',
     description:
-      'Onboard new team members seamlessly with the right tools and workflow alignment',
+      'Identify smart contract flaws, storage risks, and compliance gaps.',
     image: '/images/productSteps/step3.png',
   },
   {
     step: 'Step 4',
-    title: 'Continuous support & Performance monitoring',
+    title: 'Team & Development process analysis',
     description:
-      'Provide ongoing support and adapt to shifting project needs for optimal productivity',
+      'Assess workflows, testing standards and pinpoint technical risks.',
     image: '/images/productSteps/step4.png',
   },
   {
     step: 'Step 5',
-    title: 'Project completion & Knowledge handover',
+    title: 'Actionable reporting & Strategy',
     description:
-      'Ensure a smooth transition after project wrap-up and provide post-engagement support',
+      'Provide actionable recommendations for tech improvement and risk reduction to maximize potential.',
     image: '/images/productSteps/step5.png',
   },
 ]

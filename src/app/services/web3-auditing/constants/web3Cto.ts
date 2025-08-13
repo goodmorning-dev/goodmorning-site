@@ -6,27 +6,33 @@ import ValueIcon from '@/../public/icons/value.png'
 const web3Cto = [
   {
     icon: RocketIcon,
-    title: 'Startups & Scale-ups',
+    title: 'Mergers & acquisition teams',
     description:
-      'Move at the speed of your own ambition with our flexible talent solutions. We fill gaps in your existing team and accelerate timelines so you can meet your project deadlines without the long-term hiring commitments.',
+      'Evaluating a Web3 startup for M&A? Our technical due diligence consulting breaks down code quality, security, and scalability - helping you make informed investment decisions with confidence.',
   },
   {
     icon: BriefcaseIcon,
-    title: 'Product companies expanding their tech teams',
+    title: 'Startup founders raising capital',
     description:
-      'New features and markets bring new challenges. Conquer them by bringing in our specialized talent to boost your product quality and ensure timely delivery.',
+      'Investors ask tough questions and you have to be prepared to face them with confidence. Our audits will get you there by identifying your tech strengths, fixing weak spots, and ensuring your infrastructure is VC-ready.',
   },
   {
     icon: PeopleIcon,
-    title: 'Tech teams needing short-term expertise',
+    title: 'Blockchain & Web3 investors',
     description:
-      'You don’t need a full-time hire, but an expert who can jump in, solve a problem, and keep things moving? Our seasoned developers and blockchain experts integrate seamlessly into your team, tackling critical projects and delivering results, fast.',
+      'Before investing in a Web3 project, know exactly what you’re backing. Our smart contract auditing uncovers security flaws, scalability risks, and compliance gaps so you can invest wisely.',
   },
   {
     icon: ValueIcon,
-    title: 'Investors & Venture studios',
+    title: 'CTOs & Tech leads',
     description:
-      'Building an in-house team for every startup isn’t always feasible. That’s where our Web3 experts come in, supporting multiple projects and providing technical execution and guidance for your portfolio companies',
+      'We thoroughly assess technology stacks, security protocols, and compliance standards to help you future-proof your tech decisions when validating third-party software, platforms, or technology partnerships.',
+  },
+  {
+    icon: ValueIcon,
+    title: 'Third-party dependency risk assessment ',
+    description:
+      'APIs and smart contracts power your product, but are they reliable? Leave it to our experts to identify potential weak links before they turn into a tech nightmare.',
   },
 ]
 
