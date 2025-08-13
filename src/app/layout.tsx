@@ -2,6 +2,7 @@ import '@/styles/globals.scss'
 import '@/styles/typography.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Script from 'next/script'
 
 export const metadata = {
   title: 'goodmorning | The Web3 Development Studio',
@@ -17,6 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          id="cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid={process.env.COOKIEBOT}
+          strategy="beforeInteractive"
+        />
+      </head>
       <body>
         <Header />
         <main className="min-h-screen pt-[110px]">{children}</main>
