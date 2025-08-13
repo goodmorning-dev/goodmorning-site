@@ -103,13 +103,13 @@ export default function Footer() {
             Privacy Policy
           </Link>
           <Link
-            href="/Cookie-policy"
+            href="/cookie-policy"
             className="text-white/60 transition-colors duration-200 hover:text-white"
           >
-            Privacy policy
+            Cookie policy
           </Link>
           <Link
-            href="/Cookie-policy"
+            href="/sitemap"
             className="text-white/60 transition-colors duration-200 hover:text-white"
           >
             Sitemap
