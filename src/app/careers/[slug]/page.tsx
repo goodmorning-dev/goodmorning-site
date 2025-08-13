@@ -25,12 +25,13 @@ function findJobBySlug(slug: string): JobType | undefined {
   }
 }
 
-export default function JobDetailsPage({
+export default async function JobDetailsPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const job = findJobBySlug(params.slug)
+  const { slug } = await params
+  const job = findJobBySlug(slug)
   if (!job) return notFound()
 
   return (
