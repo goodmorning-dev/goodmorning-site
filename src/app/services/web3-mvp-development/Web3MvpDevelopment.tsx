@@ -358,9 +358,10 @@ export default function ServicesDetailsPage() {
                   }`}
                 >
                   <div className="px-6 pb-6">
-                    <p className="paragraph text-[16px] leading-relaxed text-white/80 md:text-[18px]">
-                      {item.answer}
-                    </p>
+                    <p 
+                      className="paragraph text-[16px] leading-relaxed text-white/80 md:text-[18px]"
+                      dangerouslySetInnerHTML={{ __html: item.answer }}
+                    />
                   </div>
                 </div>
               </div>

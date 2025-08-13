@@ -87,10 +87,12 @@ export default function ServicesDetailsPage() {
       >
         <div className="mx-auto flex w-full max-w-8xl flex-col items-start justify-between gap-12 px-5 lg:flex-row lg:px-0">
           <div>
-            <h1 className="header-1 max-w-3xl">Staff augmentation services</h1>
+            <h1 className="header-1 max-w-3xl">
+              Web3 Technical auditing services
+            </h1>
             <p className="paragraph mt-8 max-w-lg lg:text-[24px]">
-              Supercharge your development with our specialized Web3 team
-              augmentation service tailored to your unique project needs.
+              Secure your success by making smart moves in the Web3 space with
+              our technical auditing services.
             </p>
           </div>
         </div>
@@ -101,17 +103,16 @@ export default function ServicesDetailsPage() {
         <div className="mx-auto flex w-full max-w-8xl flex-col items-start items-center justify-between gap-5 px-5 lg:flex-row lg:px-0">
           <div>
             <h1 className="header-2 max-w-[615px] !leading-[1.3] lg:text-[56px]">
-              <span className="text-primary">Top-tier</span> talent,
-              <br />
-              <span className="gradient-underline">on demand</span>
+              Make every <span className="text-primary">tech</span> decision a{' '}
+              <span className="gradient-underline">success</span>
             </h1>
           </div>
           <div className="max-w-[640px]">
             <p className="paragraph">
-              We bring the right expertise to you exactly when you need it, so
-              you can skip the hiring headaches. Whether you’re building or
-              scaling, our experts seamlessly integrate into your existing team,
-              delivering real impact from day one.
+              Not all Web3 projects are built to last. Our IT due diligence
+              services for Web3 reveal hidden risks, optimize performance, and
+              ensure your tech is ready for growth - whether you’re investing,
+              scaling, or merging.
             </p>
           </div>
         </div>
@@ -121,19 +122,16 @@ export default function ServicesDetailsPage() {
       <section className="py-32">
         <div className="relative z-20 mx-auto max-w-8xl px-5 lg:px-0">
           <h2 className="header-2 mb-7 text-center tracking-[1.2px]">
-            <span className="gradient-underline">Who are</span> the blockchain
+            <span className="gradient-underline">Who are</span> the
             <br />
-            <span className="text-primary"> staff augmentation</span> services
+            <span className="text-primary">technical auditing</span> services
             for?
           </h2>
           <p className="paragraph mx-auto max-w-[52rem] text-center">
-            Need expert blockchain developers to complement your in-house staff?
-            Our team augmentation services are designed for fast-moving startups
-            and tech innovators to scale effortlessly. Whether you need
-            specialized Web3 expertise, additional hands on deck for a major
-            project, or a dedicated team to extend your capabilities, we provide
-            top-tier talent that integrates seamlessly with your workflow—so you
-            can build faster without the overhead of traditional hiring.
+            Whatever your Web3 goal is, you need the full picture. Making the
+            wrong technical bet can cost you, which is why our due diligence
+            services help you cut through the noise, assess risks, and conquer
+            hidden opportunities.
           </p>
 
           <div className="mt-20 flex flex-wrap justify-center gap-10">
@@ -188,14 +186,15 @@ export default function ServicesDetailsPage() {
         <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
           <div className="max-w-2xl">
             <h2 className="header-2">
-              <span className="gradient-underline">Why partner</span> with{' '}
-              <span className="text-primary">goodmorning</span>?
+              <span className="gradient-underline">Why choose </span>
+              <span className="text-primary">goodmorning</span> as your due
+              diligence consulting company?
             </h2>
             <p className="paragraph mt-8 lg:text-[20px]">
-              We don’t just fill the empty spots in your team, we build
-              solutions. Our experts blend into your company structure
-              seamlessly, bringing over a decade of technical knowledge to
-              supercharge your development process.
+              When it comes to Web3, you don’t just want to have great tech, you
+              need to have the right tech. And we help you achieve that by
+              ensuring security and scalability. With our technical due
+              diligence services, you get:
             </p>
             <ul className="ml-2 mt-10 space-y-8">
               <li className="flex items-start gap-6">
@@ -214,7 +213,8 @@ export default function ServicesDetailsPage() {
                   </svg>
                 </div>
                 <p className="paragraph lg:text-[24px]">
-                  Access top-tier Web3 talent on demand.
+                  A rock-solid codebase as our experts identify weaknesses and
+                  optimize performance.
                 </p>
               </li>
 
@@ -234,7 +234,8 @@ export default function ServicesDetailsPage() {
                   </svg>
                 </div>
                 <p className="paragraph lg:text-[24px]">
-                  Flexible engagement models to match your project needs.
+                  A smarter allocation of resources as we validate roadmaps, cut
+                  unnecessary costs, and maximize development efficiency.
                 </p>
               </li>
 
@@ -254,8 +255,8 @@ export default function ServicesDetailsPage() {
                   </svg>
                 </div>
                 <p className="paragraph lg:text-[24px]">
-                  Rapid scaling to ensure you meet your critical deadlines
-                  without compromising on quality.
+                  Future-proof technology as we assess best practices and R&D
+                  opportunities so your project stays sharp and scalable.
                 </p>
               </li>
             </ul>
@@ -289,9 +290,9 @@ export default function ServicesDetailsPage() {
             <span className="gradient-underline">How</span> it works?
           </h2>
           <p className="paragraph mx-auto mt-8 max-w-[870px] !font-normal text-white/80">
-            With a solid experience in Web3, we provide the expertise,
-            flexibility, and support you need to scale efficiently and skip the
-            hiring hassles.
+            We take a systematic, expert-led approach throughout each stage of
+            our shared journey to help you mitigate risks, optimize performance,
+            and ensure long-term maintainability.
           </p>
         </div>
 
@@ -310,8 +311,10 @@ export default function ServicesDetailsPage() {
       {/* FAQ Section */}
       <section className="bg-black px-5 py-16 lg:px-0 lg:py-32">
         <div className="mx-auto max-w-4xl">
-          <h2 className="header-2 mb-16 text-center text-[48px] lg:text-[64px]">FAQ</h2>
-          
+          <h2 className="header-2 mb-16 text-center text-[48px] lg:text-[64px]">
+            FAQ
+          </h2>
+
           <div className="space-y-4">
             {faqData.map((item, index) => (
               <div
@@ -333,7 +336,12 @@ export default function ServicesDetailsPage() {
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M20 12H4"
+                        />
                       </svg>
                     ) : (
                       <svg
@@ -342,16 +350,21 @@ export default function ServicesDetailsPage() {
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 4v16m8-8H4"
+                        />
                       </svg>
                     )}
                   </div>
                 </button>
-                
+
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out border-t border-textGray ${
+                  className={`overflow-hidden border-t border-textGray transition-all duration-300 ease-in-out ${
                     openFAQ === index
-                      ? 'max-h-96 opacity-100 pt-4'
+                      ? 'max-h-96 pt-4 opacity-100'
                       : 'max-h-0 opacity-0'
                   }`}
                 >
@@ -367,7 +380,6 @@ export default function ServicesDetailsPage() {
         </div>
       </section>
 
-
       {/* CTA section */}
       <section className="relative bg-gray px-5 py-16 lg:px-0 lg:py-64">
         <div
@@ -377,15 +389,14 @@ export default function ServicesDetailsPage() {
 
         <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
           <h2 className="header-2 max-w-xl text-center lg:text-left">
-            Make your team unstoppable
+            Stay ahead with smarter tech decisions
           </h2>
 
           <div className="max-w-[500px] text-center lg:text-left">
             <p className="paragraph leading-[1.33] tracking-[0.6px] lg:text-[24px]">
-              You don’t need more resumes - you need the right people, ready to
-              build. Leave the hiring stress in the past and take your
-              development to a whole new level with our staff augmentation
-              services.
+              Don’t gamble on your tech if you’re serious about making big moves
+              in Web3. Trust the pros and set up your project for long-term
+              success today!
             </p>
             <Button
               className="mt-9"
