@@ -1,6 +1,7 @@
 'use client'
 
 import { useKeenSlider } from 'keen-slider/react'
+import { useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
 import Image from 'next/image'
 import ReadMoreLink from '@/components/ReadMoreLink'
@@ -10,20 +11,33 @@ import { testimonials } from '@/constants/testimonials'
 export default function TestimonialsSlider() {
   const isMobile = useIsMobile()
 
-  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
-    loop: true,
-    slides: {
-      perView: isMobile ? 1 : 2,
-      spacing: 70,
+  const [loaded, setLoaded] = useState(false)
+
+  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>(
+    {
+      loop: true,
+      slides: {
+        perView: isMobile ? 1 : 2,
+        spacing: 70,
+      },
     },
-  })
+    [
+      (slider) => {
+        slider.on('created', () => setLoaded(true))
+      },
+    ]
+  )
 
   const handlePrev = () => slider.current?.prev()
   const handleNext = () => slider.current?.next()
 
   return (
     <div className="relative z-30 mt-16 w-full px-4">
-      <div ref={sliderRef} className="keen-slider">
+      <div
+        ref={sliderRef}
+        className={`keen-slider transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        aria-busy={!loaded}
+      >
         {testimonials.map((testimonial, index) => (
           <div key={index} className="keen-slider__slide flex justify-center">
             <div

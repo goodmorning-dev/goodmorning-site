@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import { useIsMobile } from '@/hooks/useIsMobile'
@@ -15,16 +15,24 @@ const logos = [
 export default function LogoScroller() {
   const isMobile = useIsMobile()
 
-  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
-    loop: true,
-    renderMode: 'performance',
-    drag: true,
-    mode: 'snap',
-    slides: {
-      perView: isMobile ? 2.1 : 4.1,
-      spacing: 86,
+  const [loaded, setLoaded] = useState(false)
+  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>(
+    {
+      loop: true,
+      renderMode: 'performance',
+      drag: true,
+      mode: 'snap',
+      slides: {
+        perView: isMobile ? 2.1 : 4.1,
+        spacing: 86,
+      },
     },
-  })
+    [
+      (slider) => {
+        slider.on('created', () => setLoaded(true))
+      },
+    ]
+  )
 
   useEffect(() => {
     if (
@@ -61,7 +69,8 @@ export default function LogoScroller() {
   return (
     <div
       ref={sliderRef}
-      className="keen-slider relative w-full overflow-hidden"
+      className={`keen-slider relative w-full overflow-hidden transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+      aria-busy={!loaded}
     >
       {logos.map((src, i) => (
         <div

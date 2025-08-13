@@ -1,6 +1,7 @@
 'use client'
 
 import { useKeenSlider } from 'keen-slider/react'
+import { useState } from 'react'
 import 'keen-slider/keen-slider.min.css'
 import Image from 'next/image'
 import { useIsMobile } from '@/hooks/useIsMobile'
@@ -8,13 +9,19 @@ import { useIsMobile } from '@/hooks/useIsMobile'
 export default function GallerySlider() {
   const isMobile = useIsMobile()
 
-  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
-    loop: true,
-    slides: {
-      perView: isMobile ? 2 : 3.5,
-      spacing: 30,
+  const [loaded, setLoaded] = useState(false)
+  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>(
+    {
+      loop: true,
+      slides: {
+        perView: isMobile ? 2 : 3.5,
+        spacing: 30,
+      },
     },
-  })
+    [
+      (slider) => slider.on('created', () => setLoaded(true)),
+    ]
+  )
 
   const handlePrev = () => slider.current?.prev()
   const handleNext = () => slider.current?.next()
@@ -36,7 +43,11 @@ export default function GallerySlider() {
   return (
     <div className="relative z-30 mt-20 w-full">
       <div className="lg:pl-[10%]">
-        <div ref={sliderRef} className="keen-slider">
+        <div
+          ref={sliderRef}
+          className={`keen-slider transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+          aria-busy={!loaded}
+        >
           {galleryImages.map((src, index) => (
             <div key={index} className="keen-slider__slide flex justify-center">
               <Image
