@@ -2,6 +2,7 @@ import RocketIcon from '@/../public/icons/rocket.png'
 import BriefcaseIcon from '@/../public/icons/briefcase.png'
 import PeopleIcon from '@/../public/icons/people.png'
 import ValueIcon from '@/../public/icons/value.png'
+import GearsIcon from '@/../public/icons/gears.png'
 
 const web3Cto = [
   {
@@ -29,7 +30,7 @@ const web3Cto = [
       'We thoroughly assess technology stacks, security protocols, and compliance standards to help you future-proof your tech decisions when validating third-party software, platforms, or technology partnerships.',
   },
   {
-    icon: ValueIcon,
+    icon: GearsIcon,
     title: 'Third-party dependency risk assessment ',
     description:
       'APIs and smart contracts power your product, but are they reliable? Leave it to our experts to identify potential weak links before they turn into a tech nightmare.',
