@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 export default function PrivacyPolicyPage() {
   const filePath = path.join(
@@ -29,7 +30,7 @@ export default function PrivacyPolicyPage() {
 
       {/* Markdown content */}
       <section className="prose prose-invert mx-auto max-w-8xl px-4 pb-16">
-        <ReactMarkdown>{content}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
       </section>
     </main>
   )
