@@ -37,6 +37,48 @@
       color 9999s ease-out;
     transition-delay: 9999s;
   }
+
+  ::selection {
+    background: #12d5ca;
+    color: #000000;
+    text-shadow: none;
+  }
+
+  ::-moz-selection {
+    background: #12d5ca;
+    color: #000000;
+    text-shadow: none;
+  }
+
+  a::selection,
+  button::selection {
+    background: #5959ff;
+    color: #ffffff;
+    text-shadow: none;
+  }
+
+  a::-moz-selection,
+  button::-moz-selection {
+    background: #5959ff;
+    color: #ffffff;
+    text-shadow: none;
+  }
+
+  code::selection,
+  pre::selection,
+  .font-mono::selection {
+    background: rgba(18, 213, 202, 0.3);
+    color: #ffffff;
+    text-shadow: none;
+  }
+
+  code::-moz-selection,
+  pre::-moz-selection,
+  .font-mono::-moz-selection {
+    background: rgba(18, 213, 202, 0.3);
+    color: #ffffff;
+    text-shadow: none;
+  }
 }
 
 @layer components {
@@ -112,5 +154,52 @@
       100% 100%,
       0 100%
     ) !important;
+  }
+
+  /* Pulsing planet glow for contact hero */
+  .planet-glow {
+    @apply pointer-events-none absolute left-0 top-0;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(
+      circle at 35% 35%,
+      rgba(255, 214, 0, 0.6) 0%,
+      rgba(255, 214, 0, 0.4) 25%,
+      rgba(255, 214, 0, 0.18) 50%,
+      rgba(255, 214, 0, 0.08) 65%,
+      transparent 75%
+    );
+    mix-blend-mode: screen;
+    filter: blur(24px);
+    animation: planetPulseGlow 3.2s ease-in-out infinite;
+    z-index: 0;
+  }
+
+  @media (min-width: 1024px) {
+    .planet-glow {
+      width: 360px;
+      height: 360px;
+      top: 290px;
+      left: 70px;
+    }
+  }
+}
+
+/* Keyframes for the pulsing glow */
+@keyframes planetPulseGlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.35;
+    filter: blur(24px);
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.6;
+    filter: blur(36px);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.35;
+    filter: blur(24px);
   }
 }

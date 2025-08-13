@@ -5,15 +5,17 @@ import { ReactNode } from 'react'
 interface SocialIconProps {
   icon: ReactNode
   href: string
+  label: string
   size?: number
 }
 
-export default function SocialIcon({ icon, href, size = 50 }: SocialIconProps) {
+export default function SocialIcon({ icon, href, label, size = 50 }: SocialIconProps) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={label}
       className="group relative block overflow-hidden rounded-[5px]"
       style={{
         width: `${size}px`,

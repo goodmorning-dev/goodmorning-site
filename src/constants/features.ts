@@ -1,5 +1,5 @@
 import ExpertiseIcon from '@/../public/icons/expertise.png'
-import EngineersIcon from '@/../public/icons/engineers.png'
+import PeopleIcon from '@/../public/icons/people.png'
 import EthereumIcon from '@/../public/icons/ethereum.png'
 import TvlIcon from '@/../public/icons/tvl.png'
 
@@ -11,7 +11,7 @@ const features = [
       "We've been through the highs and lows of Web2, mastering the tech landscape. Now, we're channeling that knowledge into Web3, helping businesses stay ahead of the curve.",
   },
   {
-    icon: EngineersIcon,
+    icon: PeopleIcon,
     title: '30+ top-class engineers',
     description:
       "We don't like to brag, but when it comes to our team, we just have to. We're lucky to work with incredibly skilled indie hackers, full-stack engineers and cryptography masters who live and breathe blockchain.",

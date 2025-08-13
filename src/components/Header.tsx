@@ -114,7 +114,7 @@ export default function Header() {
                 >
                   {openMenu === label && (
                     <div
-                      className="w-[300px] overflow-hidden bg-gray shadow-xl backdrop-blur-md"
+                      className="w-[300px] overflow-hidden bg-gray bg-[url('/images/gradient-bg.png')] bg-cover bg-right shadow-xl backdrop-blur-md"
                       style={{
                         clipPath:
                           'polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%)',
@@ -158,20 +158,24 @@ export default function Header() {
         {/* Social Icons */}
         <div className="hidden items-center gap-2 lg:flex">
           <SocialIcon
-            href="https://www.facebook.com/goodmorningdevs"
-            icon={<FaFacebookF size={20} />}
-          />
-          <SocialIcon
-            href="https://www.linkedin.com/company/goodmorningdevs"
-            icon={<FaLinkedinIn size={20} />}
-          />
-          <SocialIcon
             href="https://x.com/goodmorningdevs"
+            label="Twitter"
             icon={<FaXTwitter size={20} />}
           />
           <SocialIcon
+            href="https://www.linkedin.com/company/goodmorningdevs"
+            label="LinkedIn"
+            icon={<FaLinkedinIn size={20} />}
+          />
+          <SocialIcon
             href="https://t.me/goranstoyanov"
+            label="Telegram"
             icon={<FaTelegramPlane size={20} />}
+          />
+          <SocialIcon
+            href="https://www.facebook.com/goodmorningdevs"
+            label="Facebook"
+            icon={<FaFacebookF size={20} />}
           />
         </div>
 
@@ -266,20 +270,24 @@ export default function Header() {
           {/* Sticky Social Icons Bottom */}
           <div className="mt-auto flex gap-4 border-t border-white/10 pb-12 pt-6">
             <SocialIcon
-              href="https://www.facebook.com/goodmorningdevs"
-              icon={<FaFacebookF size={20} />}
-            />
-            <SocialIcon
-              href="https://www.linkedin.com/company/goodmorningdevs/"
-              icon={<FaLinkedinIn size={20} />}
-            />
-            <SocialIcon
               href="https://x.com/goodmorningdevs"
+              label="X"
               icon={<FaXTwitter size={20} />}
             />
             <SocialIcon
+              href="https://www.linkedin.com/company/goodmorningdevs/"
+              label="LinkedIn"
+              icon={<FaLinkedinIn size={20} />}
+            />
+            <SocialIcon
               href="https://t.me/goranstoyanov"
+              label="Telegram"
               icon={<FaTelegramPlane size={20} />}
+            />
+            <SocialIcon
+              href="https://www.facebook.com/goodmorningdevs"
+              label="Facebook"
+              icon={<FaFacebookF size={20} />}
             />
           </div>
         </div>

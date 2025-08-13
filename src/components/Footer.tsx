@@ -32,32 +32,36 @@ export default function Footer() {
             </p>
 
             <a
-              href="mailto:hello@goodmorning.dev"
+              href="mailto:gm@goodmorning.dev"
               className="mb-7 inline-block text-white transition-colors duration-200 hover:text-primary"
             >
-              hello@goodmorning.dev
+              gm@goodmorning.dev
             </a>
 
             <div className="flex gap-3">
               <SocialIcon
-                href="https://www.facebook.com/goodmorningdevs"
-                size={40}
-                icon={<FaFacebookF size={14} />}
-              />
-              <SocialIcon
                 href="https://x.com/goodmorningdevs"
+                label="X"
                 size={40}
                 icon={<FaXTwitter size={14} />}
               />
               <SocialIcon
                 href="https://www.linkedin.com/company/goodmorningdevs/"
+                label="LinkedIn"
                 size={40}
                 icon={<FaLinkedinIn size={14} />}
               />
               <SocialIcon
                 href="https://t.me/goranstoyanov"
+                label="Telegram"
                 size={40}
                 icon={<FaTelegramPlane size={14} />}
+              />
+              <SocialIcon
+                href="https://www.facebook.com/goodmorningdevs"
+                label="Facebook"
+                size={40}
+                icon={<FaFacebookF size={14} />}
               />
             </div>
           </div>

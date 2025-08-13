@@ -28,6 +28,7 @@ export default function HomePage() {
             width={0}
             height={0}
             sizes="100vw"
+            fetchPriority="high"
             style={{ width: '100%', height: 'auto' }}
           />
         </div>
@@ -38,6 +39,7 @@ export default function HomePage() {
             width={0}
             height={0}
             sizes="100vw"
+            fetchPriority="high"
             style={{ width: '100%', height: 'auto' }}
           />
         </div>
@@ -204,7 +206,7 @@ export default function HomePage() {
       <section className="relative mx-auto max-w-8xl px-5 pt-32 lg:px-0">
         <div>
           <h2 className="header-2 mb-7 text-center leading-[1.2]">
-            Our Web3 <span className="gradient-underline">clients</span>
+            Our Web3 <span className="gradient-underline">clients'</span>
             <br />
             <span className="text-primary">success stories</span>
           </h2>
@@ -319,7 +321,7 @@ export default function HomePage() {
       </section>
 
       {/* Insights section */}
-      <section className="bg-gray py-36">
+      {/* <section className="bg-gray py-36">
         <div className="mx-auto max-w-8xl px-5 lg:px-0">
           <div className="text-center">
             <h2 className="header-2 mb-8 tracking-[1.2px]">
@@ -333,7 +335,7 @@ export default function HomePage() {
           </div>
           <Blog />
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }
