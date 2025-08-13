@@ -6,6 +6,6 @@ export const metadata = {
 
 import Careers from './Careers'
 
-export default function Page() {
+export default function CareersPage() {
   return <Careers />
 }
