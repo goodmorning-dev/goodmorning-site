@@ -2,8 +2,6 @@
 
 Website for goodmorning, built with Next.js.
 
-> 🚧 **Work in Progress**
-
 ---
 
 ## 🛠 Setup Instructions
