@@ -161,7 +161,7 @@ const team: Member[] = [
       'Phoenician successor, Tennis player on hold, Baby hugger at present.',
     joinedCompanyDate: '02/10/2016',
   },
-   {
+  {
     image: '/images/team/Ivcho.jpg',
     name: 'Ivelin Megdanov',
     position: 'Front-end Engineer',
