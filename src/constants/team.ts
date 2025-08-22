@@ -68,14 +68,14 @@ const team: Member[] = [
   },
   {
     image: '/images/team/Gery.jpg',
-    name: 'Gery Mihaylova',
+    name: 'Gergana Mihaylova',
     position: 'Front-end Engineer',
     hoverText: 'Art maker & Cooking lover.',
     joinedCompanyDate: '04/07/2017',
   },
   {
     image: '/images/team/Ceco.jpg',
-    name: 'Ceco Mihaylov',
+    name: 'Cvetan Mihaylov',
     position: 'Back-end Engineer',
     hoverText: 'Likes high mountains & good music.',
     joinedCompanyDate: '26/02/2016',
@@ -104,7 +104,7 @@ const team: Member[] = [
   },
   {
     image: '/images/team/Botzy.jpg',
-    name: 'Botzy Dimitrova',
+    name: 'Boryana Dimitrova',
     position: 'Front-end Engineer',
     hoverText: 'Moto girl, loves Touring, Photography & Cooking.',
     joinedCompanyDate: '24/02/2014',
@@ -118,7 +118,7 @@ const team: Member[] = [
   },
   {
     image: '/images/team/Vesko.jpg',
-    name: 'Vesko Bratanov',
+    name: 'Veselin Bratanov',
     position: 'Back-end Engineer',
     hoverText:
       'The mastermind behind every collage FOFISA, Community radio inventor, Allergic to sports.',
@@ -126,14 +126,14 @@ const team: Member[] = [
   },
   {
     image: '/images/team/Ivtsa.jpg',
-    name: 'Ivtsata Atanasov',
+    name: 'Ivaylo Atanasov',
     position: 'Firefighter',
     hoverText: 'Master procrastinator, Semi-audiophile, Amateur truck driver.',
     joinedCompanyDate: '01/07/2014',
   },
   {
     image: '/images/team/Preso.jpg',
-    name: 'Preso Teodosiev',
+    name: 'Presiyan Teodosiev',
     position: 'Operations',
     hoverText: 'Well known for his ice-breaking skills, Shape-shifter.',
     joinedCompanyDate: '01/12/2010',
@@ -147,7 +147,7 @@ const team: Member[] = [
   },
   {
     image: '/images/team/Simo.jpg',
-    name: 'Simo Petkov',
+    name: 'Simeon Petkov',
     position: 'Front-end Engineer',
     hoverText:
       'Body sculptor, Pass master on the Football field, Crypto investor.',
@@ -155,7 +155,7 @@ const team: Member[] = [
   },
   {
     image: '/images/team/Snezhi.jpg',
-    name: 'Snezhi Trifonova',
+    name: 'Snezhina Trifonova',
     position: 'CFO',
     hoverText:
       'Phoenician successor, Tennis player on hold, Baby hugger at present.',
