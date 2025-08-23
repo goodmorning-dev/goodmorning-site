@@ -4,4 +4,5 @@ module.exports = {
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   sitemapSize: 50000,
+  exclude: ['/blog'],
 }
