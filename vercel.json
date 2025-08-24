@@ -6,6 +6,11 @@
       "permanent": true
     },
     {
+      "source": "/job",
+      "destination": "/careers",
+      "permanent": true
+    },
+    {
       "source": "/jobs.html",
       "destination": "/careers",
       "permanent": true
@@ -43,11 +48,6 @@
     {
       "source": "/tribe",
       "destination": "/team",
-      "permanent": true
-    },
-    {
-      "source": "/cookie-policy",
-      "destination": "/privacy-policy",
       "permanent": true
     },
     {
