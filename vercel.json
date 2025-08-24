@@ -1,0 +1,59 @@
+{
+  "redirects": [
+    {
+      "source": "/jobs",
+      "destination": "/careers",
+      "permanent": true
+    },
+    {
+      "source": "/jobs.html",
+      "destination": "/careers",
+      "permanent": true
+    },
+    {
+      "source": "/adex",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/adex.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ambire",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ambire.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/culture",
+      "destination": "/team",
+      "permanent": true
+    },
+    {
+      "source": "/culture.html",
+      "destination": "/team",
+      "permanent": true
+    },
+    {
+      "source": "/tribe",
+      "destination": "/team",
+      "permanent": true
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
