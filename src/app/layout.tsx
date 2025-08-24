@@ -2,6 +2,7 @@ import '@/styles/globals.scss'
 import '@/styles/typography.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import GTM from '@/components/GTM'
 import Script from 'next/script'
 
 export const metadata = {
@@ -46,6 +47,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <GTM />
         <Header />
         <main className="min-h-screen pt-[110px]">{children}</main>
         <Footer />
