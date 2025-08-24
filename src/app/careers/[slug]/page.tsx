@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import positions from '@/constants/positions'
 import { notFound } from 'next/navigation'
 import FeatureCard from '@/components/home/FeatureCard'
@@ -22,6 +23,46 @@ function findJobBySlug(slug: string): JobType | undefined {
       const jobSlug = job.link.split('/').pop()
       if (jobSlug === slug) return job
     }
+  }
+}
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const { slug } = await params
+  const job = findJobBySlug(slug)
+
+  const base = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+  const url = `${base}/careers/${slug}`
+  const image = `${base}/images/meta/careers-meta-image.png`
+
+  const title = job ? `${job.title} | Careers at goodmorning` : 'Careers at goodmorning | Web3 Dev Jobs'
+  const description =
+    job?.shortDescription ??
+    'Ready to build bold blockchain products? Join goodmorning’s award-winning Web3 team for real impact, growth, and hackathon street cred - no corporate nonsense.'
+
+  return {
+    title,
+    description,
+    twitter: {
+      card: 'summary_large_image',
+      images: [image],
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: 'goodmorning.dev',
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: 'goodmorning - careers',
+        },
+      ],
+      type: 'website',
+    },
   }
 }
 

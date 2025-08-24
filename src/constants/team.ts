@@ -208,8 +208,8 @@ const team: Member[] = [
   {
     image: '/images/team/Krisi.jpg',
     name: 'Kristiana Yakimova-Koseva',
-    position: 'Marketing Specialist',
-    hoverText: 'Knows what to post, when to post, and why it matters. Turns noise into buzz. Wife of Kaloyan!',
+    position: 'Marketing Advisor',
+    hoverText: 'Asks the tough questions and makes sure our marketing actually speaks human - not just crypto. Wife of Kaloyan!',
     joinedCompanyDate: '21/11/2024',
   },
   {

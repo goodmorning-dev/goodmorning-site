@@ -14,7 +14,7 @@ export default function SocialIcon({ icon, href, label, size = 50 }: SocialIconP
     <a
       href={href}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="nofollow noopener noreferrer"
       aria-label={label}
       className="group relative block overflow-hidden rounded-[5px]"
       style={{

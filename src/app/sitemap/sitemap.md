@@ -1,23 +1,32 @@
 # Sitemap
-**Last updated:** 22 August 2025
+**Last updated:** 23 August 2025
 
 ## Main Pages
-- [Home](/) — Landing section for the studio, services, and highlights.
-- [About Us](/about) — Mission, approach, and story.
-- [Team](/team) — Team photo, values, and members.
-- [Contact](/contact) — Contact form and information.
-- [Careers](/careers) — Open roles and hiring info.  
-  - Job detail (dynamic): `/careers/[slug]`
+- [Home](/)
+- [About Us](/about-us)
+- [Team](/team)
+- [Contact](/contact)
 
 ## Services
-- [/services](/services) — Services overview. Summary and links to detailed pages.
-- Service detail pages:
-  - [/services/web3-technical-cofounder](/services/web3-technical-cofounder) — Web3 Technical Co-Founder.
-  - [/services/web3-consulting](/services/web3-consulting) — Consulting & Architecture.
-  - [/services/staff-augmentation](/services/staff-augmentation) — Staff Augmentation.
-  - [/services/web3-mvp-development](/services/web3-mvp-development) — Web3 MVP Development.
+- [Services Overview](/services)
+  - [Staff Augmentation](/services/staff-augmentation)
+  - [Web3 Auditing](/services/web3-auditing)
+  - [Web3 Co-Founder](/services/web3-co-founder)
+  - [Web3 Consulting](/services/web3-consulting)
+  - [Web3 MVP Development](/services/web3-mvp-development)
+
+## Careers
+- [Careers Landing](/careers)
+  - [Blockchain Engineer](/careers/blockchain-engineer)
+  - [Frontend dApp Developer](/careers/frontend-dapp-developer)
+  - [DevOps Engineer](/careers/devops-engineer)
+  - [Web3 Marketing Specialist](/careers/web3-marketing-specialist)
+  - [Social Media & SEO Manager](/careers/social-media-seo-manager)
+  - [Business Development Manager](/careers/business-development-manager)
+  - [UI/UX Designer](/careers/ui-ux-designer)
+  - [Open Application](/careers/open-application)
 
 ## Legal Pages
-- [Privacy Policy](/privacy-policy) — How we handle data and privacy.
-- [Terms & Conditions](/terms-and-conditions) — Rules of use, disclaimers, and liabilities.
-- [Cookies Policy](/cookies-policy) — Information about cookies usage.
+- [Privacy Policy](/privacy-policy)
+- [Terms & Conditions](/terms)
+- [Cookies Policy](/cookie-policy)
