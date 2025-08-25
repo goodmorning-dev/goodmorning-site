@@ -1,5 +1,6 @@
 import '@/styles/globals.scss'
 import '@/styles/typography.css'
+import '@/styles/cookiebot.scss'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import GTM from '@/components/GTM'
