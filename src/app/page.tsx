@@ -51,7 +51,7 @@ export default function HomePage() {
               <br />
               operating <span className="gradient-underline">globally</span>
             </h1>
-            <p className="paragraph font-regular animate-fade-in mt-12 max-w-4xl translate-y-4 opacity-0 lg:!text-[24px]">
+            <p className="paragraph font-regular mt-12 max-w-4xl translate-y-4 animate-fade-in opacity-0 lg:!text-[24px]">
               As a Web3 development studio, at goodmorning we craft tailored
               blockchain services to help startups and industry leaders navigate
               the ever-evolving Web3 space. Whether you're launching something
@@ -240,9 +240,11 @@ export default function HomePage() {
       <section className="pb-32">
         <div className="relative z-20 mx-auto max-w-8xl px-5 lg:px-0">
           <h2 className="header-2 mb-7 text-center tracking-[1.2px]">
-            <span className="gradient-underline">Empowering</span> your Web3
-            journey <br />
-            with our <span className="text-primary">tech knowledge</span>
+            <span className="gradient-underline">Empowering</span> your
+            <br className="block lg:hidden" /> Web3 journey{' '}
+            <br className="hidden lg:block" />
+            with <br className="block lg:hidden" /> our{' '}
+            <span className="text-primary">tech knowledge</span>
           </h2>
           <p className="paragraph mx-auto max-w-[52rem] text-center">
             Well-established, cutting-edge or experimental technology, we have
