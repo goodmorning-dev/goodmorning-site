@@ -12,21 +12,19 @@ export default function TeamPage() {
     <main>
       {/* Hero section */}
       <section
-        className="relative pb-24 pt-24 lg:pt-48"
+        className="relative bg-cover bg-[position:center_top_-150px] pb-16 pt-24 md:bg-center lg:pb-24 lg:pt-48"
         style={{
           backgroundImage: "url('/images/team-hero.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
         }}
       >
-        <div className="mb-48 text-center lg:mb-[430px]">
+        <div className="mb-24 text-center lg:mb-48 lg:mb-[430px]">
           <h1 className="header-1 mb-8">Makers, thinkers, explorers</h1>
           <p className="paragraph lg:text-[20px]">
             Not Just Devs. Digital Chaos Architects.
           </p>
         </div>
 
-        <div className="mx-auto flex max-w-8xl flex-col justify-between gap-20 px-5 lg:flex-row lg:px-0">
+        <div className="mx-auto flex max-w-8xl flex-col justify-between gap-10 px-5 lg:flex-row lg:gap-20 lg:px-0">
           <div className="max-w-xl">
             <h2 className="header-2 text-center lg:text-left">
               <span className="text-primary">Level up</span> with our <br />
@@ -57,7 +55,7 @@ export default function TeamPage() {
           />
         </div>
 
-        <div className="mx-auto flex flex-col justify-between gap-20 lg:flex-row">
+        <div className="mx-auto flex flex-col justify-between gap-10 lg:flex-row lg:gap-20">
           <div className="max-w-xl">
             <h2 className="header-2 text-center lg:text-left">
               <span className="gradient-underline">Make an impact</span> with{' '}
@@ -77,8 +75,8 @@ export default function TeamPage() {
       </section>
 
       {/* Values grid */}
-      <section className="bg-gray px-5 py-36 lg:px-0">
-        <div className="mx-auto max-w-8xl space-y-28">
+      <section className="bg-gray px-5 py-16 lg:px-0 lg:py-36">
+        <div className="mx-auto max-w-8xl space-y-16 lg:space-y-28">
           {teamValues.map((item, index) => {
             const isEven = index % 2 === 0
 
