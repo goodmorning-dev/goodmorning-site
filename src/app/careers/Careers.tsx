@@ -57,7 +57,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <section className="py-36">
+      <section className="px-5 py-16 lg:px-0 lg:py-36">
         <div className="mx-auto flex max-w-8xl flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-0">
           <div className="flex max-w-[640px] flex-col items-center justify-center space-y-8 lg:items-start lg:justify-start">
             <h2 className="header-2 text-center lg:text-left">
@@ -102,9 +102,9 @@ export default function CareersPage() {
       </section>
 
       {/* Feature section */}
-      <section className="bg-gray py-40">
-        <div className="mx-auto mb-40 flex w-full max-w-8xl flex-col items-center justify-between px-5 lg:flex-row lg:px-0">
-          <div>
+      <section className="bg-gray py-16 lg:py-40">
+        <div className="mx-auto mb-16 flex w-full max-w-8xl flex-col items-center justify-between px-5 lg:mb-40 lg:flex-row lg:px-0">
+          <div className="mb-8 lg:mb-0">
             <h2 className="header-2 max-w-2xl text-center lg:text-left">
               <span className="gradient-underline">Join a team</span> that
               values <span className="text-primary">innovation</span>,{' '}
@@ -114,7 +114,7 @@ export default function CareersPage() {
           </div>
 
           <div>
-            <p className="paragraph max-w-[645px]">
+            <p className="paragraph max-w-[645px] text-center lg:text-left">
               Turnover isn't our thing - most of our teammates have been a part
               of goodmorning for 7 years, and that's no accident. We've built a
               team where people feel valued, challenged, and excited to grow -
@@ -129,7 +129,7 @@ export default function CareersPage() {
           <div className="h-[2px] w-full bg-white/10" />
         </div>
 
-        <div className="mx-auto mt-40 grid max-w-8xl gap-20 px-5 md:grid-cols-2 lg:px-0">
+        <div className="mx-auto mt-16 grid max-w-8xl gap-20 px-5 md:grid-cols-2 lg:mt-40 lg:px-0">
           {features.map((f, idx) => (
             <FeatureCard key={idx} {...f} />
           ))}
@@ -154,7 +154,7 @@ export default function CareersPage() {
       </section>
 
       {/* CTA section */}
-      <section className="relative mx-auto px-5 pb-16 pt-36 lg:px-0">
+      <section className="relative mx-auto px-5 pb-16 pt-16 lg:px-0 lg:pt-36">
         <div>
           <h2 className="header-2 mb-7 text-center leading-[1.2]">
             <span className="gradient-underline">Explore</span> our vibrant team{' '}
@@ -165,7 +165,7 @@ export default function CareersPage() {
       </section>
 
       {/* Web3 Impact Section */}
-      <section className="bg-black px-5 py-36 text-white lg:px-0">
+      <section className="bg-black px-5 py-16 text-white lg:px-0 lg:py-36">
         <div className="mb-24 text-center">
           <h2 className="header-2 mx-auto">
             <span className="gradient-underline">What's life</span> at{' '}
@@ -241,6 +241,7 @@ export default function CareersPage() {
           <Image
             src="/images/careers-life.png"
             alt="Careers Life"
+            className="my-10 lg:my-0"
             width={440}
             height={840}
           />
@@ -393,14 +394,14 @@ export default function CareersPage() {
       </section>
 
       {/* Join team section */}
-      <section id="join-form" className="py-36">
+      <section id="join-form" className="py-16 lg:py-36">
         <div className="mx-auto flex max-w-8xl flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-0">
           <div className="flex w-full flex-col items-center justify-center space-y-8 px-5 lg:w-1/2 lg:items-start lg:justify-start lg:px-0">
             <h2 className="header-2 max-w-2xl text-center lg:text-left">
               <span className="gradient-underline">Join</span> the
               <br /> goodmorning <span className="text-primary">team</span>
             </h2>
-            <p className="paragraph !my-6 lg:text-[20px]">
+            <p className="paragraph !my-6 text-center lg:text-left lg:text-[20px]">
               Not finding the job that best suits you? Fill out the form below
               and tell us what skills you have to complement our team.
             </p>
@@ -458,7 +459,7 @@ export default function CareersPage() {
               </div>
             </form>
           </div>
-          <div className="ml-0 flex flex-1 justify-end">
+          <div className="ml-0 flex flex-1 justify-end px-5 lg:px-0">
             <div className="max-w-[600px]">
               <Image
                 src="/images/team-join.png"
