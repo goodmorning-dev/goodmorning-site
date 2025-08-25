@@ -1,6 +1,6 @@
 'use client'
 
-import { ReactNode } from 'react'
+import { ReactNode, useId } from 'react'
 
 interface SocialIconProps {
   icon: ReactNode
@@ -9,14 +9,23 @@ interface SocialIconProps {
   size?: number
 }
 
-export default function SocialIcon({ icon, href, label, size = 50 }: SocialIconProps) {
+export default function SocialIcon({
+  icon,
+  href,
+  label,
+  size = 50,
+}: SocialIconProps) {
+  const rawId = useId()
+  const uid = rawId.replace(/:/g, '')
+  const gradientId = `si-borderGradient-${uid}`
+  const clipId = `si-customClip-${uid}`
   return (
     <a
       href={href}
       target="_blank"
       rel="nofollow noopener noreferrer"
       aria-label={label}
-      className="group relative block overflow-hidden rounded-[5px]"
+      className="group relative block overflow-visible rounded-[5px] md:overflow-hidden"
       style={{
         width: `${size}px`,
         height: `${size}px`,
@@ -28,20 +37,15 @@ export default function SocialIcon({ icon, href, label, size = 50 }: SocialIconP
         viewBox="0 0 50 50"
         className="h-full w-full rounded-[5px]"
         style={{ overflow: 'visible' }}
+        shapeRendering="geometricPrecision"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
-          <linearGradient
-            id="borderGradient"
-            x1="0%"
-            y1="0%"
-            x2="100%"
-            y2="100%"
-          >
+          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="rgba(255,255,255,0)" />
             <stop offset="100%" stopColor="rgba(255,255,255,0.25)" />
           </linearGradient>
-          <clipPath id="customClip">
+          <clipPath id={clipId}>
             <path
               d="
                 M 0,5
@@ -58,7 +62,7 @@ export default function SocialIcon({ icon, href, label, size = 50 }: SocialIconP
           </clipPath>
         </defs>
 
-        <g clipPath="url(#customClip)">
+        <g clipPath={`url(#${clipId})`}>
           <path
             d="
               M 0,5
@@ -72,8 +76,10 @@ export default function SocialIcon({ icon, href, label, size = 50 }: SocialIconP
               Z
             "
             fill="none"
-            stroke="url(#borderGradient)"
+            stroke={`url(#${gradientId})`}
             strokeWidth="3"
+            vectorEffect="non-scaling-stroke"
+            strokeLinejoin="round"
           />
         </g>
       </svg>
