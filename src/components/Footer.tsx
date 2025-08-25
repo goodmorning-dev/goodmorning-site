@@ -66,7 +66,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-28 text-base">
+          <div className="grid grid-cols-2 gap-28 text-sm md:text-base">
             {footerItems.map((category) => (
               <ul key={category.title} className="space-y-4">
                 {category.items.map(({ label, href }) => (
