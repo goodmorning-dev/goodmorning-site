@@ -24,21 +24,21 @@ export default function ContactPage() {
           backgroundSize: 'contain',
         }}
       >
-         {/* Pulsing planet glow overlay */}
+        {/* Pulsing planet glow overlay */}
         <div className="planet-glow hidden lg:block" aria-hidden="true" />
 
-        <div className="mx-auto flex max-w-8xl justify-end px-5 text-center lg:!pl-0 lg:!pr-16 lg:text-left">
+        <div className="mx-auto flex max-w-8xl justify-end px-5 text-right lg:!pl-0 lg:!pr-16 lg:text-left">
           <div className="max-w-[560px]">
-            <h1 className="header-1 mb-6 text-[36px] md:text-[44px] lg:text-[56px]">
+            <h1 className="header-1 mb-6 !text-[44px] lg:!text-[56px] mt-16 lg:mt-0">
               GM, frens
             </h1>
-            <p className="paragraph mb-12 max-w-[510px] !leading-relaxed text-[16px] md:text-[18px] lg:text-[20px]">
+            <p className="paragraph mb-12 mt-32 text-center max-w-[510px] text-[16px] !leading-relaxed md:text-[18px] lg:mt-0 lg:text-[20px] lg:text-left">
               <strong>Let us bring your vision to life.</strong> <br />
               Different time zones can’t scare us off. When you need us, we show
               up. Because real partnerships don’t run on a 9-to-5 schedule.
             </p>
 
-            <div className="space-y-8 md:space-y-10 text-left">
+            <div className="space-y-8 text-left md:space-y-10">
               <div className="flex items-start gap-3 md:gap-4">
                 <Image
                   src="/icons/email.png"
@@ -52,7 +52,7 @@ export default function ContactPage() {
                   </p>
                   <a
                     href="mailto:gm@goodmorning.dev"
-                    className="paragraph text-[16px] md:text-[18px] lg:text-[20px] text-primary hover:underline"
+                    className="paragraph text-[16px] text-primary hover:underline md:text-[18px] lg:text-[20px]"
                   >
                     gm@goodmorning.dev
                   </a>
@@ -82,7 +82,7 @@ export default function ContactPage() {
 
                   <a
                     href="tel:+359876261055"
-                    className="paragraph text-[16px] md:text-[18px] lg:text-[20px] text-primary hover:underline"
+                    className="paragraph text-[16px] text-primary hover:underline md:text-[18px] lg:text-[20px]"
                   >
                     +(359) 876 261 055
                   </a>
