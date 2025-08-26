@@ -185,7 +185,6 @@ export default function ServicesDetailsPage() {
       <section className="relative bg-white px-5 py-16 text-black lg:px-0 lg:py-64">
         <div
           className="pointer-events-none absolute inset-0 bg-contain bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/partner-bg.png')" }}
         />
 
         <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
