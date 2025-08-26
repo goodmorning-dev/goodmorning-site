@@ -99,7 +99,7 @@ export default function ServicesDetailsPage() {
       </section>
 
       {/* Your Vision Section */}
-      <section className="relative mx-auto bg-white py-32 text-black lg:py-36">
+      <section className="relative mx-auto bg-white py-16 text-black lg:py-36">
         <div className="mx-auto flex w-full max-w-8xl flex-col items-start items-center justify-between gap-5 px-5 lg:flex-row lg:px-0">
           <div>
             <h1 className="header-2 max-w-[615px] !leading-[1.3] lg:text-[56px]">
@@ -119,7 +119,7 @@ export default function ServicesDetailsPage() {
       </section>
 
       {/* Web3 CTO service */}
-      <section className="py-32">
+      <section className="py-16 lg:py-32">
         <div className="relative z-20 mx-auto max-w-8xl px-5 lg:px-0">
           <h2 className="header-2 mb-7 text-center tracking-[1.2px]">
             <span className="gradient-underline">Who are</span> the
@@ -180,7 +180,6 @@ export default function ServicesDetailsPage() {
       <section className="relative bg-white px-5 py-16 text-black lg:px-0 lg:py-64">
         <div
           className="pointer-events-none absolute inset-0 bg-contain bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/partner-bg.png')" }}
         />
 
         <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
@@ -196,8 +195,8 @@ export default function ServicesDetailsPage() {
               ensuring security and scalability. With our technical due
               diligence services, you get:
             </p>
-            <ul className="ml-2 mt-10 space-y-8">
-              <li className="flex items-start gap-6">
+            <ul className="ml-2 mt-10 space-y-4 lg:space-y-8">
+              <li className="flex items-start gap-4 lg:gap-6">
                 <div className="mt-1 text-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -218,7 +217,7 @@ export default function ServicesDetailsPage() {
                 </p>
               </li>
 
-              <li className="flex items-start gap-6">
+              <li className="flex items-start gap-4 lg:gap-6">
                 <div className="mt-1 text-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +238,7 @@ export default function ServicesDetailsPage() {
                 </p>
               </li>
 
-              <li className="flex items-start gap-6">
+              <li className="flex items-start gap-4 lg:gap-6">
                 <div className="mt-1 text-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -261,7 +260,7 @@ export default function ServicesDetailsPage() {
               </li>
             </ul>
             <Button
-              className="mt-20"
+              className="mt-10 lg:mt-20"
               variant="primary"
               onClick={() => router.push('/contact')}
               hoverColor="bg-secondary"

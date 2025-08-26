@@ -31,7 +31,7 @@ export default function ServicesDetailsPage() {
       key={index}
       className={clsx(
         'flex flex-col items-start lg:w-[46%]',
-        isRight && 'mt-24 items-end text-right',
+        isRight && 'mt-16 items-end text-right lg:mt-24',
         index === 1 && 'lg:pr-[100px]',
         index === 2 && 'lg:pl-[100px]',
       )}
@@ -101,8 +101,8 @@ export default function ServicesDetailsPage() {
       </section>
 
       {/* Your Vision Section */}
-      <section className="relative mx-auto bg-white py-32 text-black lg:py-36">
-        <div className="mx-auto flex w-full max-w-8xl flex-col items-start items-center justify-between gap-5 px-5 lg:flex-row lg:px-0">
+      <section className="relative mx-auto bg-white py-16 text-black lg:py-36">
+        <div className="items-left mx-auto flex w-full max-w-8xl flex-col items-start justify-between gap-5 px-5 lg:flex-row lg:items-center lg:px-0">
           <div>
             <h1 className="header-2 max-w-[615px] !leading-[1.3] lg:text-[56px]">
               <span className="text-primary">Top-tier</span> talent,
@@ -121,7 +121,7 @@ export default function ServicesDetailsPage() {
       </section>
 
       {/* Web3 CTO service */}
-      <section className="py-32">
+      <section className="py-16 lg:py-32">
         <div className="relative z-20 mx-auto max-w-8xl px-5 lg:px-0">
           <h2 className="header-2 mb-7 text-center tracking-[1.2px]">
             Who are the <span className="gradient-underline">blockchain</span>
@@ -185,7 +185,6 @@ export default function ServicesDetailsPage() {
       <section className="relative bg-white px-5 py-16 text-black lg:px-0 lg:py-64">
         <div
           className="pointer-events-none absolute inset-0 bg-contain bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/partner-bg.png')" }}
         />
 
         <div className="relative z-10 mx-auto flex max-w-8xl flex-col items-center justify-between gap-10 lg:flex-row lg:gap-0">
@@ -200,8 +199,8 @@ export default function ServicesDetailsPage() {
               seamlessly, bringing over a decade of technical knowledge to
               supercharge your development process.
             </p>
-            <ul className="ml-2 mt-10 space-y-8">
-              <li className="flex items-start gap-6">
+            <ul className="ml-2 mt-10 space-y-4 lg:space-y-8">
+              <li className="flex items-start gap-4 lg:gap-6">
                 <div className="mt-1 text-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -221,7 +220,7 @@ export default function ServicesDetailsPage() {
                 </p>
               </li>
 
-              <li className="flex items-start gap-6">
+              <li className="flex items-start gap-4 lg:gap-6">
                 <div className="mt-1 text-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -241,7 +240,7 @@ export default function ServicesDetailsPage() {
                 </p>
               </li>
 
-              <li className="flex items-start gap-6">
+              <li className="flex items-start gap-4 lg:gap-6">
                 <div className="mt-1 text-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -263,7 +262,7 @@ export default function ServicesDetailsPage() {
               </li>
             </ul>
             <Button
-              className="mt-20"
+              className="mt-10 lg:mt-20"
               variant="primary"
               onClick={() => router.push('/contact')}
               hoverColor="bg-secondary"
@@ -286,7 +285,7 @@ export default function ServicesDetailsPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="relative z-10 bg-black px-5 pb-40 pt-36 text-white">
+      <section className="relative z-10 bg-black px-5 pb-40 pt-16 text-white lg:pt-36">
         <div className="mb-24 text-center">
           <h2 className="header-2">
             <span className="gradient-underline">How we help</span> you go from
@@ -313,10 +312,12 @@ export default function ServicesDetailsPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-black px-5 py-16 lg:px-0 lg:py-32">
+      <section className="bg-black px-5 py-16 pt-0 lg:px-0 lg:py-32">
         <div className="mx-auto max-w-4xl">
-          <h2 className="header-2 mb-16 text-center text-[48px] lg:text-[64px]">FAQ</h2>
-          
+          <h2 className="header-2 mb-16 text-center text-[48px] lg:text-[64px]">
+            FAQ
+          </h2>
+
           <div className="space-y-4">
             {faqData.map((item, index) => (
               <div
@@ -338,7 +339,12 @@ export default function ServicesDetailsPage() {
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M20 12H4"
+                        />
                       </svg>
                     ) : (
                       <svg
@@ -347,16 +353,21 @@ export default function ServicesDetailsPage() {
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 4v16m8-8H4"
+                        />
                       </svg>
                     )}
                   </div>
                 </button>
-                
+
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out border-t border-textGray ${
+                  className={`overflow-hidden border-t border-textGray transition-all duration-300 ease-in-out ${
                     openFAQ === index
-                      ? 'max-h-96 opacity-100 pt-4'
+                      ? 'max-h-96 pt-4 opacity-100'
                       : 'max-h-0 opacity-0'
                   }`}
                 >
