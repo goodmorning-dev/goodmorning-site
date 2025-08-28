@@ -104,7 +104,7 @@ export default function ServicesDetailsPage() {
         <div className="mx-auto flex w-full max-w-8xl flex-col items-start items-center justify-between gap-5 px-5 lg:flex-row lg:px-0">
           <div>
             <h1 className="header-2 max-w-[615px] !leading-[1.3] lg:text-[56px]">
-              <span className="text-primary">Your MVP</span> won't, build itself
+              <span className="text-primary">Your MVP</span> won't build itself
               -{" "}
               <br className="hidden lg:block" />
               <span className="gradient-underline">but we can!</span>
