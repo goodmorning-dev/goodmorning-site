@@ -183,35 +183,84 @@ export default function Header() {
         <button
           className="z-50 lg:hidden"
           onClick={() => setIsMobileOpen((prev) => !prev)}
+          aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
         >
-          <div className="space-y-1">
-            <div className="h-0.5 w-6 bg-white" />
-            <div className="h-0.5 w-6 bg-white" />
-            <div className="h-0.5 w-6 bg-white" />
+          <div className="relative h-6 w-6">
+            {/* Top line */}
+            <div
+              className={clsx(
+                'absolute h-0.5 w-6 bg-white transition-all duration-300 ease-in-out',
+                isMobileOpen
+                  ? 'top-3 rotate-45 transform'
+                  : 'top-1 rotate-0 transform'
+              )}
+            />
+            {/* Middle line */}
+            <div
+              className={clsx(
+                'absolute top-3 h-0.5 w-6 bg-white transition-all duration-300 ease-in-out',
+                isMobileOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
+              )}
+            />
+            {/* Bottom line */}
+            <div
+              className={clsx(
+                'absolute h-0.5 w-6 bg-white transition-all duration-300 ease-in-out',
+                isMobileOpen
+                  ? 'top-3 -rotate-45 transform'
+                  : 'top-5 rotate-0 transform'
+              )}
+            />
           </div>
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {isMobileOpen && (
-        <div className="fixed inset-0 top-[110px] z-40 flex h-[calc(100vh-110px)] flex-col justify-between overflow-y-auto bg-gray px-6 py-8 shadow-xl backdrop-blur-md transition-all duration-300 lg:hidden">
+      <div 
+        className={clsx(
+          "fixed inset-0 top-[110px] z-40 flex h-[calc(100vh-110px)] flex-col justify-between overflow-y-auto bg-gray px-6 py-8 shadow-xl backdrop-blur-md transition-all duration-500 ease-out lg:hidden",
+          isMobileOpen 
+            ? "translate-x-0 opacity-100" 
+            : "translate-x-full opacity-0 pointer-events-none"
+        )}
+      >
+        <div 
+          className={clsx(
+            "fixed inset-0 bg-black/20 backdrop-blur-sm transition-opacity duration-500",
+            isMobileOpen ? "opacity-100" : "opacity-0"
+          )}
+        />
+        
+        {/* Menu content */}
+        <div className="relative z-10 flex h-full flex-col justify-between">
           <div>
-            {navItems.map(({ label, href, children }) =>
+            {navItems.map(({ label, href, children }, index) =>
               children ? (
-                <div key={label} className="mb-2 py-3">
+                <div 
+                  key={label} 
+                  className={clsx(
+                    "mb-2 py-3 transition-all duration-500 ease-out",
+                    isMobileOpen 
+                      ? "translate-x-0 opacity-100" 
+                      : "translate-x-8 opacity-0"
+                  )}
+                  style={{ 
+                    transitionDelay: isMobileOpen ? `${index * 100}ms` : '0ms' 
+                  }}
+                >
                   <button
                     onClick={() =>
                       setActiveDropdown((prev) =>
                         prev === label ? null : label,
                       )
                     }
-                    className="flex w-full items-center justify-between text-left text-sm font-semibold uppercase tracking-wide text-white/70"
+                    className="flex w-full items-center justify-between text-left text-sm font-semibold uppercase tracking-wide text-white/70 transition-colors duration-200 hover:text-white"
                   >
                     <span>{label}</span>
                     <svg
                       className={clsx(
-                        'h-4 w-4 transform transition-transform duration-200',
-                        activeDropdown === label && 'rotate-180',
+                        'h-4 w-4 transform transition-all duration-300 ease-out',
+                        activeDropdown === label ? 'rotate-180 text-primary' : 'rotate-0 text-white/70',
                       )}
                       viewBox="0 0 10 6"
                       fill="none"
@@ -226,9 +275,16 @@ export default function Header() {
                     </svg>
                   </button>
 
-                  {activeDropdown === label && (
-                    <div className="ml-2 mt-2 flex flex-col gap-2 border-l border-white/10 pl-4">
-                      {children.map((item) => (
+                  <div 
+                    className={clsx(
+                      "ml-2 mt-2 overflow-hidden transition-all duration-400 ease-out",
+                      activeDropdown === label 
+                        ? "max-h-96 opacity-100" 
+                        : "max-h-0 opacity-0"
+                    )}
+                  >
+                    <div className="flex flex-col gap-2 border-l border-white/10 pl-4">
+                      {children.map((item, itemIndex) => (
                         <Link
                           key={item.href}
                           href={item.href}
@@ -237,17 +293,23 @@ export default function Header() {
                             setActiveDropdown(null)
                           }}
                           className={clsx(
-                            'rounded-lg px-3 py-2 text-white transition-all duration-200',
+                            'rounded-lg px-3 py-2 text-white transition-all duration-500 ease-out transform',
                             pathname === item.href
                               ? 'bg-primary font-medium text-black'
                               : 'hover:bg-white/10',
+                            activeDropdown === label 
+                              ? "translate-y-0 opacity-100" 
+                              : "-translate-y-2 opacity-0"
                           )}
+                          style={{ 
+                            transitionDelay: activeDropdown === label ? `${150 + itemIndex * 100}ms` : '0ms' 
+                          }}
                         >
                           {item.label}
                         </Link>
                       ))}
                     </div>
-                  )}
+                  </div>
                 </div>
               ) : (
                 <Link
@@ -255,11 +317,17 @@ export default function Header() {
                   href={href}
                   onClick={() => setIsMobileOpen(false)}
                   className={clsx(
-                    'block rounded-lg px-3 py-3 text-white transition-all duration-200',
+                    'block rounded-lg px-3 py-3 text-white transition-all duration-500 ease-out',
                     pathname === href
                       ? 'bg-primary font-medium text-black'
                       : 'hover:bg-white/10',
+                    isMobileOpen 
+                      ? "translate-x-0 opacity-100" 
+                      : "translate-x-8 opacity-0"
                   )}
+                  style={{ 
+                    transitionDelay: isMobileOpen ? `${index * 100}ms` : '0ms' 
+                  }}
                 >
                   {label}
                 </Link>
@@ -267,8 +335,17 @@ export default function Header() {
             )}
           </div>
 
-          {/* Sticky Social Icons Bottom */}
-          <div className="mt-auto flex gap-4 border-t border-white/10 pb-12 pt-6">
+          <div 
+            className={clsx(
+              "mt-auto flex gap-4 border-t border-white/10 pb-12 pt-6 transition-all duration-700 ease-out",
+              isMobileOpen 
+                ? "translate-y-0 opacity-100" 
+                : "translate-y-8 opacity-0"
+            )}
+            style={{ 
+              transitionDelay: isMobileOpen ? '400ms' : '0ms' 
+            }}
+          >
             <SocialIcon
               href="https://x.com/goodmorningdevs"
               label="X"
@@ -291,7 +368,7 @@ export default function Header() {
             />
           </div>
         </div>
-      )}
+      </div>
     </header>
   )
 }
