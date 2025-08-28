@@ -7,21 +7,22 @@ export const metadata = {
   title: 'Sitemap | goodmorning.dev',
   description:
     'Explore the full sitemap of goodmorning.dev. Access all pages including services, careers, blog, and company info in one structured overview.',
+  alternates: {
+    canonical: '/sitemap',
+  },
   twitter: {
     card: 'summary_large_image',
-    images: [
-      `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/images/meta/home-meta-image.png`,
-    ],
+    images: ['/images/meta/home-meta-image.png'],
   },
   openGraph: {
     title: 'Sitemap | goodmorning.dev',
     description:
       'Explore the full sitemap of goodmorning.dev. Access all pages including services, careers, blog, and company info in one structured overview.',
-    url: 'https://goodmorning.dev/sitemap',
+    url: '/sitemap',
     siteName: 'goodmorning.dev',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/images/meta/home-meta-image.png`,
+        url: '/images/meta/home-meta-image.png',
         width: 1200,
         height: 630,
         alt: 'goodmorning - sitemap',
