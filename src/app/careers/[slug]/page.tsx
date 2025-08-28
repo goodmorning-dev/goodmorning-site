@@ -32,11 +32,13 @@ export async function generateMetadata(
   const { slug } = await params
   const job = findJobBySlug(slug)
 
-  const base = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
-  const url = `${base}/careers/${slug}`
-  const image = `${base}/images/meta/careers-meta-image.png`
+  const path = `/careers/${slug}`
+  const image = '/images/meta/careers-meta-image.png'
 
-  const title = job ? `${job.title} | Careers at goodmorning` : 'Careers at goodmorning | Web3 Dev Jobs'
+  const title = job
+    ? `${job.title} | Careers at goodmorning`
+    : 'Careers at goodmorning | Web3 Dev Jobs'
+
   const description =
     job?.shortDescription ??
     'Ready to build bold blockchain products? Join goodmorning’s award-winning Web3 team for real impact, growth, and hackathon street cred - no corporate nonsense.'
@@ -44,6 +46,7 @@ export async function generateMetadata(
   return {
     title,
     description,
+    alternates: { canonical: path },
     twitter: {
       card: 'summary_large_image',
       images: [image],
@@ -51,7 +54,7 @@ export async function generateMetadata(
     openGraph: {
       title,
       description,
-      url,
+      url: path,
       siteName: 'goodmorning.dev',
       images: [
         {
@@ -65,6 +68,7 @@ export async function generateMetadata(
     },
   }
 }
+
 
 export default async function JobDetailsPage({
   params,
