@@ -72,6 +72,7 @@ export default function Header() {
         <Link
           href="/"
           className="text-3xl text-[36px] font-bold tracking-wide text-primary"
+          onClick={() => setIsMobileOpen(false)}
         >
           <Image
             src={logo}
