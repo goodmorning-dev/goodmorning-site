@@ -105,8 +105,8 @@ export default function ServicesDetailsPage() {
           <div>
             <h1 className="header-2 max-w-[615px] !leading-[1.3] lg:text-[56px]">
               <span className="text-primary">Your MVP</span> won't, build itself
-              -
-              <br />
+              -{" "}
+              <br className="hidden lg:block" />
               <span className="gradient-underline">but we can!</span>
             </h1>
           </div>
