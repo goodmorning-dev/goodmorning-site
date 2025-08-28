@@ -46,6 +46,10 @@ export async function generateMetadata(
   return {
     title,
     description,
+    robots: {
+      index: false,
+      follow: true,
+    },
     alternates: { canonical: path },
     twitter: {
       card: 'summary_large_image',
