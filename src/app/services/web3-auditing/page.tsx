@@ -3,7 +3,7 @@ export const metadata = {
   description:
     'Protect your project and investors with goodmorning’s Web3 technical auditing services. From smart contract audits to technical due diligence, trusted by top teams.',
   alternates: {
-    canonical: '/services/technical-auditing',
+    canonical: '/services/web3-auditing',
   },
   twitter: {
     card: 'summary_large_image',
@@ -13,7 +13,7 @@ export const metadata = {
     title: 'Web3 Technical Auditing Services | goodmorning',
     description:
       'Protect your project and investors with goodmorning’s Web3 technical auditing services. From smart contract audits to technical due diligence, trusted by top teams.',
-    url: '/services/technical-auditing',
+    url: '/services/web3-auditing',
     siteName: 'goodmorning.dev',
     images: [
       {
