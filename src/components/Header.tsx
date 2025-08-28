@@ -219,11 +219,15 @@ export default function Header() {
       {/* Mobile Menu */}
       <div 
         className={clsx(
-          "fixed inset-0 top-[110px] z-40 flex h-[calc(100vh-110px)] flex-col justify-between overflow-y-auto bg-gray px-6 py-8 shadow-xl backdrop-blur-md transition-all duration-500 ease-out lg:hidden",
+          "fixed inset-0 top-[110px] z-40 flex h-[100dvh] flex-col justify-between overflow-y-auto bg-gray px-6 py-8 shadow-xl backdrop-blur-md transition-all duration-500 ease-out lg:hidden",
           isMobileOpen 
             ? "translate-x-0 opacity-100" 
             : "translate-x-full opacity-0 pointer-events-none"
         )}
+        style={{
+          height: 'calc(100dvh - 110px)',
+          minHeight: 'calc(100vh - 110px)', // Fallback for older browsers
+        }}
       >
         <div 
           className={clsx(
@@ -338,13 +342,15 @@ export default function Header() {
 
           <div 
             className={clsx(
-              "mt-auto flex gap-4 border-t border-white/10 pb-12 pt-6 transition-all duration-700 ease-out",
+              "mt-auto flex gap-4 border-t border-white/10 pb-safe-bottom pt-6 transition-all duration-700 ease-out",
+              "min-h-[80px] items-center",
               isMobileOpen 
                 ? "translate-y-0 opacity-100" 
                 : "translate-y-8 opacity-0"
             )}
             style={{ 
-              transitionDelay: isMobileOpen ? '400ms' : '0ms' 
+              transitionDelay: isMobileOpen ? '400ms' : '0ms',
+              paddingBottom: 'max(12px, env(safe-area-inset-bottom))'
             }}
           >
             <SocialIcon
